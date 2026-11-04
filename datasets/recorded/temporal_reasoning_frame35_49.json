@@ -1,0 +1,34 @@
+{
+  "schema": "qapha.temporal_reasoning.v1",
+  "model": "muse-spark-1.3",
+  "frame_window": [
+    35,
+    49
+  ],
+  "assessments": [
+    {
+      "assessment": "approaching_candidate_edge",
+      "edge_id": "edge_0",
+      "next_observation": "extend the frame window with dense sampling of image-plane distance to edge_0 to test whether the endpoint decrease persists toward nearness",
+      "object_id": "0",
+      "reason": "motion_class moving with distance_trend approaching to edge_0 from 189.598px to 92.0px and near_at_end false; endpoint decrease alone does not prove continuous approach and evidence is image-plane only"
+    },
+    {
+      "assessment": "approaching_candidate_edge",
+      "edge_id": "edge_1",
+      "next_observation": "continue tracking image-plane distances to edge_1 and edge_4 over longer windows with dense sampling to test whether the endpoint decrease is sustained",
+      "object_id": "1",
+      "reason": "motion_class moving with distance_trend approaching to edge_1 from 644.366px to 516.765px and near_at_end false; endpoint decrease alone does not prove continuous approach and evidence is image-plane only"
+    },
+    {
+      "assessment": "stationary_near_edge",
+      "edge_id": "edge_1",
+      "next_observation": "monitor over extended frames to verify continued approximately_stationary behavior and continued nearness to edge_1 in the image plane",
+      "object_id": "2",
+      "reason": "motion_class approximately_stationary with distance_trend approximately_constant_distance to edge_1 at 28.126px to 28.126px and near_at_end true; evidence is image-plane only"
+    }
+  ],
+  "status": "unverified_hypotheses",
+  "physical_contact_verified": false,
+  "note": "Model explanations are hypotheses, not physical measurements."
+}

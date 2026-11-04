@@ -1,0 +1,68 @@
+{
+  "schema": "qapha.policy_preregistration.v1",
+  "experiment_id": "video_d_uncertainty_response",
+  "status": "registered_before_video_d_evaluation",
+  "evaluation_data": {
+    "video": "heldout_video_d.mp4",
+    "source": "new_previously_unanalyzed_video",
+    "object_count": 1,
+    "frame_range_inclusive": [
+      0,
+      49
+    ],
+    "prediction_targets_inclusive": [
+      2,
+      49
+    ],
+    "required_consecutive_tracking": true,
+    "missing_tracking_policy": "Report incomplete evaluation; do not silently skip difficult frames"
+  },
+  "baseline": {
+    "name": "original_adaptive_selector",
+    "candidate_models": [
+      "persistence",
+      "linear"
+    ],
+    "window": 6,
+    "decay": 0.85
+  },
+  "experimental_policy": {
+    "name": "warning_triggered_persistence",
+    "warning_source": "previous_prediction_errors_only",
+    "recent_window": 5,
+    "absolute_threshold_px": 15.0,
+    "relative_factor": 3.0,
+    "minimum_baseline_px": 2.0,
+    "override_model": "persistence",
+    "override_duration_frames": 3,
+    "overlapping_warning_policy": "extend cooldown to at least 3 frames"
+  },
+  "evaluation": {
+    "primary_metric": "mean_euclidean_error_px",
+    "secondary_metrics": [
+      "maximum_euclidean_error_px",
+      "count_errors_over_25px",
+      "number_of_policy_overrides",
+      "warning_frames"
+    ],
+    "success_criterion": "Candidate mean error strictly lower than baseline mean error",
+    "report_unfavorable_results": true,
+    "no_parameter_tuning_on_video_d": true,
+    "prediction_before_observation_required": true,
+    "scope": "Evaluate the response-policy decision using the same frozen persistence and linear forecasts"
+  },
+  "limitations": [
+    "Parameters were developed using Video C.",
+    "Video D will provide one additional test, not general proof.",
+    "Image-space error is not physical prediction accuracy.",
+    "No model retraining from alternative policy actions.",
+    "No verified collision or causal understanding implied."
+  ],
+  "implementation_sha256": {
+    "adaptive_loop": "c5d97720188beab62456453b77934abb4ce3b612d8f150816a6465780f70f156",
+    "adaptive_session": "d11925c33a054c98ea0e0c7443664b297877b08064fb5e4b982cf2433ed70fa9",
+    "prediction_protocol": "0c4dac10c04294d6a47741dd9092209f7faf09ff1bec3aa6535490c436eaa90e",
+    "reliability_monitor": "1c525dd847b68d8aedc793741842df9281df1cdb1921f701fb3c83b312499e8a"
+  },
+  "registration_sha256": "c1c7a8c22a648673120d248be23ff3acbd074c7a40c8c2e2a8d6c61acf4f4381"
+}

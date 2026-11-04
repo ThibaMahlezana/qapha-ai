@@ -1,0 +1,21 @@
+{
+  "schema": "qapha.video_d_source.v1",
+  "experiment_id": "video_d_uncertainty_response",
+  "registration_sha256": "c1c7a8c22a648673120d248be23ff3acbd074c7a40c8c2e2a8d6c61acf4f4381",
+  "video_filename": "heldout_video_d.mp4",
+  "video_sha256": "9104ab9da8a56e9b26e8450394e38431bb69914a5afe67146ed1c700a4f2eb33",
+  "file_size_bytes": 823909,
+  "fps": 25.0,
+  "total_frames_reported": 605,
+  "resolution_px": [
+    1280,
+    720
+  ],
+  "calibration_frame_range": [
+    0,
+    49
+  ],
+  "tracking_performed": false,
+  "evaluation_performed": false,
+  "note": "Source metadata only. Frame decoding, tracking and prediction have not yet been verified."
+}

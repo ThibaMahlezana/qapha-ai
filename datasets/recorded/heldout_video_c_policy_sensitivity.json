@@ -1,0 +1,112 @@
+{
+  "schema": "qapha.policy_sensitivity.v1",
+  "stage": "historical_diagnostic",
+  "evaluated_predictions": 48,
+  "baseline": {
+    "mean_error_px": 11.482721,
+    "maximum_error_px": 127.22657,
+    "errors_over_25px": 6
+  },
+  "policies": [
+    {
+      "cooldown_frames": 1,
+      "warning_frames": [
+        36
+      ],
+      "decisions_changed": 1,
+      "mean_error_px": 12.492925,
+      "maximum_error_px": 127.22657,
+      "errors_over_25px": 7,
+      "changed_frames": [
+        36
+      ],
+      "difference_from_baseline_px": 1.010204
+    },
+    {
+      "cooldown_frames": 2,
+      "warning_frames": [
+        36
+      ],
+      "decisions_changed": 2,
+      "mean_error_px": 10.763259,
+      "maximum_error_px": 127.22657,
+      "errors_over_25px": 6,
+      "changed_frames": [
+        36,
+        37
+      ],
+      "difference_from_baseline_px": -0.719462
+    },
+    {
+      "cooldown_frames": 3,
+      "warning_frames": [
+        36
+      ],
+      "decisions_changed": 3,
+      "mean_error_px": 9.261511,
+      "maximum_error_px": 127.22657,
+      "errors_over_25px": 5,
+      "changed_frames": [
+        36,
+        37,
+        38
+      ],
+      "difference_from_baseline_px": -2.22121
+    },
+    {
+      "cooldown_frames": 4,
+      "warning_frames": [
+        36
+      ],
+      "decisions_changed": 3,
+      "mean_error_px": 9.261511,
+      "maximum_error_px": 127.22657,
+      "errors_over_25px": 5,
+      "changed_frames": [
+        36,
+        37,
+        38
+      ],
+      "difference_from_baseline_px": -2.22121
+    },
+    {
+      "cooldown_frames": 5,
+      "warning_frames": [
+        36
+      ],
+      "decisions_changed": 3,
+      "mean_error_px": 9.261511,
+      "maximum_error_px": 127.22657,
+      "errors_over_25px": 5,
+      "changed_frames": [
+        36,
+        37,
+        38
+      ],
+      "difference_from_baseline_px": -2.22121
+    },
+    {
+      "cooldown_frames": 6,
+      "warning_frames": [
+        36
+      ],
+      "decisions_changed": 3,
+      "mean_error_px": 9.261511,
+      "maximum_error_px": 127.22657,
+      "errors_over_25px": 5,
+      "changed_frames": [
+        36,
+        37,
+        38
+      ],
+      "difference_from_baseline_px": -2.22121
+    }
+  ],
+  "limitations": [
+    "Historical data already examined.",
+    "Policies reuse fixed candidate forecast errors.",
+    "Selection does not alter model training in this replay.",
+    "Results cannot justify selecting a winning cooldown.",
+    "Prospective evaluation on independent videos is required."
+  ]
+}

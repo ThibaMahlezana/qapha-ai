@@ -1,0 +1,10 @@
+{
+  "model": "sam-3.1",
+  "concept": "blue ball",
+  "outcome": "completed",
+  "box_count": 0,
+  "mask_count": 0,
+  "unique_object_ids": 0,
+  "tracks": [],
+  "boxes": []
+}

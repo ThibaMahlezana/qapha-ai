@@ -1,0 +1,63 @@
+{
+  "schema": "qapha.scene_geometry.v1",
+  "source": "C:\\Users\\Keywest\\Desktop\\Web Apps\\qapha-ai\\datasets\\recorded\\heldout_video_b_calibration.mp4",
+  "coordinate_system": "image_pixels_y_down",
+  "resolution_px": [
+    720,
+    1280
+  ],
+  "sampled_frames": 12,
+  "sampling": "first_consecutive_frames",
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "endpoints_px": [
+        [
+          77,
+          864
+        ],
+        [
+          195,
+          841
+        ]
+      ],
+      "length_px": 120.22,
+      "angle_deg_image": -11.03,
+      "kind": "inclined",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          272,
+          1050
+        ],
+        [
+          364,
+          1029
+        ]
+      ],
+      "length_px": 94.37,
+      "angle_deg_image": -12.86,
+      "kind": "inclined",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          116,
+          1087
+        ],
+        [
+          207,
+          1066
+        ]
+      ],
+      "length_px": 93.39,
+      "angle_deg_image": -12.99,
+      "kind": "inclined",
+      "physical_surface_verified": false
+    }
+  ],
+  "limitations": "Image edges only; some may be decoration, occlusion boundaries or duplicate edges. No contact, depth or slope-in-metres is established."
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "qapha.contact_hypotheses.v1",
+  "stage": "calibration_only",
+  "object_id": "0",
+  "cutoff_frame": 49,
+  "calibration_sha256": "e6e34f2474d9b3b3f4f364437bd548a948caa97f83400275500e6cb95c8c61b0",
+  "geometry_evidence_sha256": "5c44f562fd45bb1d14d245193e2831af4fb24dee018b14bddce1bd4000069852",
+  "surface_evidence_sha256": "214f7993c680dc0e98f0bcf418176df9142baacfa38b685fcf9aa3855e79d353",
+  "hypothesis_count": 3,
+  "hypotheses": [
+    {
+      "id": "candidate_reversal_frame_36",
+      "type": "possible_surface_interaction",
+      "frame_index": 36,
+      "status": "hypothesis_not_verified",
+      "observed_evidence": {
+        "vertical_direction_reversal": true,
+        "reversal_frame": 36,
+        "stable_visual_edge_detected": true,
+        "candidate_visual_edge_y_px": 655.0
+      },
+      "inference": "The motion reversal may reflect an interaction with the environment.",
+      "quality_warning": true,
+      "quality_flags": [
+        {
+          "from_frame": 34,
+          "to_frame": 35,
+          "displacement_px": 173.018063,
+          "requires_review": true
+        }
+      ],
+      "limitations": [
+        "Visual floor edge is not a calibrated contact plane.",
+        "No event-time 3D contact position was established.",
+        "Motion reversal does not establish collision causality."
+      ],
+      "physical_collision_verified": false
+    },
+    {
+      "id": "candidate_reversal_frame_42",
+      "type": "possible_surface_interaction",
+      "frame_index": 42,
+      "status": "hypothesis_not_verified",
+      "observed_evidence": {
+        "vertical_direction_reversal": true,
+        "reversal_frame": 42,
+        "stable_visual_edge_detected": true,
+        "candidate_visual_edge_y_px": 655.0
+      },
+      "inference": "The motion reversal may reflect an interaction with the environment.",
+      "quality_warning": false,
+      "quality_flags": [],
+      "limitations": [
+        "Visual floor edge is not a calibrated contact plane.",
+        "No event-time 3D contact position was established.",
+        "Motion reversal does not establish collision causality."
+      ],
+      "physical_collision_verified": false
+    },
+    {
+      "id": "candidate_support_frame_49",
+      "type": "possible_surface_constrained_motion",
+      "frame_index": 49,
+      "status": "hypothesis_not_verified",
+      "observed_evidence": {
+        "stable_object_bottom_y_px": 679.0,
+        "horizontal_travel_px": 8.0,
+        "stable_visual_edge_detected": true,
+        "candidate_visual_edge_y_px": 655.0,
+        "object_bottom_to_edge_offset_px": 24.0
+      },
+      "inference": "The object may be moving along a supporting surface.",
+      "quality_warning": false,
+      "quality_flags": [],
+      "limitations": [
+        "Constant image height does not establish physical support.",
+        "The floor edge and contact plane may differ."
+      ],
+      "physical_collision_verified": false
+    }
+  ],
+  "physical_collision_verified": false,
+  "note": "Hypotheses are deterministic interpretations of observed motion and visual geometry. They are not verified physical contact events."
+}

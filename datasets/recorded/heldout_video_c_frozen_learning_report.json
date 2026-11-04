@@ -1,0 +1,29 @@
+{
+  "schema": "qapha.frozen_learning_experiment.v1",
+  "stage": "calibration_replay",
+  "object_id": "0",
+  "frames_processed": 50,
+  "evaluated_predictions": 48,
+  "prediction_before_observation": true,
+  "checkpoint_pending_target": 25,
+  "states_identical": true,
+  "predictions_identical": true,
+  "evaluations_identical": true,
+  "mean_error_px": {
+    "persistence": 13.387468,
+    "linear": 13.54104,
+    "adaptive": 11.482721
+  },
+  "selection_counts": {
+    "persistence": 16,
+    "linear": 32
+  },
+  "final_protocol_sha256": "0a9e0347f15626a16287975057e03003b1355d093aa9171955325a9c43cc4388",
+  "final_state_sha256": "77206fa7fde18dc30ef8be6c7bfb1bf8671a1f436472d6bc2a1d8113bff81040",
+  "pending_prediction": false,
+  "limitations": [
+    "Historical calibration replay, not prospective testing.",
+    "One-frame position prediction only.",
+    "Does not establish physical-world generalization."
+  ]
+}

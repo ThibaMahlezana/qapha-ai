@@ -1,0 +1,88 @@
+{
+  "schema": "qapha.geometry_contact_evidence.v1",
+  "stage": "calibration_only",
+  "object_id": "0",
+  "cutoff_frame": 49,
+  "calibration_sha256": "e6e34f2474d9b3b3f4f364437bd548a948caa97f83400275500e6cb95c8c61b0",
+  "visual_geometry": {
+    "measurements": [
+      {
+        "frame_index": 0,
+        "region_x": [
+          40,
+          180
+        ],
+        "edge_y_px": 655,
+        "gradient_strength": 48.0
+      },
+      {
+        "frame_index": 0,
+        "region_x": [
+          950,
+          1150
+        ],
+        "edge_y_px": 655,
+        "gradient_strength": 51.0
+      },
+      {
+        "frame_index": 49,
+        "region_x": [
+          40,
+          180
+        ],
+        "edge_y_px": 655,
+        "gradient_strength": 48.0
+      },
+      {
+        "frame_index": 49,
+        "region_x": [
+          950,
+          1150
+        ],
+        "edge_y_px": 655,
+        "gradient_strength": 51.0
+      }
+    ],
+    "stable_edge": true,
+    "edge_spread_px": 0,
+    "candidate_visual_edge_y_px": 655.0,
+    "measurement_method": "Strongest grayscale row transition in selected background regions",
+    "physical_contact_plane_verified": false
+  },
+  "object_geometry_relation": {
+    "stable_bottom_y_px": 679.0,
+    "vertical_offset_px": 24.0,
+    "relation": "object_bottom_below_visual_edge",
+    "candidate_surface_constrained_motion": true
+  },
+  "candidate_events": [
+    {
+      "frame_index": 36,
+      "motion_evidence": "candidate_contact_reversal",
+      "independent_visual_edge_available": true,
+      "physical_collision_verified": false
+    },
+    {
+      "frame_index": 42,
+      "motion_evidence": "candidate_contact_reversal",
+      "independent_visual_edge_available": true,
+      "physical_collision_verified": false
+    }
+  ],
+  "tracking_quality_flags": [
+    {
+      "from_frame": 34,
+      "to_frame": 35,
+      "displacement_px": 173.018063,
+      "requires_review": true
+    }
+  ],
+  "physical_collision_verified": false,
+  "limitations": [
+    "The visual floor edge is not necessarily a contact plane.",
+    "The edge measurement uses manually chosen background regions.",
+    "Object-bottom offset is not physical penetration depth.",
+    "Motion reversal plus scene geometry does not prove causality.",
+    "Only calibration frames are used."
+  ]
+}

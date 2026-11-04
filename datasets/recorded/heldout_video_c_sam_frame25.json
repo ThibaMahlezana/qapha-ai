@@ -1,0 +1,25 @@
+{
+  "model": "sam-3.1",
+  "prompt": "black metallic ball",
+  "image": "C:\\Users\\Keywest\\Desktop\\Web Apps\\qapha-ai\\datasets\\recorded\\heldout_video_c_frame25.jpg",
+  "raw_segmentation": "<0f>0<|box;x1=602;y1=124;x2=667;y2=191;w=1280;h=720;c=0.8476190567016602|><|mask;x=0;y=0;c=0.8476190567016602;data=68,66,~!!!)R!0cYf/6M9Jnts!9.wXX0i+-1jfG:cEAVc3Lq:h:{:JdJV#O[b7%OL1J+-PIPpQUJ]HoXzQ.hfPBQRzw$gB`a$3Xk?jYv#FSj2.+c[!)!f6y2K@8We*/iLRA6rq:1m+ujC1FV:yP8uD/(HoNR$(OTZ5Dw'mldbr#UgPMxG!{[5q*236iJtyX:c#If*qN8KT]oV*we!r^ykvNcZM4E_5-GwhzsKk(VamaL_woJCq-Th87/z!e&0fL#E&E37zJLTDeJ.nQN]2?Yg://vPaIn-tf*/f{-:-0oZqmQfWlG9L!8R[?vlaNlww@_$5Qm3doVQ*3x4`)8lX2$9'kfr9fYoAf1(=0RJd/.TP1Oe0[9A+ooojXMBqWgsa(zl#%n-G!=JqsE=l8o)D[m&d._9rNvL_rE-Vn*B@ytnN@8^_:s7ZPAe5E_A(+{$AS-3TAa)q3Dy7thKDM^eQHes_#2f(V1]g5[u!L*EU%==m8X5PE@*1m3I3-@%4oJ93[8Wo%#M'Mhws+4]kwlJ%BwBhNm7=CWXQL^!-+?jaD4G)3Ps0]S)365e-m0k+Z!??Hw9H1c[1W!3Z&&XivKW1@*F+V@Q=*Kbeb]4fGxb%z?E[8Y[Jx$i8i5Y.B1-o+`3'9UJEY/pD7w0Uw53y9x/1m74T:JWiGtq-si#?Oyy#qU/SufjeJyI1OGqXa)5]nQvtaH-hbS[fcFrd8%u-4^lLYId^SN'BWLf6@7!vwDfKI%X:3)p&$-)y[RrNsIWp-Ogv)ci3S:u[RId15&_aUc/N&iwOSpgC/dB**shpyzmHS:KZ|>\n",
+  "inspection": {
+    "box_count": 1,
+    "boxes": [
+      {
+        "bbox_xyxy_px": [
+          602,
+          124,
+          667,
+          191
+        ],
+        "image_size_px": [
+          1280,
+          720
+        ],
+        "confidence": 0.8476190567016602
+      }
+    ],
+    "mask_tokens_present": 1
+  }
+}

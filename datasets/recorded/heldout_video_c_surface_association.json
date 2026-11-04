@@ -1,0 +1,57 @@
+{
+  "schema": "qapha.surface_association.v1",
+  "stage": "calibration_only",
+  "object_id": "0",
+  "cutoff_frame": 49,
+  "calibration_sha256": "e6e34f2474d9b3b3f4f364437bd548a948caa97f83400275500e6cb95c8c61b0",
+  "latest_regime": "candidate_surface_constrained_motion",
+  "candidate_support": {
+    "bottom_y_px": 679.0,
+    "source": "median_of_recent_tracked_object_bottoms",
+    "frames_inclusive": [
+      44,
+      49
+    ],
+    "bottom_span_px": 0,
+    "center_y_span_px": 0.0,
+    "horizontal_travel_px": 8.0,
+    "stable_height": true,
+    "independent_surface_geometry_verified": false
+  },
+  "candidate_events": [
+    {
+      "frame_index": 36,
+      "bottom_distance_to_candidate_level_px": 0.0,
+      "preceding_center_dy_px": 62.5,
+      "following_center_dy_px": -11.0,
+      "classification": "candidate_contact_reversal",
+      "physical_collision_verified": false
+    },
+    {
+      "frame_index": 42,
+      "bottom_distance_to_candidate_level_px": 0.0,
+      "preceding_center_dy_px": 11.0,
+      "following_center_dy_px": -4.0,
+      "classification": "candidate_contact_reversal",
+      "physical_collision_verified": false
+    }
+  ],
+  "tracking_quality_flags": [
+    {
+      "from_frame": 34,
+      "to_frame": 35,
+      "displacement_px": 173.018063,
+      "requires_review": true
+    }
+  ],
+  "parameters": {
+    "stable_frames": 6,
+    "stable_tolerance_px": 3.0,
+    "contact_tolerance_px": 5.0,
+    "min_horizontal_travel_px": 5.0,
+    "min_descent_px": 5.0,
+    "min_reversal_px": 2.0,
+    "large_jump_px": 100.0
+  },
+  "limitations": "Candidate support level is inferred from the object itself, not independently measured from scene geometry. Reversals and proximity do not verify physical contact. Thresholds are pixel-scale heuristics."
+}

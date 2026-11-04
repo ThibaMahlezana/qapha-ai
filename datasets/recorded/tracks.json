@@ -1,0 +1,190 @@
+{
+  "source_manifest": "C:\\Users\\Keywest\\Desktop\\Web Apps\\qapha-ai\\datasets\\recorded\\extracted\\manifest.json",
+  "method": "HSV colour segmentation (controlled conditions only)",
+  "color": "red",
+  "coordinate_system": "image_pixels",
+  "frames_checked": 10,
+  "frames_detected": 10,
+  "detections": [
+    {
+      "frame_index": 0,
+      "timestamp_ms": 0.0,
+      "detected": true,
+      "measurement": {
+        "center_px": [
+          36.55,
+          319.22
+        ],
+        "bbox_xywh_px": [
+          23,
+          302,
+          30,
+          30
+        ],
+        "area_px2": 374.5
+      }
+    },
+    {
+      "frame_index": 13,
+      "timestamp_ms": 520.0,
+      "detected": true,
+      "measurement": {
+        "center_px": [
+          1076.12,
+          322.46
+        ],
+        "bbox_xywh_px": [
+          1071,
+          294,
+          17,
+          54
+        ],
+        "area_px2": 278.5
+      }
+    },
+    {
+      "frame_index": 25,
+      "timestamp_ms": 1000.0,
+      "detected": true,
+      "measurement": {
+        "center_px": [
+          1013.65,
+          338.74
+        ],
+        "bbox_xywh_px": [
+          1010,
+          315,
+          15,
+          47
+        ],
+        "area_px2": 154.5
+      }
+    },
+    {
+      "frame_index": 38,
+      "timestamp_ms": 1520.0,
+      "detected": true,
+      "measurement": {
+        "center_px": [
+          389.41,
+          515.39
+        ],
+        "bbox_xywh_px": [
+          376,
+          501,
+          38,
+          27
+        ],
+        "area_px2": 224.0
+      }
+    },
+    {
+      "frame_index": 50,
+      "timestamp_ms": 2000.0,
+      "detected": true,
+      "measurement": {
+        "center_px": [
+          865.7,
+          443.3
+        ],
+        "bbox_xywh_px": [
+          848,
+          428,
+          54,
+          46
+        ],
+        "area_px2": 217.0
+      }
+    },
+    {
+      "frame_index": 63,
+      "timestamp_ms": 2520.0,
+      "detected": true,
+      "measurement": {
+        "center_px": [
+          803.03,
+          501.38
+        ],
+        "bbox_xywh_px": [
+          799,
+          479,
+          11,
+          46
+        ],
+        "area_px2": 148.0
+      }
+    },
+    {
+      "frame_index": 75,
+      "timestamp_ms": 3000.0,
+      "detected": true,
+      "measurement": {
+        "center_px": [
+          699.01,
+          538.72
+        ],
+        "bbox_xywh_px": [
+          693,
+          530,
+          16,
+          20
+        ],
+        "area_px2": 118.5
+      }
+    },
+    {
+      "frame_index": 88,
+      "timestamp_ms": 3520.0,
+      "detected": true,
+      "measurement": {
+        "center_px": [
+          886.38,
+          472.02
+        ],
+        "bbox_xywh_px": [
+          879,
+          440,
+          26,
+          58
+        ],
+        "area_px2": 225.5
+      }
+    },
+    {
+      "frame_index": 100,
+      "timestamp_ms": 4000.0,
+      "detected": true,
+      "measurement": {
+        "center_px": [
+          841.84,
+          549.39
+        ],
+        "bbox_xywh_px": [
+          831,
+          539,
+          30,
+          27
+        ],
+        "area_px2": 208.0
+      }
+    },
+    {
+      "frame_index": 113,
+      "timestamp_ms": 4520.0,
+      "detected": true,
+      "measurement": {
+        "center_px": [
+          746.92,
+          433.58
+        ],
+        "bbox_xywh_px": [
+          728,
+          419,
+          56,
+          43
+        ],
+        "area_px2": 156.5
+      }
+    }
+  ]
+}

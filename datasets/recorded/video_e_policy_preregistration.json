@@ -1,0 +1,82 @@
+{
+  "schema": "qapha.policy_preregistration.v2",
+  "experiment_id": "video_e_uncertainty_response",
+  "status": "registered_before_video_e_tracking",
+  "video": "heldout_video_e.mp4",
+  "target_selection": {
+    "method": "select_one_visible_object_before_tracking",
+    "target_description": null,
+    "must_record_target_before_sam_execution": true,
+    "no_target_reselection_after_performance_review": true
+  },
+  "frame_range_inclusive": [
+    0,
+    49
+  ],
+  "prediction_targets_inclusive": [
+    2,
+    49
+  ],
+  "tracking_requirements": {
+    "unique_object_ids": 1,
+    "required_frames": 50,
+    "missing_frame_policy": "report_incomplete"
+  },
+  "informativeness": {
+    "minimum_total_path_length_px": 50.0,
+    "minimum_maximum_step_px": 5.0,
+    "if_not_met": "report_non_informative",
+    "no_silent_exclusion": true
+  },
+  "baseline": {
+    "name": "original_adaptive_selector",
+    "candidate_models": [
+      "persistence",
+      "linear"
+    ],
+    "window": 6,
+    "decay": 0.85
+  },
+  "experimental_policy": {
+    "name": "warning_triggered_persistence",
+    "warning_source": "previous_prediction_errors_only",
+    "recent_window": 5,
+    "absolute_threshold_px": 15.0,
+    "relative_factor": 3.0,
+    "minimum_baseline_px": 2.0,
+    "override_model": "persistence",
+    "override_duration_frames": 3,
+    "overlapping_warning_policy": "extend cooldown to at least 3 frames"
+  },
+  "evaluation": {
+    "primary_metric": "mean_euclidean_error_px",
+    "secondary_metrics": [
+      "maximum_euclidean_error_px",
+      "count_errors_over_25px",
+      "warning_frames",
+      "policy_overrides"
+    ],
+    "no_parameter_tuning": true,
+    "prediction_before_observation_required": true,
+    "report_unfavorable_results": true
+  },
+  "inherited_implementation_sha256": {
+    "adaptive_loop": "c5d97720188beab62456453b77934abb4ce3b612d8f150816a6465780f70f156",
+    "adaptive_session": "d11925c33a054c98ea0e0c7443664b297877b08064fb5e4b982cf2433ed70fa9",
+    "prediction_protocol": "0c4dac10c04294d6a47741dd9092209f7faf09ff1bec3aa6535490c436eaa90e",
+    "reliability_monitor": "1c525dd847b68d8aedc793741842df9281df1cdb1921f701fb3c83b312499e8a"
+  },
+  "previous_experiment": {
+    "experiment_id": "video_d_uncertainty_response",
+    "registration_sha256": "c1c7a8c22a648673120d248be23ff3acbd074c7a40c8c2e2a8d6c61acf4f4381",
+    "outcome": "policy_not_activated_stationary_target"
+  },
+  "limitations": [
+    "Movement eligibility criteria are exploratory.",
+    "Eligibility is assessed separately from prediction quality.",
+    "One additional video cannot establish generalization.",
+    "The policy was originally developed using Video C.",
+    "A hash alone does not prove registration time."
+  ],
+  "registration_sha256": "88367a5bca1c50f8c7a99b08b2ee553a4567ce1a5d9d9d6de9daa73f82f6bf71"
+}

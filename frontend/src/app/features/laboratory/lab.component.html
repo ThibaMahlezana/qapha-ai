@@ -1,0 +1,234 @@
+<header class="top">
+  <div>
+    <h1 class="page-title">Replay lab</h1>
+    <p class="top-note">Every forecast was sealed <em>before</em> its frame was revealed.</p>
+  </div>
+  @if (clips().length) {
+    <label class="clip">
+      Clip
+      <select [value]="clipName()" (change)="load($any($event.target).value)">
+        @for (c of clips(); track c.name) {
+          <option [value]="c.name">{{ c.concept || c.name }}</option>
+        }
+      </select>
+    </label>
+  }
+</header>
+
+@if (error()) {
+  <div class="alert">{{ error() }}</div>
+}
+
+@if (timeline(); as t) {
+  <main class="grid">
+    <section class="viewer card">
+      <div class="stage" [style.aspect-ratio]="size()[0] + ' / ' + size()[1]"
+        [style.max-width]="stageMaxWidth()">
+        <img [src]="frameUrl()" alt="" (error)="onFrameError()" />
+        <svg [attr.viewBox]="'0 0 ' + size()[0] + ' ' + size()[1]" preserveAspectRatio="none">
+          <polyline [attr.points]="trail()" class="trail" />
+          @if (frame(); as f) {
+            <rect class="obs-box"
+              [attr.x]="f.observed.bbox_xyxy_px[0]" [attr.y]="f.observed.bbox_xyxy_px[1]"
+              [attr.width]="f.observed.bbox_xyxy_px[2] - f.observed.bbox_xyxy_px[0]"
+              [attr.height]="f.observed.bbox_xyxy_px[3] - f.observed.bbox_xyxy_px[1]" />
+            @if (f.bounce?.floor_bottom_px != null && visible().has('bounce_aware')) {
+              <line class="floor-line" x1="0" [attr.x2]="size()[0]"
+                [attr.y1]="f.bounce!.floor_bottom_px" [attr.y2]="f.bounce!.floor_bottom_px" />
+              <text class="floor-label" x="12" [attr.y]="f.bounce!.floor_bottom_px! - 8">
+                floor learned from an earlier bounce</text>
+            }
+            @for (hz of hypotheses(); track hz.name) {
+              <ellipse [class]="'hyp ' + hz.cls" [attr.opacity]="hz.opacity"
+                [attr.cx]="hz.centre_xy[0]" [attr.cy]="hz.centre_xy[1]"
+                [attr.rx]="hz.rx_px" [attr.ry]="hz.ry_px"
+                [attr.transform]="'rotate(' + hz.angle_deg + ' ' + hz.centre_xy[0] + ' ' + hz.centre_xy[1] + ')'" />
+              @if (hypotheses().length > 1) {
+                <text [class]="'hyp-label ' + hz.cls"
+                  [attr.x]="hz.centre_xy[0] + hz.rx_px + 10" [attr.y]="hz.centre_xy[1] + hz.labelDy">{{ hz.label }}</text>
+              }
+            }
+            @if (f.zone && visible().has('kalman_cv')) {
+              <ellipse class="zone" [class.missed]="!f.zone.observed_inside"
+                [attr.cx]="f.zone.centre_xy[0]" [attr.cy]="f.zone.centre_xy[1]"
+                [attr.rx]="f.zone.rx_px" [attr.ry]="f.zone.ry_px"
+                [attr.transform]="'rotate(' + f.zone.angle_deg + ' ' + f.zone.centre_xy[0] + ' ' + f.zone.centre_xy[1] + ')'" />
+            }
+            @for (p of markers(); track p.key) {
+              <line class="err-line" [attr.stroke]="p.colour"
+                [attr.x1]="p.px" [attr.y1]="p.py"
+                [attr.x2]="f.observed.centre_xy[0]" [attr.y2]="f.observed.centre_xy[1]" />
+              @if (p.off) {
+                <rect class="pred off" width="22" height="22" [attr.stroke]="p.colour"
+                  [attr.x]="p.px - 11" [attr.y]="p.py - 11"
+                  [attr.transform]="'rotate(45 ' + p.px + ' ' + p.py + ')'" />
+              } @else {
+                <circle class="pred" r="11" [attr.stroke]="p.colour"
+                  [attr.cx]="p.px" [attr.cy]="p.py" />
+              }
+            }
+            <circle class="obs" r="6"
+              [attr.cx]="f.observed.centre_xy[0]" [attr.cy]="f.observed.centre_xy[1]" />
+          }
+        </svg>
+        @if (frame()?.policy?.warning) {
+          <div class="badge warn">Reliability warning</div>
+        }
+      </div>
+
+      <div class="controls">
+        <button (click)="stop(); go(0)" title="First frame">⏮</button>
+        <button (click)="stop(); go(index() - 1)" title="Previous (←)">◀</button>
+        <button class="play" (click)="playing() ? stop() : play()" title="Play / pause (space)">
+          {{ playing() ? 'Pause' : 'Play' }}
+        </button>
+        <button (click)="stop(); go(index() + 1)" title="Next (→)">▶</button>
+        <button (click)="stop(); go(t.frame_count - 1)" title="Last frame">⏭</button>
+        <input type="range" min="0" [max]="t.frame_count - 1" [value]="index()"
+          (input)="stop(); go(+$any($event.target).value)" />
+        <span class="frame-no">Frame {{ index() }} / {{ t.frame_count - 1 }}
+          · {{ index() / (t.video?.fps ?? 25) | number: '1.2-2' }} s</span>
+        <select (change)="setSpeed($any($event.target).value)" title="Playback speed">
+          <option value="0.1">0.1×</option>
+          <option value="0.25" selected>0.25×</option>
+          <option value="0.5">0.5×</option>
+          <option value="1">1×</option>
+        </select>
+      </div>
+
+      <div class="legend">
+        <span class="key"><i class="dot obs-dot"></i>Observed (SAM box centre)</span>
+        <span class="key"><i class="diamond"></i>Guess outside the image (pinned to edge)</span>
+        <span class="key"><i class="swatch fall"></i>"keeps falling" zone</span>
+        <span class="key"><i class="swatch bnc"></i>"bounces" zone</span>
+        @for (m of models; track m.key) {
+          <button class="key toggle" [class.off]="!visible().has(m.key)" (click)="toggle(m.key)"
+            [title]="m.note">
+            <i class="ring" [style.border-color]="m.colour"></i>{{ m.label }}
+          </button>
+        }
+      </div>
+    </section>
+
+    <aside class="panel card">
+      <h2>Frame {{ index() }}</h2>
+      @if (frame()?.predictions) {
+        <p class="sub">Forecasts made at frame {{ index() - 1 }}, scored when frame {{ index() }} arrived.</p>
+        <table class="rows">
+          <thead><tr><th>Model</th><th class="num">Error</th><th></th></tr></thead>
+          <tbody>
+            @for (r of rows(); track r.key) {
+              <tr [class.dim]="!visible().has(r.key)">
+                <td><i class="ring sm" [style.border-color]="r.colour"></i>{{ r.label }}
+                  @if (r.offFrame) { <span class="tag" title="Predicted centre lies outside the image">off-frame</span> }</td>
+                <td class="num">{{ r.error_px | number: '1.1-1' }} px</td>
+                <td class="bar-cell">
+                  <span class="bar" [style.background]="r.colour"
+                    [style.width.%]="(r.error_px / yMax()) * 100"></span>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+
+        <div class="facts">
+          @if (frame()!.bounce; as b) {
+            <div><span>Floor known?</span>
+              <b>{{ b.floor_bottom_px != null ? 'yes, y = ' + (b.floor_bottom_px | number: '1.0-0') : 'not yet (no bounce seen)' }}</b></div>
+            @if (b.p_bounce != null) {
+              <div><span>Chance of bounce this frame</span>
+                <b [class.hot]="b.p_bounce > 0.5">{{ b.p_bounce * 100 | number: '1.0-0' }}%</b></div>
+            }
+          }
+          @if (frame()!.zone; as z) {
+            <div><span>Kalman 90% zone</span><b>{{ z.rx_px | number: '1.0-0' }} × {{ z.ry_px | number: '1.0-0' }} px</b></div>
+            <div><span>Ball inside zone?</span>
+              <b [class.hot]="!z.observed_inside" [class.ok]="z.observed_inside">
+                {{ z.observed_inside ? 'yes' : 'no: confidently wrong' }}</b></div>
+          }
+          <div><span>Adaptive chose</span><b>{{ frame()!.adaptive!.selection }}</b></div>
+          <div><span>Warning policy</span>
+            <b [class.hot]="frame()!.policy!.override_active">
+              {{ frame()!.policy!.override_active ? 'override → persistence' : 'no override' }}
+            </b></div>
+          <div><span>Recent error, persistence</span>
+            <b>{{ frame()!.adaptive!.scores_before_observation['persistence'] | number: '1.1-1' }} px</b></div>
+          <div><span>Recent error, linear</span>
+            <b>{{ frame()!.adaptive!.scores_before_observation['linear'] | number: '1.1-1' }} px</b></div>
+          <div><span>Frozen prediction</span>
+            <code [title]="frame()!.adaptive!.prediction_sha256">{{ short(frame()!.adaptive!.prediction_sha256) }}</code></div>
+        </div>
+      } @else {
+        <p class="sub">No forecasts yet. Every model needs two observed frames before it can predict.</p>
+      }
+
+      @if (t.zone_summary; as zs) {
+        <h2>Is the zone honest?</h2>
+        <p class="sub">A truthful 90% zone should contain the ball about 90% of the time.</p>
+        <div class="facts">
+          <div><span>Ball inside 90% zone</span>
+            <b [class.hot]="zs.coverage['90'] < 0.8" [class.ok]="zs.coverage['90'] >= 0.8">
+              {{ zs.coverage['90'] * 100 | number: '1.0-0' }}%</b></div>
+          <div><span>Inside 50% zone</span><b>{{ zs.coverage['50'] * 100 | number: '1.0-0' }}%</b></div>
+          <div><span>Surprise score (NLL, lower is better)</span><b>{{ zs.mean_nll | number: '1.1-1' }}</b></div>
+        </div>
+      }
+
+      <h2>Whole clip</h2>
+      <table class="rows">
+        <thead><tr><th>Model</th><th class="num">Mean</th><th class="num">Worst</th><th class="num">&gt;25 px</th></tr></thead>
+        <tbody>
+          @for (r of ranking(); track r.key; let first = $first) {
+            <tr [class.best]="first">
+              <td><i class="ring sm" [style.border-color]="r.colour"></i>{{ r.label }}</td>
+              <td class="num">{{ r.mean_error_px | number: '1.1-1' }}</td>
+              <td class="num">{{ r.maximum_error_px | number: '1.0-0' }}</td>
+              <td class="num">{{ r.errors_over_25px }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </aside>
+
+    <section class="chart card">
+      <div class="chart-head">
+        <h2>Prediction error per frame</h2>
+        <span class="sub">Click to jump · red ticks = reliability warnings · dashed amber = Kalman 90% zone size</span>
+      </div>
+      <svg [attr.viewBox]="'0 0 ' + chart.w + ' ' + chart.h" (click)="chartClick($event)">
+        @for (v of yTicks(); track v) {
+          <line class="grid-line" [attr.x1]="chart.pad.l" [attr.x2]="chart.w - chart.pad.r"
+            [attr.y1]="cy(v)" [attr.y2]="cy(v)" />
+          <text class="tick" [attr.x]="chart.pad.l - 6" [attr.y]="cy(v) + 4" text-anchor="end">{{ v }}</text>
+        }
+        @for (w of t.warning_frames; track w) {
+          <line class="warn-tick" [attr.x1]="cx(w)" [attr.x2]="cx(w)"
+            [attr.y1]="chart.h - chart.pad.b" [attr.y2]="chart.h - chart.pad.b + 8" />
+        }
+        @for (l of chartLines(); track l.colour) {
+          <polyline class="series" [attr.points]="l.points" [attr.stroke]="l.colour" />
+        }
+        @if (zoneLine()) {
+          <polyline class="zone-series" [attr.points]="zoneLine()" />
+        }
+        <line class="cursor" [attr.x1]="cx(index())" [attr.x2]="cx(index())"
+          [attr.y1]="chart.pad.t" [attr.y2]="chart.h - chart.pad.b" />
+        <text class="tick" [attr.x]="chart.pad.l" [attr.y]="chart.h - 2">frame 0</text>
+        <text class="tick" [attr.x]="chart.w - chart.pad.r" [attr.y]="chart.h - 2" text-anchor="end">
+          frame {{ t.frame_count - 1 }}</text>
+      </svg>
+    </section>
+
+    <footer class="limits card">
+      <h2>What this does not show</h2>
+      <ul>
+        @for (l of t.limitations; track l) { <li>{{ l }}</li> }
+      </ul>
+      <p class="sub">Final learning state <code>{{ short(t.final_learning_state_sha256) }}</code>
+        @if (t.source.tracks_sha256) { · tracks <code>{{ short(t.source.tracks_sha256) }}</code> }
+      </p>
+    </footer>
+  </main>
+} @else if (!error()) {
+  <p class="loading">Loading…</p>
+}

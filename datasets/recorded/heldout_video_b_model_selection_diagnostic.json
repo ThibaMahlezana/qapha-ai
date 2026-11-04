@@ -1,0 +1,114 @@
+{
+  "schema": "qapha.model_selection.v1",
+  "stage": "calibration_only_model_selection",
+  "object_id": "0",
+  "cutoff_frame": 49,
+  "calibration_sha256": "9cea498c3c5b1779823b20955786b57f4bb902a103dbf32c855fcb2217e33e35",
+  "tracking_observations_sha256": "f7a828b61972604d46978e8766ecce51a9fb2094b5fd4286d61527714a2f2a5f",
+  "policy": {
+    "method": "walk_forward",
+    "training_samples": 12,
+    "validation_horizon_frames": 3,
+    "origin_step_frames": 3,
+    "minimum_folds": 4,
+    "required_relative_improvement": 0.1,
+    "tie_breaker": "linear"
+  },
+  "fold_count": 8,
+  "folds": [
+    {
+      "training_frames": [
+        13,
+        24
+      ],
+      "validation_frame": 27,
+      "errors_px": {
+        "linear": 14.229323,
+        "quadratic_y": 2.844703
+      }
+    },
+    {
+      "training_frames": [
+        16,
+        27
+      ],
+      "validation_frame": 30,
+      "errors_px": {
+        "linear": 33.297465,
+        "quadratic_y": 15.993826
+      }
+    },
+    {
+      "training_frames": [
+        19,
+        30
+      ],
+      "validation_frame": 33,
+      "errors_px": {
+        "linear": 17.64718,
+        "quadratic_y": 11.423438
+      }
+    },
+    {
+      "training_frames": [
+        22,
+        33
+      ],
+      "validation_frame": 36,
+      "errors_px": {
+        "linear": 9.493526,
+        "quadratic_y": 1.420795
+      }
+    },
+    {
+      "training_frames": [
+        25,
+        36
+      ],
+      "validation_frame": 39,
+      "errors_px": {
+        "linear": 0.393914,
+        "quadratic_y": 19.686498
+      }
+    },
+    {
+      "training_frames": [
+        28,
+        39
+      ],
+      "validation_frame": 42,
+      "errors_px": {
+        "linear": 1.724526,
+        "quadratic_y": 9.173657
+      }
+    },
+    {
+      "training_frames": [
+        31,
+        42
+      ],
+      "validation_frame": 45,
+      "errors_px": {
+        "linear": 23.682188,
+        "quadratic_y": 30.01723
+      }
+    },
+    {
+      "training_frames": [
+        34,
+        45
+      ],
+      "validation_frame": 48,
+      "errors_px": {
+        "linear": 10.458099,
+        "quadratic_y": 6.584431
+      }
+    }
+  ],
+  "mean_validation_error_px": {
+    "linear": 13.865778,
+    "quadratic_y": 12.143072
+  },
+  "selected_model": "quadratic_y",
+  "note": "Selection uses calibration observations only. Validation outcomes are historical calibration frames, not held-out verification frames. Policy validation on Video B is retrospective because Video B verification results are already known."
+}

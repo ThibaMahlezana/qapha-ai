@@ -1,0 +1,915 @@
+{
+  "schema": "qapha.bounce_test_evaluation.v1",
+  "registration_sha256": "033e7270919dbf396d3103b6d59ab81ef6aa191ed8be601ad2f59aee9462593e",
+  "intake_manifest_sha256": "6620a6f1cb060d2d4483c2fb5e4a77743e9d362836a386236a78d45dbfd3e5e8",
+  "eligible_clips": "5 of 7",
+  "hypotheses": {
+    "H1_primary": {
+      "testable": true,
+      "pooled_later_bounce_error_px": {
+        "kalman+reset+floor": 19.9867,
+        "kalman+reset": 17.63575
+      },
+      "clips_improved": "2 of 3",
+      "per_clip_improved": {
+        "drop_050cm": true,
+        "drop_150cm": false,
+        "throw_bounces_1": true
+      },
+      "supported": false
+    },
+    "H2": {
+      "testable": true,
+      "pooled_mean_nll": {
+        "kalman+reset+floor": 6.467821,
+        "kalman+reset": 6.556109
+      },
+      "supported": true
+    },
+    "H3_safety": {
+      "testable": true,
+      "per_clip": {
+        "roll_ramp": {
+          "kalman+reset+floor": 1.167953,
+          "kalman+reset": 1.19308,
+          "within_5_percent": true
+        }
+      },
+      "supported": true
+    }
+  },
+  "clips": [
+    {
+      "clip_id": "H01",
+      "role": "drop_050cm",
+      "group": "bounce",
+      "tracks_sha256": "bb287f6922cbbeff09a89e0ac5e7ac60458afe93df76e47ba294499fe62fc43f",
+      "segment": {
+        "object_id": "0",
+        "objects_tracked": 1,
+        "first_frame": 0,
+        "last_frame": 191,
+        "frames": 192
+      },
+      "eligible": true,
+      "reason": "eligible",
+      "variants": {
+        "kalman": {
+          "evaluated_predictions": 190,
+          "mean_error_px": 8.083127,
+          "mean_nll": 8.820393,
+          "inside90_approx": 0.9,
+          "bounces": [
+            {
+              "bounce_frame": 107,
+              "order": "first",
+              "mean_error_px": 48.233,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 123,
+              "order": "later",
+              "mean_error_px": 39.135,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 136,
+              "order": "later",
+              "mean_error_px": 35.09,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 147,
+              "order": "later",
+              "mean_error_px": 30.942,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 157,
+              "order": "later",
+              "mean_error_px": 26.235,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 165,
+              "order": "later",
+              "mean_error_px": 21.128,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 172,
+              "order": "later",
+              "mean_error_px": 20.421,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 178,
+              "order": "later",
+              "mean_error_px": 17.71,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 183,
+              "order": "later",
+              "mean_error_px": 18.788,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": [
+            39.135,
+            35.09,
+            30.942,
+            26.235,
+            21.128,
+            20.421,
+            17.71,
+            18.788
+          ]
+        },
+        "kalman+reset": {
+          "evaluated_predictions": 190,
+          "mean_error_px": 7.923896,
+          "mean_nll": 8.689603,
+          "inside90_approx": 0.9316,
+          "bounces": [
+            {
+              "bounce_frame": 107,
+              "order": "first",
+              "mean_error_px": 48.895,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 123,
+              "order": "later",
+              "mean_error_px": 37.991,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 136,
+              "order": "later",
+              "mean_error_px": 36.322,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 147,
+              "order": "later",
+              "mean_error_px": 33.013,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 157,
+              "order": "later",
+              "mean_error_px": 26.431,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 165,
+              "order": "later",
+              "mean_error_px": 21.917,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 172,
+              "order": "later",
+              "mean_error_px": 21.331,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 178,
+              "order": "later",
+              "mean_error_px": 18.701,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 183,
+              "order": "later",
+              "mean_error_px": 20.0,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": [
+            37.991,
+            36.322,
+            33.013,
+            26.431,
+            21.917,
+            21.331,
+            18.701,
+            20.0
+          ]
+        },
+        "kalman+reset+floor": {
+          "evaluated_predictions": 190,
+          "mean_error_px": 7.849971,
+          "mean_nll": 7.857679,
+          "inside90_approx": 0.9158,
+          "bounces": [
+            {
+              "bounce_frame": 107,
+              "order": "first",
+              "mean_error_px": 48.895,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 123,
+              "order": "later",
+              "mean_error_px": 9.469,
+              "p_bounce_at_contact": 0.999
+            },
+            {
+              "bounce_frame": 136,
+              "order": "later",
+              "mean_error_px": 11.993,
+              "p_bounce_at_contact": 0.992
+            },
+            {
+              "bounce_frame": 147,
+              "order": "later",
+              "mean_error_px": 17.403,
+              "p_bounce_at_contact": 0.966
+            },
+            {
+              "bounce_frame": 157,
+              "order": "later",
+              "mean_error_px": 11.715,
+              "p_bounce_at_contact": 0.999
+            },
+            {
+              "bounce_frame": 165,
+              "order": "later",
+              "mean_error_px": 23.55,
+              "p_bounce_at_contact": 0.999
+            },
+            {
+              "bounce_frame": 172,
+              "order": "later",
+              "mean_error_px": 35.379,
+              "p_bounce_at_contact": 0.999
+            },
+            {
+              "bounce_frame": 178,
+              "order": "later",
+              "mean_error_px": 34.906,
+              "p_bounce_at_contact": 0.999
+            },
+            {
+              "bounce_frame": 183,
+              "order": "later",
+              "mean_error_px": 37.723,
+              "p_bounce_at_contact": 0.999
+            }
+          ],
+          "later_bounce_errors": [
+            9.469,
+            11.993,
+            17.403,
+            11.715,
+            23.55,
+            35.379,
+            34.906,
+            37.723
+          ]
+        },
+        "constant_velocity_2pt": {
+          "evaluated_predictions": 190,
+          "mean_error_px": 7.854997
+        }
+      }
+    },
+    {
+      "clip_id": "H02",
+      "role": "drop_100cm",
+      "group": "bounce",
+      "tracks_sha256": "939e41e95e0a2c76a8e8382967e5478cf2c3e250e3677aae36bb3a1cac7be084",
+      "segment": {
+        "object_id": "0",
+        "objects_tracked": 1,
+        "first_frame": 0,
+        "last_frame": 185,
+        "frames": 186
+      },
+      "eligible": true,
+      "reason": "eligible",
+      "variants": {
+        "kalman": {
+          "evaluated_predictions": 184,
+          "mean_error_px": 1.300032,
+          "mean_nll": 5.932383,
+          "inside90_approx": 0.9891,
+          "bounces": [
+            {
+              "bounce_frame": 173,
+              "order": "first",
+              "mean_error_px": 28.366,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": []
+        },
+        "kalman+reset": {
+          "evaluated_predictions": 184,
+          "mean_error_px": 1.274817,
+          "mean_nll": 5.888441,
+          "inside90_approx": 0.9891,
+          "bounces": [
+            {
+              "bounce_frame": 173,
+              "order": "first",
+              "mean_error_px": 27.297,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": []
+        },
+        "kalman+reset+floor": {
+          "evaluated_predictions": 184,
+          "mean_error_px": 1.274817,
+          "mean_nll": 5.888501,
+          "inside90_approx": 0.9891,
+          "bounces": [
+            {
+              "bounce_frame": 173,
+              "order": "first",
+              "mean_error_px": 27.297,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": []
+        },
+        "constant_velocity_2pt": {
+          "evaluated_predictions": 184,
+          "mean_error_px": 1.262416
+        }
+      }
+    },
+    {
+      "clip_id": "H03",
+      "role": "drop_150cm",
+      "group": "bounce",
+      "tracks_sha256": "1adb05833b2c22b67406f9573466f9c9237500cc21afc161c3f4dab7c4ac6d17",
+      "segment": {
+        "object_id": "0",
+        "objects_tracked": 1,
+        "first_frame": 107,
+        "last_frame": 253,
+        "frames": 147
+      },
+      "eligible": true,
+      "reason": "eligible",
+      "variants": {
+        "kalman": {
+          "evaluated_predictions": 145,
+          "mean_error_px": 4.781581,
+          "mean_nll": 6.645334,
+          "inside90_approx": 0.9448,
+          "bounces": [
+            {
+              "bounce_frame": 29,
+              "order": "first",
+              "mean_error_px": 24.315,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 58,
+              "order": "later",
+              "mean_error_px": 20.579,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 82,
+              "order": "later",
+              "mean_error_px": 20.302,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 102,
+              "order": "later",
+              "mean_error_px": 17.999,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 120,
+              "order": "later",
+              "mean_error_px": 16.924,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 134,
+              "order": "later",
+              "mean_error_px": 15.494,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": [
+            20.579,
+            20.302,
+            17.999,
+            16.924,
+            15.494
+          ]
+        },
+        "kalman+reset": {
+          "evaluated_predictions": 145,
+          "mean_error_px": 4.651312,
+          "mean_nll": 6.637177,
+          "inside90_approx": 0.9448,
+          "bounces": [
+            {
+              "bounce_frame": 29,
+              "order": "first",
+              "mean_error_px": 22.982,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 58,
+              "order": "later",
+              "mean_error_px": 20.792,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 82,
+              "order": "later",
+              "mean_error_px": 20.865,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 102,
+              "order": "later",
+              "mean_error_px": 17.02,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 120,
+              "order": "later",
+              "mean_error_px": 16.924,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 134,
+              "order": "later",
+              "mean_error_px": 15.494,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": [
+            20.792,
+            20.865,
+            17.02,
+            16.924,
+            15.494
+          ]
+        },
+        "kalman+reset+floor": {
+          "evaluated_predictions": 145,
+          "mean_error_px": 8.005569,
+          "mean_nll": 7.186771,
+          "inside90_approx": 0.8897,
+          "bounces": [
+            {
+              "bounce_frame": 29,
+              "order": "first",
+              "mean_error_px": 22.982,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 58,
+              "order": "later",
+              "mean_error_px": 34.943,
+              "p_bounce_at_contact": 0.999
+            },
+            {
+              "bounce_frame": 82,
+              "order": "later",
+              "mean_error_px": 42.687,
+              "p_bounce_at_contact": 0.999
+            },
+            {
+              "bounce_frame": 102,
+              "order": "later",
+              "mean_error_px": 33.102,
+              "p_bounce_at_contact": 0.999
+            },
+            {
+              "bounce_frame": 120,
+              "order": "later",
+              "mean_error_px": 35.98,
+              "p_bounce_at_contact": 0.999
+            },
+            {
+              "bounce_frame": 134,
+              "order": "later",
+              "mean_error_px": 50.586,
+              "p_bounce_at_contact": 0.999
+            }
+          ],
+          "later_bounce_errors": [
+            34.943,
+            42.687,
+            33.102,
+            35.98,
+            50.586
+          ]
+        },
+        "constant_velocity_2pt": {
+          "evaluated_predictions": 145,
+          "mean_error_px": 4.595821
+        }
+      }
+    },
+    {
+      "clip_id": "H04",
+      "role": "roll_ramp",
+      "group": "rolling_safety_check",
+      "tracks_sha256": "93f7fd68ab5ca034818767e86f48771a9fb3de1a9f2958e58dd1c0284be5de3f",
+      "segment": {
+        "object_id": "0",
+        "objects_tracked": 1,
+        "first_frame": 0,
+        "last_frame": 324,
+        "frames": 325
+      },
+      "eligible": true,
+      "reason": "eligible",
+      "variants": {
+        "kalman": {
+          "evaluated_predictions": 323,
+          "mean_error_px": 1.206511,
+          "mean_nll": 5.804221,
+          "inside90_approx": 0.9969,
+          "bounces": [
+            {
+              "bounce_frame": 182,
+              "order": "first",
+              "mean_error_px": 8.335,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 186,
+              "order": "later",
+              "mean_error_px": 7.436,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 190,
+              "order": "later",
+              "mean_error_px": 4.752,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 194,
+              "order": "later",
+              "mean_error_px": 3.103,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 231,
+              "order": "later",
+              "mean_error_px": 3.065,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": [
+            7.436,
+            4.752,
+            3.103,
+            3.065
+          ]
+        },
+        "kalman+reset": {
+          "evaluated_predictions": 323,
+          "mean_error_px": 1.19308,
+          "mean_nll": 5.803966,
+          "inside90_approx": 0.9969,
+          "bounces": [
+            {
+              "bounce_frame": 182,
+              "order": "first",
+              "mean_error_px": 8.335,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 186,
+              "order": "later",
+              "mean_error_px": 7.436,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 190,
+              "order": "later",
+              "mean_error_px": 4.752,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 194,
+              "order": "later",
+              "mean_error_px": 3.103,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 231,
+              "order": "later",
+              "mean_error_px": 3.065,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": [
+            7.436,
+            4.752,
+            3.103,
+            3.065
+          ]
+        },
+        "kalman+reset+floor": {
+          "evaluated_predictions": 323,
+          "mean_error_px": 1.167953,
+          "mean_nll": 5.812152,
+          "inside90_approx": 0.9969,
+          "bounces": [
+            {
+              "bounce_frame": 182,
+              "order": "first",
+              "mean_error_px": 8.335,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 186,
+              "order": "later",
+              "mean_error_px": 6.364,
+              "p_bounce_at_contact": 0.084
+            },
+            {
+              "bounce_frame": 190,
+              "order": "later",
+              "mean_error_px": 3.41,
+              "p_bounce_at_contact": 0.15
+            },
+            {
+              "bounce_frame": 194,
+              "order": "later",
+              "mean_error_px": 2.46,
+              "p_bounce_at_contact": 0.431
+            },
+            {
+              "bounce_frame": 231,
+              "order": "later",
+              "mean_error_px": 3.065,
+              "p_bounce_at_contact": 0.002
+            }
+          ],
+          "later_bounce_errors": [
+            6.364,
+            3.41,
+            2.46,
+            3.065
+          ]
+        },
+        "constant_velocity_2pt": {
+          "evaluated_predictions": 323,
+          "mean_error_px": 1.20083
+        }
+      }
+    },
+    {
+      "clip_id": "H05",
+      "role": "roll_wall",
+      "group": "excluded",
+      "tracks_sha256": null,
+      "eligible": false,
+      "reason": "excluded: Analysed in test v1 (H3 failure recorded); now development data"
+    },
+    {
+      "clip_id": "H06",
+      "role": "throw_bounces_1",
+      "group": "bounce",
+      "tracks_sha256": "6f9abaac688902e399396c49299462e123efb64c3445e3a619eb6e5b0c1d8135",
+      "segment": {
+        "object_id": "0",
+        "objects_tracked": 1,
+        "first_frame": 167,
+        "last_frame": 319,
+        "frames": 153
+      },
+      "eligible": true,
+      "reason": "eligible",
+      "variants": {
+        "kalman": {
+          "evaluated_predictions": 151,
+          "mean_error_px": 4.41571,
+          "mean_nll": 6.216201,
+          "inside90_approx": 0.9338,
+          "bounces": [
+            {
+              "bounce_frame": 65,
+              "order": "first",
+              "mean_error_px": 10.949,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 77,
+              "order": "later",
+              "mean_error_px": 9.35,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 87,
+              "order": "later",
+              "mean_error_px": 9.336,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 96,
+              "order": "later",
+              "mean_error_px": 7.323,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 104,
+              "order": "later",
+              "mean_error_px": 6.163,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 116,
+              "order": "later",
+              "mean_error_px": 5.079,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 121,
+              "order": "later",
+              "mean_error_px": 4.465,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 129,
+              "order": "later",
+              "mean_error_px": 4.198,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": [
+            9.35,
+            9.336,
+            7.323,
+            6.163,
+            5.079,
+            4.465,
+            4.198
+          ]
+        },
+        "kalman+reset": {
+          "evaluated_predictions": 151,
+          "mean_error_px": 4.41571,
+          "mean_nll": 6.216201,
+          "inside90_approx": 0.9338,
+          "bounces": [
+            {
+              "bounce_frame": 65,
+              "order": "first",
+              "mean_error_px": 10.949,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 77,
+              "order": "later",
+              "mean_error_px": 9.35,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 87,
+              "order": "later",
+              "mean_error_px": 9.336,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 96,
+              "order": "later",
+              "mean_error_px": 7.323,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 104,
+              "order": "later",
+              "mean_error_px": 6.163,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 116,
+              "order": "later",
+              "mean_error_px": 5.079,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 121,
+              "order": "later",
+              "mean_error_px": 4.465,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 129,
+              "order": "later",
+              "mean_error_px": 4.198,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": [
+            9.35,
+            9.336,
+            7.323,
+            6.163,
+            5.079,
+            4.465,
+            4.198
+          ]
+        },
+        "kalman+reset+floor": {
+          "evaluated_predictions": 151,
+          "mean_error_px": 3.765678,
+          "mean_nll": 6.13706,
+          "inside90_approx": 0.9536,
+          "bounces": [
+            {
+              "bounce_frame": 65,
+              "order": "first",
+              "mean_error_px": 10.949,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 77,
+              "order": "later",
+              "mean_error_px": 6.569,
+              "p_bounce_at_contact": 0.905
+            },
+            {
+              "bounce_frame": 87,
+              "order": "later",
+              "mean_error_px": 2.092,
+              "p_bounce_at_contact": 0.2
+            },
+            {
+              "bounce_frame": 96,
+              "order": "later",
+              "mean_error_px": 1.972,
+              "p_bounce_at_contact": 0.358
+            },
+            {
+              "bounce_frame": 104,
+              "order": "later",
+              "mean_error_px": 2.815,
+              "p_bounce_at_contact": 0.555
+            },
+            {
+              "bounce_frame": 116,
+              "order": "later",
+              "mean_error_px": 1.774,
+              "p_bounce_at_contact": 0.341
+            },
+            {
+              "bounce_frame": 121,
+              "order": "later",
+              "mean_error_px": 1.725,
+              "p_bounce_at_contact": 0.369
+            },
+            {
+              "bounce_frame": 129,
+              "order": "later",
+              "mean_error_px": 3.351,
+              "p_bounce_at_contact": 0.27
+            }
+          ],
+          "later_bounce_errors": [
+            6.569,
+            2.092,
+            1.972,
+            2.815,
+            1.774,
+            1.725,
+            3.351
+          ]
+        },
+        "constant_velocity_2pt": {
+          "evaluated_predictions": 151,
+          "mean_error_px": 4.270449
+        }
+      }
+    },
+    {
+      "clip_id": "H07",
+      "role": "throw_bounces_2",
+      "group": "bounce",
+      "tracks_sha256": "8373937a4c1c7a45ac8bcec2fa219a62e3ab89f840dc010bbfa9be4e895cd6e0",
+      "segment": null,
+      "eligible": false,
+      "reason": "0 tracked objects"
+    }
+  ],
+  "limitations": [
+    "Clips were recompressed by WhatsApp (reduced resolution).",
+    "The clip owner watched each clip once to label it; the method developer has not viewed any frame.",
+    "Development data (videos C, E and a synthetic ball) shaped the method; this test is its first independent check.",
+    "No two-ball or stationary clip in this set; Video D served as the stationary control during development.",
+    "Pixel errors are in image space; scale differs between clips.",
+    "Test v1 (report d9d817b7) analysed only the first 90 frames, which contained no drops; v2 changes the protocol only, the method code is unchanged."
+  ],
+  "report_sha256": "edc5e57d424637cc01256956f456f6bd447bf0628d67ff771a01f45b0669236e"
+}

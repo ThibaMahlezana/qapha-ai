@@ -1,0 +1,55 @@
+{
+  "schema": "qapha.contact_audit.v1",
+  "stage": "post_prediction_evaluation_only",
+  "object_id": "1",
+  "forecast_cutoff_frame": 49,
+  "reviewed_edge_id": "edge_0",
+  "audits": [
+    {
+      "predicted_impact_frame": 60.050853,
+      "predicted_impact_x_px": 599.344077,
+      "audit_frame_window": [
+        54,
+        66
+      ],
+      "observed_frame_count": 13,
+      "observed_at_nearest_frame": {
+        "frame_index": 60,
+        "center_px": [
+          587.5,
+          553.0
+        ],
+        "bottom_center_px": [
+          587.5,
+          583
+        ]
+      },
+      "closest_bottom_to_edge": {
+        "frame_index": 60,
+        "center_px": [
+          587.5,
+          553.0
+        ],
+        "bottom_center_px": [
+          587.5,
+          583
+        ],
+        "half_height_px": 30.0,
+        "center_edge_distance_px": 27.0,
+        "bottom_edge_distance_px": 3.0
+      },
+      "vertical_down_to_up_reversals": [
+        {
+          "frame_index": 61,
+          "delta_before_px": 34.5,
+          "delta_after_px": -30.0,
+          "bottom_edge_distance_px": 38.0,
+          "near_visual_edge": false
+        }
+      ],
+      "any_reversal_near_edge": false,
+      "physical_collision_verified": false
+    }
+  ],
+  "limitations": "SAM box geometry and 2D proximity do not establish 3D contact. A motion reversal near a visual edge is suggestive, not proof of collision. Future verification observations were used only for this audit, never to update the frozen forecast."
+}

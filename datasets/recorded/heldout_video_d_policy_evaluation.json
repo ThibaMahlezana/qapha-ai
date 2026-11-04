@@ -1,0 +1,463 @@
+{
+  "schema": "qapha.video_d_policy_evaluation.v1",
+  "registration_sha256": "c1c7a8c22a648673120d248be23ff3acbd074c7a40c8c2e2a8d6c61acf4f4381",
+  "video_sha256": "9104ab9da8a56e9b26e8450394e38431bb69914a5afe67146ed1c700a4f2eb33",
+  "stage": "registered_sequential_replay",
+  "frames_processed": 50,
+  "evaluated_predictions": 48,
+  "warning_frames": [],
+  "decisions_changed": [],
+  "baseline": {
+    "mean_error_px": 0.010417,
+    "maximum_error_px": 0.5,
+    "errors_over_25px": 0
+  },
+  "candidate": {
+    "mean_error_px": 0.010417,
+    "maximum_error_px": 0.5,
+    "errors_over_25px": 0
+  },
+  "mean_error_difference_px": 0.0,
+  "policy_activated": false,
+  "interpretation": "Policy effectiveness not exercised",
+  "records": [
+    {
+      "frame": 2,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "ccd40bb50c26f455e9ef3efc4531ba085040f7622242d4cf38c91e1f542870de"
+    },
+    {
+      "frame": 3,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "8df8482e81b23b95e1de3c37b6194a464e33c5e7096fabe4f9f0a4068fa4bbf9"
+    },
+    {
+      "frame": 4,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "f6ff57333ea56a950ea93d4ad154659e08458c9bef0faf557521933b792262a0"
+    },
+    {
+      "frame": 5,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "6b9bb04ed3767714a1344961dd251c964575ef8918a1e9f3888c564ca5e3b565"
+    },
+    {
+      "frame": 6,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "330e690e8c16d2e87aa27138c1f9673f9ee7c25806c96551c1afe211c23ab5ec"
+    },
+    {
+      "frame": 7,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "bb9bda6b2a1d08d38710b6fc6b7d3646d1a483982c4fd0cd11943e819e960fbc"
+    },
+    {
+      "frame": 8,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "0386f92512a451023e5332a5fc2192d02c97185d2e4526952d76634049610eab"
+    },
+    {
+      "frame": 9,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "9a930d68ab0a208108c2ab16c4fbb1b5ac361a9d0ed77855c97f516fad0a4b29"
+    },
+    {
+      "frame": 10,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "8942eea0860b936ed92c1e266860f12a8eb24fb165006f873c2d70e8d95a06b9"
+    },
+    {
+      "frame": 11,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "269264c315e456c140ce89dd1b972cc5c7b55d9f723a8190a7a752c98ca317e6"
+    },
+    {
+      "frame": 12,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "74fcc53fd375323452af955a470931670d7736168f59e56f74e0c2e7628cc62f"
+    },
+    {
+      "frame": 13,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "019d2d6005df7b8298159d95e1787f027c0b2684dd853a45d6db8b0155955ca2"
+    },
+    {
+      "frame": 14,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "f9109de0a5d32b2d26d468aef724ef3d4d24ddcbcc9de01b013a8b2bfb3d4794"
+    },
+    {
+      "frame": 15,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "baa364cdf60e366e4a6d387d3375f4f8a76f01cf62d92086c0670babab5a59d7"
+    },
+    {
+      "frame": 16,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "2f5b29cbf69ab6f5f934a6cbf95fb489f748721078033ff28d3a6e37d5f8d29b"
+    },
+    {
+      "frame": 17,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "c52bd8ce06f87eadf5bb3d58980e25da7d9c626279576c0f78298c891aafb8ec"
+    },
+    {
+      "frame": 18,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "df73d269d3faba40ad477e7f10355e84d13484aaad63e653b26730d64613845f"
+    },
+    {
+      "frame": 19,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "2f7d04651adc802addfc88cc92233a4e99eff076b183262e4e66b49d7ff03cad"
+    },
+    {
+      "frame": 20,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "e5a78563464af122504edfbd165f50edcd640f2d3d8ad5e7a7b42cef6e1383ba"
+    },
+    {
+      "frame": 21,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "340b36ae52583cea7e073bc2ca6d85fbe2482fa1f7f219d99fa3a9b2b482ef6f"
+    },
+    {
+      "frame": 22,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "b4b6f531e89a792429694116539170d45a5848311b8cf89f68216e038157c8ae"
+    },
+    {
+      "frame": 23,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "6adcb33a88d47d790bf7769da9da31ee10cb5ddeae16a46055a86f4e9cd116a2"
+    },
+    {
+      "frame": 24,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "e48d9f71e29fb737ce373a5809c4ef1ba9670ac2e5605378ed228314f7abd56a"
+    },
+    {
+      "frame": 25,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "1c26f6a6906a20a9d416e2cf22c8a317e76bd89d77c62c04cda5262fecbaf5a4"
+    },
+    {
+      "frame": 26,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "6a1a8ed9d40abc41ca46c92fd0b667ba9c5bb1d54fa41f45243fe3947cee34dd"
+    },
+    {
+      "frame": 27,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "a5300115478a233f4da3a1730214444e2ce9e4d233b2246a78030f909ac1efe2"
+    },
+    {
+      "frame": 28,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "c0bc49f055e3a7537f699d8cfa1e5225ef1c24211d1b2b09f7f6c0b4a4c61a0b"
+    },
+    {
+      "frame": 29,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "1f6bd8717a312567300cc91ec14acb41ad06d8a5bb177fc84713d07267275fe0"
+    },
+    {
+      "frame": 30,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "1d44f9dddcc2e0df3e4fd4aa5489a9a1f78a404924d5787023714e4bc7e88ea2"
+    },
+    {
+      "frame": 31,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "86672f8ce399f2edeb137f348a66fb8ec06fe81ac22c0277a672ba3013775e8b"
+    },
+    {
+      "frame": 32,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "7085b25be67dd90f616e2b19ce7179b7b772fd3f245f9431e263bd859c09d120"
+    },
+    {
+      "frame": 33,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "52776cb09358536f2c68fd403cdf65252edefb8585f91b347aacaa34dd05b5bf"
+    },
+    {
+      "frame": 34,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "02c606cc8d864fb95c525fc16afac09d2b856e9cc667869e4462ade67d636314"
+    },
+    {
+      "frame": 35,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "30543a3e108fda26bd3fd792213cbb6cc3b316a7559f3e3965d6a1f4fb8fd091"
+    },
+    {
+      "frame": 36,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "335f9197eeec886c0b86de996ba8f573f1e6d547c313f0410789a1962edd2ddf"
+    },
+    {
+      "frame": 37,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "84fdc6f493a9941599486af7897cabc6cb2a504d4a517be54bd343f0e6788dba"
+    },
+    {
+      "frame": 38,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "190671d8d29464b6fa112f9426a556f55ad67a32f93c0e28df27ab0fa4433a88"
+    },
+    {
+      "frame": 39,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "bab89ae8e3f4ff319575323e53f9034a345bc17509b5389486defb228d455aa5"
+    },
+    {
+      "frame": 40,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "3111e650374a45706d2a24486db0c035f8a1bd3dda9656f689e6065bcf0ced5b"
+    },
+    {
+      "frame": 41,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "8be8ced3bdeab4c223b6fbb6103d13e88e3c735936368800339b123da7b29619"
+    },
+    {
+      "frame": 42,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "ce4a667d7c906a48efefccd9264b3a2c0f4ae9fe6ba34a921928c9090a915a42"
+    },
+    {
+      "frame": 43,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "d19af5ce7915a988cf5a54b1bf685e8183445317db04021be9020b03370bbaf6"
+    },
+    {
+      "frame": 44,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "ed3b9c16668798cf04a26736e8475b9370bf8a990d81f32e6f0e8a342d55a417"
+    },
+    {
+      "frame": 45,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "674f3c21ec2244b228baa8ab8aaa397e1d092d1bb32ebdf0fef4c309cf52456b"
+    },
+    {
+      "frame": 46,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "422be97011e06a472f3de501d8f21cafb803642b00194d74afefdb560b32abbb"
+    },
+    {
+      "frame": 47,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "14ba2a4239325fa5f13a17a36e97946a41d37dd005118186069fecf3a5d01516"
+    },
+    {
+      "frame": 48,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.0,
+      "candidate_error_px": 0.0,
+      "prediction_sha256": "54ebb76d39deec4259ac5c0dee5c48c07703521c19efa7ae0621dfdfc1d869ac"
+    },
+    {
+      "frame": 49,
+      "warning": false,
+      "baseline_model": "persistence",
+      "candidate_model": "persistence",
+      "baseline_error_px": 0.5,
+      "candidate_error_px": 0.5,
+      "prediction_sha256": "0d1c9ab3b58b98f24a8f49881ce012cf42b72c7c7bb11d3d226905611f41dc93"
+    }
+  ],
+  "limitations": [
+    "Single video and tracked object.",
+    "Policy decisions do not alter the baseline learner's updates.",
+    "Tracking precision is not physical movement ground truth.",
+    "No generalization established."
+  ]
+}

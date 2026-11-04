@@ -1,12 +1,13 @@
 .env
 .venv/
+venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
 *.egg-info/
-datasets/recorded/*
-!datasets/recorded/.gitkeep
 datasets/public/*
 !datasets/public/.gitkeep
 evaluation/results/*
 !evaluation/results/.gitkeep
+# Experiment evidence in datasets/recorded and datasets/fresh_* IS committed:
+# the sealed registrations, tracks and reports are the project's results.

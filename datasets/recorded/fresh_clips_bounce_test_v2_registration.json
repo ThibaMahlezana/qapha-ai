@@ -1,0 +1,117 @@
+{
+  "schema": "qapha.bounce_test_registration.v1",
+  "experiment_id": "fresh_clips_floor_memory_v2",
+  "registered_at_utc_self_reported": "2026-11-04T19:51:55+00:00",
+  "clip_registry_sha256": "14a0223fd0fa8884dc38d845f717b929801430fa1a0e7de1fb2f4408381b5b54",
+  "clips": [
+    {
+      "clip_id": "H01",
+      "file": "drop_050cm.mp4",
+      "role": "drop_050cm",
+      "sha256": "b210fd5cccd0ac49230d5b008e4523adee23567bba879d5793205135776f7548",
+      "group": "bounce"
+    },
+    {
+      "clip_id": "H02",
+      "file": "drop_100cm.mp4",
+      "role": "drop_100cm",
+      "sha256": "da642129395de0f8f038cd2503c9b81394484acde01751d4976a1b3a2a8a6750",
+      "group": "bounce"
+    },
+    {
+      "clip_id": "H03",
+      "file": "drop_150cm.mp4",
+      "role": "drop_150cm",
+      "sha256": "36c157d2dcd13b09d1b2c29ffe59b150277bdb3d2ff1bc01552f08bacf5b4bcd",
+      "group": "bounce"
+    },
+    {
+      "clip_id": "H04",
+      "file": "roll_ramp.mp4",
+      "role": "roll_ramp",
+      "sha256": "b057349701e0bf5d0f3f4cc73e6195979b21493fb6cffd320e6c712d20440a09",
+      "group": "rolling_safety_check"
+    },
+    {
+      "clip_id": "H05",
+      "file": "roll_wall.mp4",
+      "role": "roll_wall",
+      "sha256": "0f1024d4594b1d4452b16449b0e42dedc16e805660a19418c675b6b8f3c0ce7a",
+      "group": "excluded",
+      "excluded_reason": "Analysed in test v1 (H3 failure recorded); now development data"
+    },
+    {
+      "clip_id": "H06",
+      "file": "throw_bounces_1.mp4",
+      "role": "throw_bounces_1",
+      "sha256": "abf2202ff61bfacc3898e0ab08cb76881b22257efca7484b6c91867a463f2eed",
+      "group": "bounce"
+    },
+    {
+      "clip_id": "H07",
+      "file": "throw_bounces_2.mp4",
+      "role": "throw_bounces_2",
+      "sha256": "5b28561da7ebcb2fa92c8180d56abc79e119f8a077ba6676bd3a6aa7e3e845e1",
+      "group": "bounce"
+    }
+  ],
+  "locked_code_sha256": {
+    "bounce_aware": "f91f4e1315c4d9fc83987bba47b351d85128eab0bbabfe84e0dcc27b31678aa2",
+    "probabilistic": "e16540c74f6fd3667d950f0504db75302a7e35f837721f7d35a3759d9eae1b76"
+  },
+  "settings": {
+    "q": 50.0,
+    "r": 4.0,
+    "restitution": 0.6,
+    "reset_d2": 30.0,
+    "min_rise_px": 1.0
+  },
+  "compared_variants": [
+    "kalman",
+    "kalman+reset",
+    "kalman+reset+floor"
+  ],
+  "also_reported": [
+    "constant_velocity_2pt"
+  ],
+  "analysis": {
+    "frames_per_clip": "all frames",
+    "segment_rule": "longest_gap_free_run_min_30",
+    "sam_concept": "blue ball",
+    "target_record_before_tracking": true,
+    "eligibility": "exactly one tracked object present in every analysed frame; otherwise reported as ineligible, never silently dropped",
+    "bounce_definition": "bottom edge goes down then up by more than 1 px; frames b, b+1, b+2 scored"
+  },
+  "hypotheses": {
+    "H1_primary": {
+      "claim": "kalman+reset+floor has lower error than kalman+reset at LATER bounces",
+      "metric": "mean error over frames b..b+2 of later bounces",
+      "supported_if": "lower when pooled over all eligible bounce clips AND lower in a majority of clips that have at least one later bounce",
+      "clips_without_later_bounce": "reported, excluded from H1"
+    },
+    "H2": {
+      "claim": "floor memory lowers the overall surprise score",
+      "metric": "mean NLL over all predictions",
+      "supported_if": "lower pooled over all eligible clips"
+    },
+    "H3_safety": {
+      "claim": "floor memory does not harm rolling clips",
+      "metric": "mean error on rolling_safety_check clips",
+      "supported_if": "kalman+reset+floor within 5% of kalman+reset on each rolling clip"
+    }
+  },
+  "reporting": {
+    "report_every_clip_and_variant": true,
+    "report_unfavourable_results": true,
+    "no_parameter_tuning_after_tracking": true
+  },
+  "known_limitations": [
+    "Clips were recompressed by WhatsApp (reduced resolution).",
+    "The clip owner watched each clip once to label it; the method developer has not viewed any frame.",
+    "Development data (videos C, E and a synthetic ball) shaped the method; this test is its first independent check.",
+    "No two-ball or stationary clip in this set; Video D served as the stationary control during development.",
+    "Pixel errors are in image space; scale differs between clips.",
+    "Test v1 (report d9d817b7) analysed only the first 90 frames, which contained no drops; v2 changes the protocol only, the method code is unchanged."
+  ],
+  "registration_sha256": "033e7270919dbf396d3103b6d59ab81ef6aa191ed8be601ad2f59aee9462593e"
+}

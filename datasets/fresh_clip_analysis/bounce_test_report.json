@@ -1,0 +1,232 @@
+{
+  "schema": "qapha.bounce_test_evaluation.v1",
+  "registration_sha256": "0605849bddae79b07f4f55ddc4b84ed89080407e27b2295e5df7201114aa7aec",
+  "intake_manifest_sha256": "c029d83d6d9ef238d621e76e268836d2f7da748cf58a9464f7b75940f02e6dda",
+  "eligible_clips": "3 of 7",
+  "hypotheses": {
+    "H1_primary": {
+      "testable": false,
+      "reason": "no eligible bounce clip has a later bounce"
+    },
+    "H2": {
+      "testable": true,
+      "pooled_mean_nll": {
+        "kalman+reset+floor": 5.844468,
+        "kalman+reset": 5.799667
+      },
+      "supported": false
+    },
+    "H3_safety": {
+      "testable": true,
+      "per_clip": {
+        "roll_wall": {
+          "kalman+reset+floor": 2.01677,
+          "kalman+reset": 1.902643,
+          "within_5_percent": false
+        }
+      },
+      "supported": false
+    }
+  },
+  "clips": [
+    {
+      "clip_id": "F01",
+      "role": "drop_050cm",
+      "group": "bounce",
+      "eligible": true,
+      "reason": "eligible",
+      "tracks_sha256": "e9123f334f0185f4b11b48d0fe4f05f7b842759afb4244d6e52469291849d541",
+      "variants": {
+        "kalman": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 0.643799,
+          "mean_nll": 5.729822,
+          "inside90_approx": 1.0,
+          "bounces": [],
+          "later_bounce_errors": []
+        },
+        "kalman+reset": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 0.643799,
+          "mean_nll": 5.729822,
+          "inside90_approx": 1.0,
+          "bounces": [],
+          "later_bounce_errors": []
+        },
+        "kalman+reset+floor": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 0.643799,
+          "mean_nll": 5.729822,
+          "inside90_approx": 1.0,
+          "bounces": [],
+          "later_bounce_errors": []
+        },
+        "constant_velocity_2pt": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 0.668009
+        }
+      }
+    },
+    {
+      "clip_id": "F02",
+      "role": "drop_100cm",
+      "group": "bounce",
+      "eligible": true,
+      "reason": "eligible",
+      "tracks_sha256": "2296bce6ba4cf10bb6ccb338e8a850623daf126d509d0b9bb4a4bdad8c469b3e",
+      "variants": {
+        "kalman": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 0.510546,
+          "mean_nll": 5.728,
+          "inside90_approx": 1.0,
+          "bounces": [],
+          "later_bounce_errors": []
+        },
+        "kalman+reset": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 0.510546,
+          "mean_nll": 5.728,
+          "inside90_approx": 1.0,
+          "bounces": [],
+          "later_bounce_errors": []
+        },
+        "kalman+reset+floor": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 0.510546,
+          "mean_nll": 5.728,
+          "inside90_approx": 1.0,
+          "bounces": [],
+          "later_bounce_errors": []
+        },
+        "constant_velocity_2pt": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 0.509955
+        }
+      }
+    },
+    {
+      "clip_id": "F03",
+      "role": "drop_150cm",
+      "group": "bounce",
+      "eligible": false,
+      "reason": "0 tracked objects",
+      "tracks_sha256": "a54ed2e73badcdb32638b779e2fdd64fbd0330c5e2b22c0e7d4bcdb441b7a3ae"
+    },
+    {
+      "clip_id": "F07",
+      "role": "roll_ramp",
+      "group": "rolling_safety_check",
+      "eligible": false,
+      "reason": "1 frames without the ball",
+      "tracks_sha256": "67b9e5f19a8e2d326bf299515bfa2876d218ed598a612e0fb5411d0fa58e5a7a"
+    },
+    {
+      "clip_id": "F06",
+      "role": "roll_wall",
+      "group": "rolling_safety_check",
+      "eligible": true,
+      "reason": "eligible",
+      "tracks_sha256": "c5a1f8ea0b83e4a6e75725dc1b0583cfe34af597411b546a23a4cac9ce06c337",
+      "variants": {
+        "kalman": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 1.902643,
+          "mean_nll": 5.941179,
+          "inside90_approx": 0.9886,
+          "bounces": [
+            {
+              "bounce_frame": 45,
+              "order": "first",
+              "mean_error_px": 14.57,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 49,
+              "order": "later",
+              "mean_error_px": 6.006,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": [
+            6.006
+          ]
+        },
+        "kalman+reset": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 1.902643,
+          "mean_nll": 5.941179,
+          "inside90_approx": 0.9886,
+          "bounces": [
+            {
+              "bounce_frame": 45,
+              "order": "first",
+              "mean_error_px": 14.57,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 49,
+              "order": "later",
+              "mean_error_px": 6.006,
+              "p_bounce_at_contact": null
+            }
+          ],
+          "later_bounce_errors": [
+            6.006
+          ]
+        },
+        "kalman+reset+floor": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 2.01677,
+          "mean_nll": 6.075583,
+          "inside90_approx": 0.9886,
+          "bounces": [
+            {
+              "bounce_frame": 45,
+              "order": "first",
+              "mean_error_px": 14.57,
+              "p_bounce_at_contact": null
+            },
+            {
+              "bounce_frame": 49,
+              "order": "later",
+              "mean_error_px": 5.273,
+              "p_bounce_at_contact": 0.53
+            }
+          ],
+          "later_bounce_errors": [
+            5.273
+          ]
+        },
+        "constant_velocity_2pt": {
+          "evaluated_predictions": 88,
+          "mean_error_px": 1.886539
+        }
+      }
+    },
+    {
+      "clip_id": "F04",
+      "role": "throw_bounces_1",
+      "group": "bounce",
+      "eligible": false,
+      "reason": "0 tracked objects",
+      "tracks_sha256": "a54ed2e73badcdb32638b779e2fdd64fbd0330c5e2b22c0e7d4bcdb441b7a3ae"
+    },
+    {
+      "clip_id": "F05",
+      "role": "throw_bounces_2",
+      "group": "bounce",
+      "eligible": false,
+      "reason": "0 tracked objects",
+      "tracks_sha256": "a54ed2e73badcdb32638b779e2fdd64fbd0330c5e2b22c0e7d4bcdb441b7a3ae"
+    }
+  ],
+  "limitations": [
+    "Clips were recompressed by WhatsApp (reduced resolution).",
+    "The clip owner watched each clip once to label it; the method developer has not viewed any frame.",
+    "Development data (videos C, E and a synthetic ball) shaped the method; this test is its first independent check.",
+    "No two-ball or stationary clip in this set; Video D served as the stationary control during development.",
+    "Pixel errors are in image space; scale differs between clips."
+  ],
+  "report_sha256": "d9d817b7b2554f997ceb43870f91fc821c2d81d40ad51a48eb2296f0ee24df16"
+}

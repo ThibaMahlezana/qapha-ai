@@ -1,0 +1,78 @@
+{
+  "schema": "qapha.context_forecast.v1",
+  "object_id": "1",
+  "cutoff_frame": 49,
+  "target_frame": 70,
+  "policy": "post_reversal_linear",
+  "latest_observed_reversal_frame": 41,
+  "train_frames": [
+    42,
+    49
+  ],
+  "baseline_train_start_without_event_policy": 38,
+  "sample_count": 8,
+  "predicted_center_px": [
+    686.458333,
+    95.083333
+  ],
+  "history_sha256": "3d110d64838d6fb2ee7430e0635525919d44e219e1ca404aafa09ff5422b1960",
+  "history": [
+    {
+      "frame_index": 42,
+      "center_px": [
+        441.0,
+        556.5
+      ]
+    },
+    {
+      "frame_index": 43,
+      "center_px": [
+        450.5,
+        530.0
+      ]
+    },
+    {
+      "frame_index": 44,
+      "center_px": [
+        459.5,
+        507.5
+      ]
+    },
+    {
+      "frame_index": 45,
+      "center_px": [
+        466.5,
+        488.5
+      ]
+    },
+    {
+      "frame_index": 46,
+      "center_px": [
+        476.0,
+        473.5
+      ]
+    },
+    {
+      "frame_index": 47,
+      "center_px": [
+        485.5,
+        460.0
+      ]
+    },
+    {
+      "frame_index": 48,
+      "center_px": [
+        494.0,
+        450.5
+      ]
+    },
+    {
+      "frame_index": 49,
+      "center_px": [
+        502.5,
+        443.0
+      ]
+    }
+  ],
+  "warning": "Image-pixel linear extrapolation, not a collision model or proof of improvement."
+}

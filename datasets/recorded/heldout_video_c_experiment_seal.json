@@ -1,0 +1,42 @@
+{
+  "schema": "qapha.experiment_seal.v1",
+  "stage": "calibration_only_sealed",
+  "source_video_sha256": "6747f156ddee08b3e5b0181adc4c6a32203027171ababd956c667823a17c05ab",
+  "calibration_video_sha256": "e6e34f2474d9b3b3f4f364437bd548a948caa97f83400275500e6cb95c8c61b0",
+  "calibration_cutoff_frame": 49,
+  "object_id": "0",
+  "selected_model": "linear",
+  "selected_predictions": [
+    {
+      "frame_index": 54,
+      "center_px": [
+        530.302448,
+        659.141026
+      ]
+    },
+    {
+      "frame_index": 59,
+      "center_px": [
+        521.22028,
+        668.275641
+      ]
+    },
+    {
+      "frame_index": 70,
+      "center_px": [
+        501.23951,
+        688.371795
+      ]
+    }
+  ],
+  "selection_artifact_sha256": "ffb6039a0d07f903888d4282051a963390f4243488c143b528c9a162bb9c6ff6",
+  "forecast_artifact_sha256": "ff56327cf708b52eab0849db2487fe84567a6bc32ef03e4815acabe865d90844",
+  "protocol_artifact_sha256": "51cfa40a2fc0669eb32fac70e1cccde1b290bacce6c1ed1e62bffe518057b02d",
+  "calibration_manifest_artifact_sha256": "8966c0ad37662e4a63f578f02435c0901a554965ce7552b04fe2de5baf3e94cd",
+  "tracking_artifact_sha256": "caae618576fb93bfd644399d4a4330a57e8112f29290077cb9968e4e151ab1ae",
+  "selection_reproduced_exactly": true,
+  "forecast_reproduced_exactly": true,
+  "verification_frames_used": false,
+  "limitations": "This is a reproducible local record, not a digital signature or independently trusted timestamp. Video B is a retrospective selector diagnostic; use a new untouched video for prospective evaluation.",
+  "seal_sha256": "e5e67aa920475fa908a528ff8b8ade19ebe64e24ac6eb91a0ae24332e4e161ab"
+}

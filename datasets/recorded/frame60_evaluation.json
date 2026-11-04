@@ -1,0 +1,16 @@
+{
+  "status": "verified",
+  "object_id": "1",
+  "target_frame": 60,
+  "prediction_sha256": "c9e595640979575cb6e2b30b86f217a5a78ab107a4d8d8a2f73a881f45739145",
+  "predicted_center_px": {
+    "x": 598.3571,
+    "y": 277.25
+  },
+  "actual_center_px": {
+    "x": 587.5,
+    "y": 553.0
+  },
+  "euclidean_error_px": 275.9637,
+  "note": "Image-plane error, not physical distance"
+}

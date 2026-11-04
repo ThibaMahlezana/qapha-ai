@@ -1,0 +1,164 @@
+{
+  "schema": "qapha.scene_graph.v1",
+  "coordinate_system": "image_pixels_y_down",
+  "frame_index": 49,
+  "reviewed_edges": [
+    {
+      "edge_id": "edge_0",
+      "source_candidate_index": 0,
+      "endpoints_px": [
+        [
+          339,
+          580
+        ],
+        [
+          934,
+          580
+        ]
+      ],
+      "review_status": "manually_selected_visual_edge",
+      "physical_surface_verified": false
+    },
+    {
+      "edge_id": "edge_1",
+      "source_candidate_index": 1,
+      "endpoints_px": [
+        [
+          1016,
+          415
+        ],
+        [
+          1279,
+          354
+        ]
+      ],
+      "review_status": "manually_selected_visual_edge",
+      "physical_surface_verified": false
+    },
+    {
+      "edge_id": "edge_2",
+      "source_candidate_index": 2,
+      "endpoints_px": [
+        [
+          129,
+          331
+        ],
+        [
+          335,
+          382
+        ]
+      ],
+      "review_status": "manually_selected_visual_edge",
+      "physical_surface_verified": false
+    },
+    {
+      "edge_id": "edge_3",
+      "source_candidate_index": 3,
+      "endpoints_px": [
+        [
+          56,
+          368
+        ],
+        [
+          252,
+          414
+        ]
+      ],
+      "review_status": "manually_selected_visual_edge",
+      "physical_surface_verified": false
+    },
+    {
+      "edge_id": "edge_4",
+      "source_candidate_index": 4,
+      "endpoints_px": [
+        [
+          938,
+          381
+        ],
+        [
+          1096,
+          344
+        ]
+      ],
+      "review_status": "manually_selected_visual_edge",
+      "physical_surface_verified": false
+    }
+  ],
+  "tracked_objects": [
+    {
+      "object_id": "0",
+      "bbox_xyxy_px": [
+        856,
+        415,
+        930,
+        488
+      ],
+      "center_px": [
+        893.0,
+        451.5
+      ],
+      "bottom_center_px": [
+        893.0,
+        488
+      ],
+      "evidence": {
+        "source": "sam_tracking",
+        "frame_index": 49
+      }
+    },
+    {
+      "object_id": "1",
+      "bbox_xyxy_px": [
+        473,
+        413,
+        532,
+        473
+      ],
+      "center_px": [
+        502.5,
+        443.0
+      ],
+      "bottom_center_px": [
+        502.5,
+        473
+      ],
+      "evidence": {
+        "source": "sam_tracking",
+        "frame_index": 49
+      }
+    },
+    {
+      "object_id": "2",
+      "bbox_xyxy_px": [
+        1203,
+        284,
+        1244,
+        338
+      ],
+      "center_px": [
+        1223.5,
+        311.0
+      ],
+      "bottom_center_px": [
+        1223.5,
+        338
+      ],
+      "evidence": {
+        "source": "sam_tracking",
+        "frame_index": 49
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "2",
+      "predicate": "image_proximity_to_edge",
+      "object": "edge_1",
+      "distance_px": 28.126,
+      "threshold_px": 30.0,
+      "physical_contact_verified": false,
+      "evidence_frame_index": 49
+    }
+  ],
+  "limitations": "2D image proximity only; does not establish support, collision, depth, or metric slope."
+}

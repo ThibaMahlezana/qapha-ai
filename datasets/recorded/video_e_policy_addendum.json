@@ -1,0 +1,61 @@
+{
+  "schema": "qapha.registration_addendum.v1",
+  "experiment_id": "video_e_uncertainty_response",
+  "amends_registration_sha256": "88367a5bca1c50f8c7a99b08b2ee553a4567ce1a5d9d9d6de9daa73f82f6bf71",
+  "registered_at_utc_self_reported": "2026-11-04T06:54:04+00:00",
+  "status": "registered_before_video_e_tracking",
+  "source_video_present_at_registration": false,
+  "source_video_sha256": null,
+  "unchanged_from_original": [
+    "primary_metric",
+    "baseline",
+    "experimental_policy",
+    "informativeness",
+    "tracking_requirements",
+    "frame_range_inclusive",
+    "prediction_targets_inclusive"
+  ],
+  "locked_implementation_sha256": {
+    "warning_policy": "47b89034026554764fc22313b80d9d261eef365ca6efc8b110b2090673c94709",
+    "reference_baselines": "bf234e7e5c9e2daa03abd5a515f030f2694644d5c2d93f0ab6847d4ffced7e85"
+  },
+  "secondary_comparisons": {
+    "role": "descriptive; does not alter the primary decision",
+    "models": {
+      "fixed_persistence": "adaptive_loop persistence expert",
+      "fixed_linear_window6": "adaptive_loop linear expert",
+      "constant_velocity_2pt": "x_t = 2 x_(t-1) - x_(t-2)",
+      "alpha_beta": {
+        "alpha": 0.85,
+        "beta": 0.5,
+        "dt_frames": 1
+      }
+    },
+    "metrics": [
+      "mean_euclidean_error_px",
+      "maximum_euclidean_error_px",
+      "count_errors_over_25px"
+    ],
+    "prediction_targets_inclusive": [
+      2,
+      49
+    ]
+  },
+  "exploratory_expectations": {
+    "basis": "post-hoc review of Video C only",
+    "E1": "constant_velocity_2pt mean error is lower than original_adaptive_selector mean error",
+    "E2": "warning_triggered_persistence mean error is lower than original_adaptive_selector mean error",
+    "note": "Expectations are recorded so that they can fail."
+  },
+  "reporting": {
+    "report_all_models_regardless_of_outcome": true,
+    "non_informative_video_reported_as_such": true,
+    "no_parameter_tuning": true
+  },
+  "limitations": [
+    "Self-reported timestamp; git commit provides external record.",
+    "Secondary baselines were first examined on Video C.",
+    "One video cannot establish generalization."
+  ],
+  "registration_sha256": "f99bd0081ae4ed9ca3032876166d1d8c712260be17809977acd287cf2bc64ef5"
+}

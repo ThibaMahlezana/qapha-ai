@@ -1,0 +1,25 @@
+{
+  "model": "sam-3.1",
+  "prompt": "red ball",
+  "image": "C:\\Users\\Keywest\\Desktop\\Web Apps\\qapha-ai\\datasets\\recorded\\heldout_video_b_frame49.jpg",
+  "raw_segmentation": "<0f>0<|box;x1=54;y1=322;x2=135;y2=400;w=720;h=1280;c=0.9569892287254333|><|mask;x=0;y=0;c=0.9569892287254333;data=79,82,~!!!+*!0cYeE@neV&X{vPfh{O-pB@4lg1T9b0[#ttT!yx$]E4R9$[[FG[_nYyX)^8[gn.+*MM^nA&+^BB:)XN(ej!E*XF%)kF3pzx%:I2H:9n8*Wu6b]Z6m43S)[jaEW*97WW+9zDw%7a_NH_imz0nKdg3e03nFSs5$r%aS6+i*nT[jyGauUy^jK&%*y:COPzMgyX:7)fX&.w+y++[T8@bIi`%AZp)D6i$m=KtRY[d&]mLtGW)W?ewrM/1`lwur%s-qOFue%qm8Wq8P8R-DE*AMIzK&UZQ/?Y3yGZ&7W.VRyEVhLsq9r#OgB!kz0KST%&^8h{k:kJv8Y#vg)9E$?B[.Jb=IjAr_E?#@xbBU[AV^gK?dZ::UfBf$v8y.2sE&Oqfn((^0M6$Uwfu+K0?$=P2f2%@uOZO*vO01vUs?f&ki#ZuuPPy@SeyJq4$PU{(56f:m9lcwt.*CwQo)Z9I%d`'JUEK#T%H$_2()zF2i__.kFTvY+Q6g70v8/N_A0&yDoj^:QtTAgBfx@{4`WH^c`eu2+_@l?lLP_n&Qe`y.*$i^NF@#mBf_/*dW8c0oFCQlUZWJ=1G4``G-FKV$Jk4nad9]JPX_hNaVFtNDM?.^C&9pkdsF?ARN[Hlt){t7cW8oY{:31ERjl#92NDGO]5n'iuerH?ujqfB(UehhJ:J[#2$#5X-p%86v]ax%BI.OgyCTOKXq1GP*O6iwt3W'wp9!h:YI$ZMzVl:/E/^ecblAGN[8amxWWIrFDY356u-DCZJ[D$Bx%dn4GA-Nzc$rQnz=xwQVE^M/P7%UaGMm6N@(QWptfbzG1L59iRhVtb6V4]]N[1VA^`4I*C#f51Eg-P)N2Xyncx)Xhk'rgt&Ia3{k4+{Fmxo?Jm$vjxgVW2Ko$b]ADYn%%B:JUZ6i5@b#w7q*IqnyN98!x*ycD':Y=lXr)+R`EAWZ[Pqp.cTmah5$drvI&.om:G%R`UFS!!|>\n",
+  "inspection": {
+    "box_count": 1,
+    "boxes": [
+      {
+        "bbox_xyxy_px": [
+          54,
+          322,
+          135,
+          400
+        ],
+        "image_size_px": [
+          720,
+          1280
+        ],
+        "confidence": 0.9569892287254333
+      }
+    ],
+    "mask_tokens_present": 1
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "model": "sam-3.1",
+  "concept": "red ball",
+  "outcome": "completed",
+  "box_count": 21,
+  "mask_count": 21,
+  "unique_object_ids": 1,
+  "tracks": [
+    {
+      "object_id": "0",
+      "first_frame": 0,
+      "last_frame": 20,
+      "visible_frames": 21
+    }
+  ],
+  "boxes": [
+    {
+      "object_id": "0",
+      "frame_index": 0,
+      "bbox_xyxy_px": [
+        58,
+        360,
+        138,
+        439
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 1,
+      "bbox_xyxy_px": [
+        58,
+        360,
+        138,
+        439
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 2,
+      "bbox_xyxy_px": [
+        58,
+        360,
+        138,
+        438
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 3,
+      "bbox_xyxy_px": [
+        62,
+        399,
+        141,
+        476
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 4,
+      "bbox_xyxy_px": [
+        62,
+        399,
+        141,
+        476
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 5,
+      "bbox_xyxy_px": [
+        66,
+        440,
+        143,
+        516
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 6,
+      "bbox_xyxy_px": [
+        66,
+        440,
+        143,
+        516
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 7,
+      "bbox_xyxy_px": [
+        66,
+        440,
+        143,
+        516
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 8,
+      "bbox_xyxy_px": [
+        69,
+        483,
+        146,
+        556
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 9,
+      "bbox_xyxy_px": [
+        69,
+        483,
+        146,
+        556
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 10,
+      "bbox_xyxy_px": [
+        73,
+        524,
+        149,
+        596
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 11,
+      "bbox_xyxy_px": [
+        73,
+        524,
+        149,
+        596
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 12,
+      "bbox_xyxy_px": [
+        73,
+        524,
+        149,
+        596
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 13,
+      "bbox_xyxy_px": [
+        77,
+        566,
+        152,
+        637
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 14,
+      "bbox_xyxy_px": [
+        77,
+        566,
+        152,
+        637
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 15,
+      "bbox_xyxy_px": [
+        81,
+        609,
+        155,
+        679
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 16,
+      "bbox_xyxy_px": [
+        81,
+        608,
+        155,
+        679
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 17,
+      "bbox_xyxy_px": [
+        81,
+        609,
+        155,
+        679
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 18,
+      "bbox_xyxy_px": [
+        84,
+        643,
+        157,
+        713
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 19,
+      "bbox_xyxy_px": [
+        84,
+        643,
+        157,
+        714
+      ]
+    },
+    {
+      "object_id": "0",
+      "frame_index": 20,
+      "bbox_xyxy_px": [
+        84,
+        649,
+        156,
+        719
+      ]
+    }
+  ]
+}

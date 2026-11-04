@@ -1,0 +1,61 @@
+{
+  "schema": "qapha.conditional_contact.v1",
+  "object_id": "1",
+  "cutoff_frame": 49,
+  "training_frames": [
+    42,
+    49
+  ],
+  "training_sha256": "3d110d64838d6fb2ee7430e0635525919d44e219e1ca404aafa09ff5422b1960",
+  "contact_assumption": {
+    "edge_id": "edge_0",
+    "contact_y_px": 580.0,
+    "contact_offset_px": 0.0,
+    "restitution": 0.6,
+    "physical_surface_verified": false
+  },
+  "fitted_apparent_y_acceleration_px_per_frame2": 3.14881,
+  "forecasts": [
+    {
+      "frame_index": 54,
+      "no_contact_center_px": [
+        546.363095,
+        457.616071
+      ],
+      "conditional_contact_center_px": [
+        546.363095,
+        457.616071
+      ]
+    },
+    {
+      "frame_index": 59,
+      "no_contact_center_px": [
+        590.142857,
+        550.473214
+      ],
+      "conditional_contact_center_px": [
+        590.142857,
+        550.473214
+      ]
+    },
+    {
+      "frame_index": 70,
+      "no_contact_center_px": [
+        686.458333,
+        1031.854167
+      ],
+      "conditional_contact_center_px": [
+        686.458333,
+        558.236751
+      ]
+    }
+  ],
+  "hypothetical_impacts": [
+    {
+      "time_after_cutoff_frames": 11.050853,
+      "image_x_px": 599.344077,
+      "impact_vertical_velocity_px_per_frame": 29.752389
+    }
+  ],
+  "limitations": "2D image coordinates. The selected edge is not verified as a support plane. The contact offset and restitution are declared assumptions, not fitted physical facts. Hypothetical impacts are not observed collisions."
+}

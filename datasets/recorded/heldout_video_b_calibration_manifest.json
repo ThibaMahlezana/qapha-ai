@@ -1,0 +1,20 @@
+{
+  "schema": "qapha.calibration_clip.v1",
+  "source_sha256": "660c8d3b3375ed7f11ea6c75ff73b5d124fc83330aefa283daa042f917e2e1a5",
+  "source_video": "C:\\Users\\Keywest\\Desktop\\Web Apps\\qapha-ai\\datasets\\recorded\\heldout_video_b.mp4",
+  "calibration_video": "C:\\Users\\Keywest\\Desktop\\Web Apps\\qapha-ai\\datasets\\recorded\\heldout_video_b_calibration.mp4",
+  "calibration_sha256": "9cea498c3c5b1779823b20955786b57f4bb902a103dbf32c855fcb2217e33e35",
+  "frame_range_inclusive": [
+    0,
+    49
+  ],
+  "frames_written": 50,
+  "frames_verified": 50,
+  "fps": 60.0,
+  "resolution_px": [
+    720,
+    1280
+  ],
+  "future_frames_included": false,
+  "note": "Calibration-only MP4. Re-encoding can change pixel values. Frame indexing is preserved, but this is not a lossless copy. Verification must use a separate pipeline."
+}

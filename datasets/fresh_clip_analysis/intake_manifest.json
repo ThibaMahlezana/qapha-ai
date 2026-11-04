@@ -1,0 +1,120 @@
+{
+  "schema": "qapha.fresh_clip_intake.v1",
+  "registration_sha256": "0605849bddae79b07f4f55ddc4b84ed89080407e27b2295e5df7201114aa7aec",
+  "frames_per_clip": 90,
+  "preview_frames": [
+    0,
+    30,
+    60,
+    89
+  ],
+  "note": "All clips are tracked regardless of preview appearance; eligibility is decided only by the registered rule.",
+  "clips": [
+    {
+      "clip_id": "F01",
+      "role": "drop_050cm",
+      "group": "bounce",
+      "status": "ok",
+      "frames_written": 90,
+      "fps": 30.0,
+      "resolution_px": [
+        576,
+        768
+      ],
+      "analysis_video": "drop_050cm.mp4",
+      "analysis_video_sha256": "897f582a1f766e7f83ae69bf2579021f51e5b169f2f0736a7f9ec3fdf8ce8887",
+      "preview": "drop_050cm_preview.jpg"
+    },
+    {
+      "clip_id": "F02",
+      "role": "drop_100cm",
+      "group": "bounce",
+      "status": "ok",
+      "frames_written": 90,
+      "fps": 30.0,
+      "resolution_px": [
+        576,
+        768
+      ],
+      "analysis_video": "drop_100cm.mp4",
+      "analysis_video_sha256": "3b5749b4cf8b714ad29204c16912970349eeb80c4566f1fe71fc5c3a026fe858",
+      "preview": "drop_100cm_preview.jpg"
+    },
+    {
+      "clip_id": "F03",
+      "role": "drop_150cm",
+      "group": "bounce",
+      "status": "ok",
+      "frames_written": 90,
+      "fps": 30.05246065450912,
+      "resolution_px": [
+        480,
+        640
+      ],
+      "analysis_video": "drop_150cm.mp4",
+      "analysis_video_sha256": "f9b41133146534af209e84a57cddd66757a717754f2357f31ee65cc729108119",
+      "preview": "drop_150cm_preview.jpg"
+    },
+    {
+      "clip_id": "F07",
+      "role": "roll_ramp",
+      "group": "rolling_safety_check",
+      "status": "ok",
+      "frames_written": 90,
+      "fps": 29.92174313334356,
+      "resolution_px": [
+        768,
+        576
+      ],
+      "analysis_video": "roll_ramp.mp4",
+      "analysis_video_sha256": "9b5b6117851dc96fb917c43ec34a7edeaf00d4e504b1f6ac4c1b131579214c7f",
+      "preview": "roll_ramp_preview.jpg"
+    },
+    {
+      "clip_id": "F06",
+      "role": "roll_wall",
+      "group": "rolling_safety_check",
+      "status": "ok",
+      "frames_written": 90,
+      "fps": 30.04754358161648,
+      "resolution_px": [
+        640,
+        480
+      ],
+      "analysis_video": "roll_wall.mp4",
+      "analysis_video_sha256": "a7c206c5eef0d02fd3e6d2b60e0e57960b27e9d31b9a927370adcfb70d17b753",
+      "preview": "roll_wall_preview.jpg"
+    },
+    {
+      "clip_id": "F04",
+      "role": "throw_bounces_1",
+      "group": "bounce",
+      "status": "ok",
+      "frames_written": 90,
+      "fps": 30.0,
+      "resolution_px": [
+        768,
+        576
+      ],
+      "analysis_video": "throw_bounces_1.mp4",
+      "analysis_video_sha256": "a626d38c6d1573036b2a27d523c1dd4cc3beb0884ffeb9d42af5149596b18e80",
+      "preview": "throw_bounces_1_preview.jpg"
+    },
+    {
+      "clip_id": "F05",
+      "role": "throw_bounces_2",
+      "group": "bounce",
+      "status": "ok",
+      "frames_written": 90,
+      "fps": 30.070294194220256,
+      "resolution_px": [
+        640,
+        480
+      ],
+      "analysis_video": "throw_bounces_2.mp4",
+      "analysis_video_sha256": "f06906b50dd07086d7be9bed9b2f3995f68db179f35421802e79389afb7cd27e",
+      "preview": "throw_bounces_2_preview.jpg"
+    }
+  ],
+  "manifest_sha256": "c029d83d6d9ef238d621e76e268836d2f7da748cf58a9464f7b75940f02e6dda"
+}

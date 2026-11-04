@@ -1,0 +1,1563 @@
+{
+  "schema": "qapha.adaptive_replay.v1",
+  "method": "prequential_one_step_expert_selection",
+  "selection_rule": "lowest previously observed EWMA pixel error",
+  "window_frames": 6,
+  "decay": 0.85,
+  "evaluated_predictions": 48,
+  "mean_error_px": {
+    "persistence": 13.387468,
+    "linear": 13.54104,
+    "adaptive": 11.482721
+  },
+  "selection_counts": {
+    "persistence": 16,
+    "linear": 32
+  },
+  "events": [
+    {
+      "frame_index": 2,
+      "history_cutoff_frame": 1,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": null,
+        "linear": null
+      },
+      "predictions_xy": {
+        "persistence": [
+          704.0,
+          153.5
+        ],
+        "linear": [
+          704.0,
+          153.0
+        ]
+      },
+      "observed_xy": [
+        703.5,
+        153.5
+      ],
+      "errors_px": {
+        "persistence": 0.5,
+        "linear": 0.707107,
+        "adaptive": 0.5
+      },
+      "scores_after_observation": {
+        "persistence": 0.5,
+        "linear": 0.7071067811865476
+      }
+    },
+    {
+      "frame_index": 3,
+      "history_cutoff_frame": 2,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 0.5,
+        "linear": 0.7071067811865476
+      },
+      "predictions_xy": {
+        "persistence": [
+          703.5,
+          153.5
+        ],
+        "linear": [
+          703.25,
+          153.25
+        ]
+      },
+      "observed_xy": [
+        703.0,
+        153.5
+      ],
+      "errors_px": {
+        "persistence": 0.5,
+        "linear": 0.353553,
+        "adaptive": 0.5
+      },
+      "scores_after_observation": {
+        "persistence": 0.5,
+        "linear": 0.6540737725975565
+      }
+    },
+    {
+      "frame_index": 4,
+      "history_cutoff_frame": 3,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 0.5,
+        "linear": 0.6540737725975565
+      },
+      "predictions_xy": {
+        "persistence": [
+          703.0,
+          153.5
+        ],
+        "linear": [
+          702.6667,
+          153.3333
+        ]
+      },
+      "observed_xy": [
+        702.5,
+        153.5
+      ],
+      "errors_px": {
+        "persistence": 0.5,
+        "linear": 0.235702,
+        "adaptive": 0.5
+      },
+      "scores_after_observation": {
+        "persistence": 0.5,
+        "linear": 0.5913180457672453
+      }
+    },
+    {
+      "frame_index": 5,
+      "history_cutoff_frame": 4,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 0.5,
+        "linear": 0.5913180457672453
+      },
+      "predictions_xy": {
+        "persistence": [
+          702.5,
+          153.5
+        ],
+        "linear": [
+          702.125,
+          153.375
+        ]
+      },
+      "observed_xy": [
+        701.5,
+        153.5
+      ],
+      "errors_px": {
+        "persistence": 1.0,
+        "linear": 0.637377,
+        "adaptive": 1.0
+      },
+      "scores_after_observation": {
+        "persistence": 0.575,
+        "linear": 0.5982269547820233
+      }
+    },
+    {
+      "frame_index": 6,
+      "history_cutoff_frame": 5,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 0.575,
+        "linear": 0.5982269547820233
+      },
+      "predictions_xy": {
+        "persistence": [
+          701.5,
+          153.5
+        ],
+        "linear": [
+          701.0,
+          153.4
+        ]
+      },
+      "observed_xy": [
+        699.5,
+        153.5
+      ],
+      "errors_px": {
+        "persistence": 2.0,
+        "linear": 1.50333,
+        "adaptive": 2.0
+      },
+      "scores_after_observation": {
+        "persistence": 0.7887500000000001,
+        "linear": 0.7339923572403133
+      }
+    },
+    {
+      "frame_index": 7,
+      "history_cutoff_frame": 6,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 0.7887500000000001,
+        "linear": 0.7339923572403133
+      },
+      "predictions_xy": {
+        "persistence": [
+          699.5,
+          153.5
+        ],
+        "linear": [
+          698.6,
+          153.5
+        ]
+      },
+      "observed_xy": [
+        698.5,
+        154.0
+      ],
+      "errors_px": {
+        "persistence": 1.118034,
+        "linear": 0.509902,
+        "adaptive": 0.509902
+      },
+      "scores_after_observation": {
+        "persistence": 0.8381425983124843,
+        "linear": 0.7003787963581588
+      }
+    },
+    {
+      "frame_index": 8,
+      "history_cutoff_frame": 7,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 0.8381425983124843,
+        "linear": 0.7003787963581588
+      },
+      "predictions_xy": {
+        "persistence": [
+          698.5,
+          154.0
+        ],
+        "linear": [
+          697.5,
+          154.1
+        ]
+      },
+      "observed_xy": [
+        696.5,
+        154.0
+      ],
+      "errors_px": {
+        "persistence": 2.0,
+        "linear": 1.004988,
+        "adaptive": 1.004988
+      },
+      "scores_after_observation": {
+        "persistence": 1.0124212085656117,
+        "linear": 0.7460701112212483
+      }
+    },
+    {
+      "frame_index": 9,
+      "history_cutoff_frame": 8,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 1.0124212085656117,
+        "linear": 0.7460701112212483
+      },
+      "predictions_xy": {
+        "persistence": [
+          696.5,
+          154.0
+        ],
+        "linear": [
+          695.2,
+          154.1
+        ]
+      },
+      "observed_xy": [
+        694.5,
+        154.0
+      ],
+      "errors_px": {
+        "persistence": 2.0,
+        "linear": 0.707107,
+        "adaptive": 0.707107
+      },
+      "scores_after_observation": {
+        "persistence": 1.16055802728077,
+        "linear": 0.7402256117160498
+      }
+    },
+    {
+      "frame_index": 10,
+      "history_cutoff_frame": 9,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 1.16055802728077,
+        "linear": 0.7402256117160498
+      },
+      "predictions_xy": {
+        "persistence": [
+          694.5,
+          154.0
+        ],
+        "linear": [
+          692.9,
+          154.1
+        ]
+      },
+      "observed_xy": [
+        693.0,
+        154.0
+      ],
+      "errors_px": {
+        "persistence": 1.5,
+        "linear": 0.141421,
+        "adaptive": 0.141421
+      },
+      "scores_after_observation": {
+        "persistence": 1.2114743231886547,
+        "linear": 0.6504049733942405
+      }
+    },
+    {
+      "frame_index": 11,
+      "history_cutoff_frame": 10,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 1.2114743231886547,
+        "linear": 0.6504049733942405
+      },
+      "predictions_xy": {
+        "persistence": [
+          693.0,
+          154.0
+        ],
+        "linear": [
+          691.3,
+          154.1
+        ]
+      },
+      "observed_xy": [
+        690.0,
+        154.0
+      ],
+      "errors_px": {
+        "persistence": 3.0,
+        "linear": 1.30384,
+        "adaptive": 1.30384
+      },
+      "scores_after_observation": {
+        "persistence": 1.4797531747103565,
+        "linear": 0.7484202995411771
+      }
+    },
+    {
+      "frame_index": 12,
+      "history_cutoff_frame": 11,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 1.4797531747103565,
+        "linear": 0.7484202995411771
+      },
+      "predictions_xy": {
+        "persistence": [
+          690.0,
+          154.0
+        ],
+        "linear": [
+          688.1,
+          154.1
+        ]
+      },
+      "observed_xy": [
+        688.0,
+        154.5
+      ],
+      "errors_px": {
+        "persistence": 2.061553,
+        "linear": 0.412311,
+        "adaptive": 0.412311
+      },
+      "scores_after_observation": {
+        "persistence": 1.5670231204251275,
+        "linear": 0.6980038389942671
+      }
+    },
+    {
+      "frame_index": 13,
+      "history_cutoff_frame": 12,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 1.5670231204251275,
+        "linear": 0.6980038389942671
+      },
+      "predictions_xy": {
+        "persistence": [
+          688.0,
+          154.5
+        ],
+        "linear": [
+          685.9,
+          154.6
+        ]
+      },
+      "observed_xy": [
+        684.5,
+        155.0
+      ],
+      "errors_px": {
+        "persistence": 3.535534,
+        "linear": 1.456022,
+        "adaptive": 1.456022
+      },
+      "scores_after_observation": {
+        "persistence": 1.862299738251269,
+        "linear": 0.8117065598235396
+      }
+    },
+    {
+      "frame_index": 14,
+      "history_cutoff_frame": 13,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 1.862299738251269,
+        "linear": 0.8117065598235396
+      },
+      "predictions_xy": {
+        "persistence": [
+          684.5,
+          155.0
+        ],
+        "linear": [
+          682.1,
+          155.2
+        ]
+      },
+      "observed_xy": [
+        682.0,
+        154.5
+      ],
+      "errors_px": {
+        "persistence": 2.54951,
+        "linear": 0.707107,
+        "adaptive": 0.707107
+      },
+      "scores_after_observation": {
+        "persistence": 1.9653812410330376,
+        "linear": 0.7960165930279895
+      }
+    },
+    {
+      "frame_index": 15,
+      "history_cutoff_frame": 14,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 1.9653812410330376,
+        "linear": 0.7960165930279895
+      },
+      "predictions_xy": {
+        "persistence": [
+          682.0,
+          154.5
+        ],
+        "linear": [
+          679.5,
+          154.6
+        ]
+      },
+      "observed_xy": [
+        679.0,
+        155.0
+      ],
+      "errors_px": {
+        "persistence": 3.041381,
+        "linear": 0.640312,
+        "adaptive": 0.640312
+      },
+      "scores_after_observation": {
+        "persistence": 2.1267812446504486,
+        "linear": 0.7726609676352844
+      }
+    },
+    {
+      "frame_index": 16,
+      "history_cutoff_frame": 15,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 2.1267812446504486,
+        "linear": 0.7726609676352844
+      },
+      "predictions_xy": {
+        "persistence": [
+          679.0,
+          155.0
+        ],
+        "linear": [
+          676.2,
+          155.2
+        ]
+      },
+      "observed_xy": [
+        675.5,
+        155.5
+      ],
+      "errors_px": {
+        "persistence": 3.535534,
+        "linear": 0.761577,
+        "adaptive": 0.761577
+      },
+      "scores_after_observation": {
+        "persistence": 2.338094143842792,
+        "linear": 0.7709984190779573
+      }
+    },
+    {
+      "frame_index": 17,
+      "history_cutoff_frame": 16,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 2.338094143842792,
+        "linear": 0.7709984190779573
+      },
+      "predictions_xy": {
+        "persistence": [
+          675.5,
+          155.5
+        ],
+        "linear": [
+          672.6,
+          155.8
+        ]
+      },
+      "observed_xy": [
+        672.0,
+        155.5
+      ],
+      "errors_px": {
+        "persistence": 3.5,
+        "linear": 0.67082,
+        "adaptive": 0.67082
+      },
+      "scores_after_observation": {
+        "persistence": 2.512380022266373,
+        "linear": 0.755971715203758
+      }
+    },
+    {
+      "frame_index": 18,
+      "history_cutoff_frame": 17,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 2.512380022266373,
+        "linear": 0.755971715203758
+      },
+      "predictions_xy": {
+        "persistence": [
+          672.0,
+          155.5
+        ],
+        "linear": [
+          668.8,
+          155.7
+        ]
+      },
+      "observed_xy": [
+        669.0,
+        156.0
+      ],
+      "errors_px": {
+        "persistence": 3.041381,
+        "linear": 0.360555,
+        "adaptive": 0.360555
+      },
+      "scores_after_observation": {
+        "persistence": 2.5917302086987837,
+        "linear": 0.6966592270551594
+      }
+    },
+    {
+      "frame_index": 19,
+      "history_cutoff_frame": 18,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 2.5917302086987837,
+        "linear": 0.6966592270551594
+      },
+      "predictions_xy": {
+        "persistence": [
+          669.0,
+          156.0
+        ],
+        "linear": [
+          665.9,
+          156.2
+        ]
+      },
+      "observed_xy": [
+        665.0,
+        156.5
+      ],
+      "errors_px": {
+        "persistence": 4.031129,
+        "linear": 0.948683,
+        "adaptive": 0.948683
+      },
+      "scores_after_observation": {
+        "persistence": 2.807640008516357,
+        "linear": 0.7344628377044599
+      }
+    },
+    {
+      "frame_index": 20,
+      "history_cutoff_frame": 19,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 2.807640008516357,
+        "linear": 0.7344628377044599
+      },
+      "predictions_xy": {
+        "persistence": [
+          665.0,
+          156.5
+        ],
+        "linear": [
+          661.6,
+          156.9
+        ]
+      },
+      "observed_xy": [
+        661.0,
+        156.5
+      ],
+      "errors_px": {
+        "persistence": 4.0,
+        "linear": 0.72111,
+        "adaptive": 0.72111
+      },
+      "scores_after_observation": {
+        "persistence": 2.9864940072389037,
+        "linear": 0.7324599503127138
+      }
+    },
+    {
+      "frame_index": 21,
+      "history_cutoff_frame": 20,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 2.9864940072389037,
+        "linear": 0.7324599503127138
+      },
+      "predictions_xy": {
+        "persistence": [
+          661.0,
+          156.5
+        ],
+        "linear": [
+          657.4,
+          156.8
+        ]
+      },
+      "observed_xy": [
+        656.5,
+        156.5
+      ],
+      "errors_px": {
+        "persistence": 4.5,
+        "linear": 0.948683,
+        "adaptive": 0.948683
+      },
+      "scores_after_observation": {
+        "persistence": 3.213519906153068,
+        "linear": 0.7648934524733811
+      }
+    },
+    {
+      "frame_index": 22,
+      "history_cutoff_frame": 21,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 3.213519906153068,
+        "linear": 0.7648934524733811
+      },
+      "predictions_xy": {
+        "persistence": [
+          656.5,
+          156.5
+        ],
+        "linear": [
+          652.7,
+          156.7
+        ]
+      },
+      "observed_xy": [
+        652.0,
+        157.0
+      ],
+      "errors_px": {
+        "persistence": 4.527693,
+        "linear": 0.761577,
+        "adaptive": 0.761577
+      },
+      "scores_after_observation": {
+        "persistence": 3.410645805590414,
+        "linear": 0.7643960311903395
+      }
+    },
+    {
+      "frame_index": 23,
+      "history_cutoff_frame": 22,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 3.410645805590414,
+        "linear": 0.7643960311903395
+      },
+      "predictions_xy": {
+        "persistence": [
+          652.0,
+          157.0
+        ],
+        "linear": [
+          648.0,
+          157.3
+        ]
+      },
+      "observed_xy": [
+        647.0,
+        157.5
+      ],
+      "errors_px": {
+        "persistence": 5.024938,
+        "linear": 1.019804,
+        "adaptive": 1.019804
+      },
+      "scores_after_observation": {
+        "persistence": 3.6527896063359186,
+        "linear": 0.8027072119195717
+      }
+    },
+    {
+      "frame_index": 24,
+      "history_cutoff_frame": 23,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 3.6527896063359186,
+        "linear": 0.8027072119195717
+      },
+      "predictions_xy": {
+        "persistence": [
+          647.0,
+          157.5
+        ],
+        "linear": [
+          642.6,
+          157.8
+        ]
+      },
+      "observed_xy": [
+        641.5,
+        157.5
+      ],
+      "errors_px": {
+        "persistence": 5.5,
+        "linear": 1.140175,
+        "adaptive": 1.140175
+      },
+      "scores_after_observation": {
+        "persistence": 3.929871165385531,
+        "linear": 0.8533274438965104
+      }
+    },
+    {
+      "frame_index": 25,
+      "history_cutoff_frame": 24,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 3.929871165385531,
+        "linear": 0.8533274438965104
+      },
+      "predictions_xy": {
+        "persistence": [
+          641.5,
+          157.5
+        ],
+        "linear": [
+          636.8,
+          157.7
+        ]
+      },
+      "observed_xy": [
+        635.0,
+        158.5
+      ],
+      "errors_px": {
+        "persistence": 6.576473,
+        "linear": 1.969772,
+        "adaptive": 1.969772
+      },
+      "scores_after_observation": {
+        "persistence": 4.3268614734251445,
+        "linear": 1.0207940613659114
+      }
+    },
+    {
+      "frame_index": 26,
+      "history_cutoff_frame": 25,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 4.3268614734251445,
+        "linear": 1.0207940613659114
+      },
+      "predictions_xy": {
+        "persistence": [
+          635.0,
+          158.5
+        ],
+        "linear": [
+          629.8,
+          158.9
+        ]
+      },
+      "observed_xy": [
+        627.5,
+        158.0
+      ],
+      "errors_px": {
+        "persistence": 7.516648,
+        "linear": 2.469818,
+        "adaptive": 2.469818
+      },
+      "scores_after_observation": {
+        "persistence": 4.805329480789341,
+        "linear": 1.2381476232178728
+      }
+    },
+    {
+      "frame_index": 27,
+      "history_cutoff_frame": 26,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 4.805329480789341,
+        "linear": 1.2381476232178728
+      },
+      "predictions_xy": {
+        "persistence": [
+          627.5,
+          158.0
+        ],
+        "linear": [
+          621.7,
+          158.3
+        ]
+      },
+      "observed_xy": [
+        616.5,
+        160.5
+      ],
+      "errors_px": {
+        "persistence": 11.280514,
+        "linear": 5.646238,
+        "adaptive": 5.646238
+      },
+      "scores_after_observation": {
+        "persistence": 5.776607184572712,
+        "linear": 1.8993611325447837
+      }
+    },
+    {
+      "frame_index": 28,
+      "history_cutoff_frame": 27,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 5.776607184572712,
+        "linear": 1.8993611325447837
+      },
+      "predictions_xy": {
+        "persistence": [
+          616.5,
+          160.5
+        ],
+        "linear": [
+          609.4,
+          161.2
+        ]
+      },
+      "observed_xy": [
+        606.0,
+        168.0
+      ],
+      "errors_px": {
+        "persistence": 12.903488,
+        "linear": 7.602631,
+        "adaptive": 7.602631
+      },
+      "scores_after_observation": {
+        "persistence": 6.845639291971397,
+        "linear": 2.754851631187959
+      }
+    },
+    {
+      "frame_index": 29,
+      "history_cutoff_frame": 28,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 6.845639291971397,
+        "linear": 2.754851631187959
+      },
+      "predictions_xy": {
+        "persistence": [
+          606.0,
+          168.0
+        ],
+        "linear": [
+          597.8,
+          170.1
+        ]
+      },
+      "observed_xy": [
+        596.0,
+        181.0
+      ],
+      "errors_px": {
+        "persistence": 16.401219,
+        "linear": 11.047624,
+        "adaptive": 11.047624
+      },
+      "scores_after_observation": {
+        "persistence": 8.278976318204197,
+        "linear": 3.998767513356877
+      }
+    },
+    {
+      "frame_index": 30,
+      "history_cutoff_frame": 29,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 8.278976318204197,
+        "linear": 3.998767513356877
+      },
+      "predictions_xy": {
+        "persistence": [
+          596.0,
+          181.0
+        ],
+        "linear": [
+          586.9,
+          185.7
+        ]
+      },
+      "observed_xy": [
+        587.0,
+        200.5
+      ],
+      "errors_px": {
+        "persistence": 21.476732,
+        "linear": 14.800338,
+        "adaptive": 14.800338
+      },
+      "scores_after_observation": {
+        "persistence": 10.258639609710746,
+        "linear": 5.619003061450652
+      }
+    },
+    {
+      "frame_index": 31,
+      "history_cutoff_frame": 30,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 10.258639609710746,
+        "linear": 5.619003061450652
+      },
+      "predictions_xy": {
+        "persistence": [
+          587.0,
+          200.5
+        ],
+        "linear": [
+          577.4,
+          208.9
+        ]
+      },
+      "observed_xy": [
+        580.0,
+        229.5
+      ],
+      "errors_px": {
+        "persistence": 29.832868,
+        "linear": 20.763429,
+        "adaptive": 20.763429
+      },
+      "scores_after_observation": {
+        "persistence": 13.194773835307025,
+        "linear": 7.890667010611992
+      }
+    },
+    {
+      "frame_index": 32,
+      "history_cutoff_frame": 31,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 13.194773835307025,
+        "linear": 7.890667010611992
+      },
+      "predictions_xy": {
+        "persistence": [
+          580.0,
+          229.5
+        ],
+        "linear": [
+          570.5,
+          243.8
+        ]
+      },
+      "observed_xy": [
+        577.5,
+        269.0
+      ],
+      "errors_px": {
+        "persistence": 39.579035,
+        "linear": 26.154158,
+        "adaptive": 26.154158
+      },
+      "scores_after_observation": {
+        "persistence": 17.15241298815996,
+        "linear": 10.630190714396766
+      }
+    },
+    {
+      "frame_index": 33,
+      "history_cutoff_frame": 32,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 17.15241298815996,
+        "linear": 10.630190714396766
+      },
+      "predictions_xy": {
+        "persistence": [
+          577.5,
+          269.0
+        ],
+        "linear": [
+          569.7,
+          290.7
+        ]
+      },
+      "observed_xy": [
+        574.5,
+        325.0
+      ],
+      "errors_px": {
+        "persistence": 56.0803,
+        "linear": 34.634232,
+        "adaptive": 34.634232
+      },
+      "scores_after_observation": {
+        "persistence": 22.991595975621937,
+        "linear": 14.230796850436892
+      }
+    },
+    {
+      "frame_index": 34,
+      "history_cutoff_frame": 33,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 22.991595975621937,
+        "linear": 14.230796850436892
+      },
+      "predictions_xy": {
+        "persistence": [
+          574.5,
+          325.0
+        ],
+        "linear": [
+          568.2,
+          356.4
+        ]
+      },
+      "observed_xy": [
+        570.5,
+        410.0
+      ],
+      "errors_px": {
+        "persistence": 85.094066,
+        "linear": 53.649324,
+        "adaptive": 53.649324
+      },
+      "scores_after_observation": {
+        "persistence": 32.30696641898153,
+        "linear": 20.143575970881788
+      }
+    },
+    {
+      "frame_index": 35,
+      "history_cutoff_frame": 34,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 32.30696641898153,
+        "linear": 20.143575970881788
+      },
+      "predictions_xy": {
+        "persistence": [
+          570.5,
+          410.0
+        ],
+        "linear": [
+          565.4,
+          455.8
+        ]
+      },
+      "observed_xy": [
+        568.0,
+        583.0
+      ],
+      "errors_px": {
+        "persistence": 173.018063,
+        "linear": 127.22657,
+        "adaptive": 127.22657
+      },
+      "scores_after_observation": {
+        "persistence": 53.413630852264795,
+        "linear": 36.20602500806727
+      }
+    },
+    {
+      "frame_index": 36,
+      "history_cutoff_frame": 35,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 53.413630852264795,
+        "linear": 36.20602500806727
+      },
+      "predictions_xy": {
+        "persistence": [
+          568.0,
+          583.0
+        ],
+        "linear": [
+          564.2,
+          659.5
+        ]
+      },
+      "observed_xy": [
+        565.5,
+        645.5
+      ],
+      "errors_px": {
+        "persistence": 62.54998,
+        "linear": 14.060228,
+        "adaptive": 14.060228
+      },
+      "scores_after_observation": {
+        "persistence": 54.78408322682268,
+        "linear": 32.88415539598343
+      }
+    },
+    {
+      "frame_index": 37,
+      "history_cutoff_frame": 36,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 54.78408322682268,
+        "linear": 32.88415539598343
+      },
+      "predictions_xy": {
+        "persistence": [
+          565.5,
+          645.5
+        ],
+        "linear": [
+          562.6,
+          728.7
+        ]
+      },
+      "observed_xy": [
+        563.5,
+        634.5
+      ],
+      "errors_px": {
+        "persistence": 11.18034,
+        "linear": 94.204299,
+        "adaptive": 94.204299
+      },
+      "scores_after_observation": {
+        "persistence": 48.24352172592412,
+        "linear": 42.08217697632821
+      }
+    },
+    {
+      "frame_index": 38,
+      "history_cutoff_frame": 37,
+      "selection": "linear",
+      "scores_before_observation": {
+        "persistence": 48.24352172592412,
+        "linear": 42.08217697632821
+      },
+      "predictions_xy": {
+        "persistence": [
+          563.5,
+          634.5
+        ],
+        "linear": [
+          560.7,
+          707.6
+        ]
+      },
+      "observed_xy": [
+        560.0,
+        629.0
+      ],
+      "errors_px": {
+        "persistence": 6.519202,
+        "linear": 78.603117,
+        "adaptive": 78.603117
+      },
+      "scores_after_observation": {
+        "persistence": 41.984873827815896,
+        "linear": 47.56031797786028
+      }
+    },
+    {
+      "frame_index": 39,
+      "history_cutoff_frame": 38,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 41.984873827815896,
+        "linear": 47.56031797786028
+      },
+      "predictions_xy": {
+        "persistence": [
+          560.0,
+          629.0
+        ],
+        "linear": [
+          557.1,
+          689.8
+        ]
+      },
+      "observed_xy": [
+        558.0,
+        627.0
+      ],
+      "errors_px": {
+        "persistence": 2.828427,
+        "linear": 62.806449,
+        "adaptive": 2.828427
+      },
+      "scores_after_observation": {
+        "persistence": 36.11140682235544,
+        "linear": 49.847237588204436
+      }
+    },
+    {
+      "frame_index": 40,
+      "history_cutoff_frame": 39,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 36.11140682235544,
+        "linear": 49.847237588204436
+      },
+      "predictions_xy": {
+        "persistence": [
+          558.0,
+          627.0
+        ],
+        "linear": [
+          555.5,
+          670.4
+        ]
+      },
+      "observed_xy": [
+        556.0,
+        629.0
+      ],
+      "errors_px": {
+        "persistence": 2.828427,
+        "linear": 41.403019,
+        "adaptive": 2.828427
+      },
+      "scores_after_observation": {
+        "persistence": 31.11895986771405,
+        "linear": 48.58060483201063
+      }
+    },
+    {
+      "frame_index": 41,
+      "history_cutoff_frame": 40,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 31.11895986771405,
+        "linear": 48.58060483201063
+      },
+      "predictions_xy": {
+        "persistence": [
+          556.0,
+          629.0
+        ],
+        "linear": [
+          553.6,
+          638.2
+        ]
+      },
+      "observed_xy": [
+        553.5,
+        634.5
+      ],
+      "errors_px": {
+        "persistence": 6.041523,
+        "linear": 3.701351,
+        "adaptive": 6.041523
+      },
+      "scores_after_observation": {
+        "persistence": 27.357344335576535,
+        "linear": 41.848716772908695
+      }
+    },
+    {
+      "frame_index": 42,
+      "history_cutoff_frame": 41,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 27.357344335576535,
+        "linear": 41.848716772908695
+      },
+      "predictions_xy": {
+        "persistence": [
+          553.5,
+          634.5
+        ],
+        "linear": [
+          551.1,
+          632.3
+        ]
+      },
+      "observed_xy": [
+        551.5,
+        645.5
+      ],
+      "errors_px": {
+        "persistence": 11.18034,
+        "linear": 13.206059,
+        "adaptive": 11.18034
+      },
+      "scores_after_observation": {
+        "persistence": 24.9307936683649,
+        "linear": 37.5523181392787
+      }
+    },
+    {
+      "frame_index": 43,
+      "history_cutoff_frame": 42,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 24.9307936683649,
+        "linear": 37.5523181392787
+      },
+      "predictions_xy": {
+        "persistence": [
+          551.5,
+          645.5
+        ],
+        "linear": [
+          549.1,
+          647.7
+        ]
+      },
+      "observed_xy": [
+        550.0,
+        641.5
+      ],
+      "errors_px": {
+        "persistence": 4.272002,
+        "linear": 6.264982,
+        "adaptive": 4.272002
+      },
+      "scores_after_observation": {
+        "persistence": 21.83197489900898,
+        "linear": 32.85921772484752
+      }
+    },
+    {
+      "frame_index": 44,
+      "history_cutoff_frame": 43,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 21.83197489900898,
+        "linear": 32.85921772484752
+      },
+      "predictions_xy": {
+        "persistence": [
+          550.0,
+          641.5
+        ],
+        "linear": [
+          548.0,
+          644.0
+        ]
+      },
+      "observed_xy": [
+        548.0,
+        645.5
+      ],
+      "errors_px": {
+        "persistence": 4.472136,
+        "linear": 1.5,
+        "adaptive": 4.472136
+      },
+      "scores_after_observation": {
+        "persistence": 19.22799905740757,
+        "linear": 28.15533506612039
+      }
+    },
+    {
+      "frame_index": 45,
+      "history_cutoff_frame": 44,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 19.22799905740757,
+        "linear": 28.15533506612039
+      },
+      "predictions_xy": {
+        "persistence": [
+          548.0,
+          645.5
+        ],
+        "linear": [
+          546.0,
+          649.2
+        ]
+      },
+      "observed_xy": [
+        546.0,
+        645.5
+      ],
+      "errors_px": {
+        "persistence": 2.0,
+        "linear": 3.7,
+        "adaptive": 2.0
+      },
+      "scores_after_observation": {
+        "persistence": 16.643799198796433,
+        "linear": 24.487034806202338
+      }
+    },
+    {
+      "frame_index": 46,
+      "history_cutoff_frame": 45,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 16.643799198796433,
+        "linear": 24.487034806202338
+      },
+      "predictions_xy": {
+        "persistence": [
+          546.0,
+          645.5
+        ],
+        "linear": [
+          544.0,
+          648.8
+        ]
+      },
+      "observed_xy": [
+        544.5,
+        645.5
+      ],
+      "errors_px": {
+        "persistence": 1.5,
+        "linear": 3.337664,
+        "adaptive": 1.5
+      },
+      "scores_after_observation": {
+        "persistence": 14.372229318976967,
+        "linear": 21.31462916332034
+      }
+    },
+    {
+      "frame_index": 47,
+      "history_cutoff_frame": 46,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 14.372229318976967,
+        "linear": 21.31462916332034
+      },
+      "predictions_xy": {
+        "persistence": [
+          544.5,
+          645.5
+        ],
+        "linear": [
+          542.7,
+          647.7
+        ]
+      },
+      "observed_xy": [
+        543.5,
+        645.5
+      ],
+      "errors_px": {
+        "persistence": 1.0,
+        "linear": 2.34094,
+        "adaptive": 1.0
+      },
+      "scores_after_observation": {
+        "persistence": 12.366394921130421,
+        "linear": 18.468575786143884
+      }
+    },
+    {
+      "frame_index": 48,
+      "history_cutoff_frame": 47,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 12.366394921130421,
+        "linear": 18.468575786143884
+      },
+      "predictions_xy": {
+        "persistence": [
+          543.5,
+          645.5
+        ],
+        "linear": [
+          541.9,
+          645.5
+        ]
+      },
+      "observed_xy": [
+        541.5,
+        645.5
+      ],
+      "errors_px": {
+        "persistence": 2.0,
+        "linear": 0.4,
+        "adaptive": 2.0
+      },
+      "scores_after_observation": {
+        "persistence": 10.811435682960859,
+        "linear": 15.758289418222297
+      }
+    },
+    {
+      "frame_index": 49,
+      "history_cutoff_frame": 48,
+      "selection": "persistence",
+      "scores_before_observation": {
+        "persistence": 10.811435682960859,
+        "linear": 15.758289418222297
+      },
+      "predictions_xy": {
+        "persistence": [
+          541.5,
+          645.5
+        ],
+        "linear": [
+          539.8,
+          646.3
+        ]
+      },
+      "observed_xy": [
+        540.0,
+        645.5
+      ],
+      "errors_px": {
+        "persistence": 1.5,
+        "linear": 0.824621,
+        "adaptive": 1.5
+      },
+      "scores_after_observation": {
+        "persistence": 9.41472033051673,
+        "linear": 13.518239174257477
+      }
+    }
+  ],
+  "limitations": [
+    "Predicts only one frame ahead in image-pixel coordinates.",
+    "Online expert selection is not a learned physics model.",
+    "Video C has already been examined; this is diagnostic replay.",
+    "Tracker errors and abrupt changes affect observed loss."
+  ],
+  "object_id": "0",
+  "input_frames": 50
+}

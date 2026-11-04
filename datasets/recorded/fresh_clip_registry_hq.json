@@ -1,0 +1,128 @@
+{
+  "schema": "qapha.fresh_clip_registry.v1",
+  "registered_at_utc_self_reported": "2026-11-04T19:35:16+00:00",
+  "folder": "fresh_clips_hq",
+  "frames_viewed_at_registration": 0,
+  "note": "Original-quality versions of the recordings registered as F01-F07 (WhatsApp copies). Same recordings; bounce motion not analysed in test v1.",
+  "minimum_frames": 71,
+  "clips": [
+    {
+      "clip_id": "H01",
+      "role": "drop_050cm",
+      "file": "drop_050cm.mp4",
+      "sha256": "b210fd5cccd0ac49230d5b008e4523adee23567bba879d5793205135776f7548",
+      "size_bytes": 1924786,
+      "readable": true,
+      "fps": 30.0,
+      "frame_count_reported": 339,
+      "resolution_px": [
+        576,
+        768
+      ],
+      "duration_s": 11.3,
+      "meets_minimum_length": true
+    },
+    {
+      "clip_id": "H02",
+      "role": "drop_100cm",
+      "file": "drop_100cm.mp4",
+      "sha256": "da642129395de0f8f038cd2503c9b81394484acde01751d4976a1b3a2a8a6750",
+      "size_bytes": 2121722,
+      "readable": true,
+      "fps": 30.0,
+      "frame_count_reported": 368,
+      "resolution_px": [
+        576,
+        768
+      ],
+      "duration_s": 12.267,
+      "meets_minimum_length": true
+    },
+    {
+      "clip_id": "H03",
+      "role": "drop_150cm",
+      "file": "drop_150cm.mp4",
+      "sha256": "36c157d2dcd13b09d1b2c29ffe59b150277bdb3d2ff1bc01552f08bacf5b4bcd",
+      "size_bytes": 2302404,
+      "readable": true,
+      "fps": 30.0525,
+      "frame_count_reported": 401,
+      "resolution_px": [
+        480,
+        640
+      ],
+      "duration_s": 13.343,
+      "meets_minimum_length": true
+    },
+    {
+      "clip_id": "H04",
+      "role": "roll_ramp",
+      "file": "roll_ramp.mp4",
+      "sha256": "b057349701e0bf5d0f3f4cc73e6195979b21493fb6cffd320e6c712d20440a09",
+      "size_bytes": 1905555,
+      "readable": true,
+      "fps": 29.9217,
+      "frame_count_reported": 325,
+      "resolution_px": [
+        768,
+        576
+      ],
+      "duration_s": 10.862,
+      "meets_minimum_length": true
+    },
+    {
+      "clip_id": "H05",
+      "role": "roll_wall",
+      "file": "roll_wall.mp4",
+      "sha256": "0f1024d4594b1d4452b16449b0e42dedc16e805660a19418c675b6b8f3c0ce7a",
+      "size_bytes": 939749,
+      "readable": true,
+      "fps": 30.0475,
+      "frame_count_reported": 158,
+      "resolution_px": [
+        640,
+        480
+      ],
+      "duration_s": 5.258,
+      "meets_minimum_length": true
+    },
+    {
+      "clip_id": "H06",
+      "role": "throw_bounces_1",
+      "file": "throw_bounces_1.mp4",
+      "sha256": "abf2202ff61bfacc3898e0ab08cb76881b22257efca7484b6c91867a463f2eed",
+      "size_bytes": 2794437,
+      "readable": true,
+      "fps": 30.0,
+      "frame_count_reported": 487,
+      "resolution_px": [
+        768,
+        576
+      ],
+      "duration_s": 16.233,
+      "meets_minimum_length": true
+    },
+    {
+      "clip_id": "H07",
+      "role": "throw_bounces_2",
+      "file": "throw_bounces_2.mp4",
+      "sha256": "5b28561da7ebcb2fa92c8180d56abc79e119f8a077ba6676bd3a6aa7e3e845e1",
+      "size_bytes": 2197117,
+      "readable": true,
+      "fps": 30.0703,
+      "frame_count_reported": 385,
+      "resolution_px": [
+        640,
+        480
+      ],
+      "duration_s": 12.803,
+      "meets_minimum_length": true
+    }
+  ],
+  "rules": [
+    "Clips are a held-out test set: no tracking or analysis until a method is registered against them.",
+    "Eligibility previews (if any) must be recorded before tracking.",
+    "Failures and ineligible clips are reported, never dropped silently."
+  ],
+  "registry_sha256": "14a0223fd0fa8884dc38d845f717b929801430fa1a0e7de1fb2f4408381b5b54"
+}

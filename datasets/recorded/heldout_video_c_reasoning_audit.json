@@ -1,0 +1,87 @@
+{
+  "schema": "qapha.reasoning_audit.v1",
+  "stage": "calibration_only",
+  "source_packet_sha256": "26da80b3a7d43ac00db5567fa868d9876e2342f1c538f352822778eeeed28759",
+  "reasoning_sha256": "f9dacfa5ba663adc112e8599de4fde61f2bb91de5894cc15583985f1da87f9a8",
+  "object_id": "0",
+  "cutoff_frame": 49,
+  "evidence_count": 3,
+  "assessment_count": 3,
+  "coverage_complete": true,
+  "reference_validation_passed": true,
+  "structural_validation_passed": true,
+  "conclusion_counts": {
+    "insufficient_evidence": 1,
+    "possible_surface_interaction": 1,
+    "possible_surface_constrained_motion": 1
+  },
+  "results": [
+    {
+      "evidence_id": "candidate_reversal_frame_36",
+      "frame_index": 36,
+      "input_hypothesis_type": "possible_surface_interaction",
+      "model_conclusion": "insufficient_evidence",
+      "evidence_reference_valid": true,
+      "frame_reference_valid": true,
+      "input_quality_warning_preserved": true,
+      "physical_collision_verified": false,
+      "review_reasons": [
+        "input_tracking_quality_warning"
+      ]
+    },
+    {
+      "evidence_id": "candidate_reversal_frame_42",
+      "frame_index": 42,
+      "input_hypothesis_type": "possible_surface_interaction",
+      "model_conclusion": "possible_surface_interaction",
+      "evidence_reference_valid": true,
+      "frame_reference_valid": true,
+      "input_quality_warning_preserved": true,
+      "physical_collision_verified": false,
+      "review_reasons": [
+        "physical_hypothesis_requires_review"
+      ]
+    },
+    {
+      "evidence_id": "candidate_support_frame_49",
+      "frame_index": 49,
+      "input_hypothesis_type": "possible_surface_constrained_motion",
+      "model_conclusion": "possible_surface_constrained_motion",
+      "evidence_reference_valid": true,
+      "frame_reference_valid": true,
+      "input_quality_warning_preserved": true,
+      "physical_collision_verified": false,
+      "review_reasons": [
+        "physical_hypothesis_requires_review"
+      ]
+    }
+  ],
+  "review_items": [
+    {
+      "evidence_id": "candidate_reversal_frame_36",
+      "reasons": [
+        "input_tracking_quality_warning"
+      ]
+    },
+    {
+      "evidence_id": "candidate_reversal_frame_42",
+      "reasons": [
+        "physical_hypothesis_requires_review"
+      ]
+    },
+    {
+      "evidence_id": "candidate_support_frame_49",
+      "reasons": [
+        "physical_hypothesis_requires_review"
+      ]
+    }
+  ],
+  "manual_review_required": true,
+  "physical_collision_verified": false,
+  "limitations": [
+    "Structural validity does not establish scientific truth.",
+    "The audit does not independently verify explanatory prose.",
+    "Review flags do not establish that an assessment is wrong.",
+    "Physical hypotheses require additional observation."
+  ]
+}

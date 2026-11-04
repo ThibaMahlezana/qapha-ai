@@ -1,0 +1,52 @@
+{
+  "schema": "qapha.muse_contact_reasoning.v1",
+  "stage": "calibration_only",
+  "model": "muse-spark-1.3",
+  "object_id": "0",
+  "cutoff_frame": 49,
+  "source_packet_sha256": "26da80b3a7d43ac00db5567fa868d9876e2342f1c538f352822778eeeed28759",
+  "assessment_count": 3,
+  "assessments": [
+    {
+      "alternative_explanation": "Apparent reversal from tracking error, occlusion, or projection artifact rather than surface interaction.",
+      "conclusion": "insufficient_evidence",
+      "evidence_id": "candidate_reversal_frame_36",
+      "frame_index": 36,
+      "next_observation": "Event-time 3D bottom position versus calibrated plane and cleaned velocity trace around frame 36 to test coincidence.",
+      "reason": "Vertical reversal observed at 36 with edge at 655px, but 173px jump frames 34-35 shows high measurement uncertainty; edge not calibrated and no 3D contact, so interaction not established.",
+      "physical_collision_verified": false,
+      "status": "unverified_reasoning_assessment",
+      "input_quality_warning": true
+    },
+    {
+      "alternative_explanation": "Apparent reversal could reflect projection effects, tracking jitter, occlusion, or motion change unrelated to surface.",
+      "conclusion": "possible_surface_interaction",
+      "evidence_id": "candidate_reversal_frame_42",
+      "frame_index": 42,
+      "next_observation": "Calibrated contact-plane measurement and event-time 3D bottom position with pre/post vertical velocity to test surface coincidence.",
+      "reason": "Reversal at 42 observed with stable edge at 655px, but edge is not calibrated plane and no event-time 3D contact was established; reversal alone does not prove surface causality.",
+      "physical_collision_verified": false,
+      "status": "unverified_reasoning_assessment",
+      "input_quality_warning": false
+    },
+    {
+      "alternative_explanation": "Stable apparent height could be projection effect, camera geometry, tracking smoothing, or motion on different plane while airborne.",
+      "conclusion": "possible_surface_constrained_motion",
+      "evidence_id": "candidate_support_frame_49",
+      "frame_index": 49,
+      "next_observation": "Calibrated plane depth, longer horizontal track, and 3D trajectory to test sustained proximity versus projection coincidence.",
+      "reason": "Bottom stable at 679px with 8px horizontal travel near stable edge 655px offset 24px; constant image height suggests but does not prove support, edge may differ from contact plane.",
+      "physical_collision_verified": false,
+      "status": "unverified_reasoning_assessment",
+      "input_quality_warning": false
+    }
+  ],
+  "physical_collision_verified": false,
+  "limitations": [
+    "Muse explanations are hypotheses, not measurements.",
+    "Textual explanations are not independently fact-verified.",
+    "Evidence IDs and frame references were validated.",
+    "Physical contact was not verified.",
+    "No future observations were provided to Muse."
+  ]
+}

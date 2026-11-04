@@ -1,0 +1,239 @@
+{
+  "schema": "qapha.scene_geometry.v1",
+  "source": "C:\\Users\\Keywest\\Desktop\\Web Apps\\qapha-ai\\datasets\\recorded\\test_video_a.mp4",
+  "coordinate_system": "image_pixels_y_down",
+  "resolution_px": [
+    1280,
+    720
+  ],
+  "sampled_frames": 12,
+  "sampling": "first_consecutive_frames",
+  "candidate_count": 14,
+  "candidates": [
+    {
+      "endpoints_px": [
+        [
+          339,
+          580
+        ],
+        [
+          934,
+          580
+        ]
+      ],
+      "length_px": 595.0,
+      "angle_deg_image": 0.0,
+      "kind": "approximately_horizontal",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          1016,
+          415
+        ],
+        [
+          1279,
+          354
+        ]
+      ],
+      "length_px": 269.98,
+      "angle_deg_image": -13.06,
+      "kind": "inclined",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          129,
+          331
+        ],
+        [
+          335,
+          382
+        ]
+      ],
+      "length_px": 212.22,
+      "angle_deg_image": 13.91,
+      "kind": "inclined",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          56,
+          368
+        ],
+        [
+          252,
+          414
+        ]
+      ],
+      "length_px": 201.33,
+      "angle_deg_image": 13.21,
+      "kind": "inclined",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          938,
+          381
+        ],
+        [
+          1096,
+          344
+        ]
+      ],
+      "length_px": 162.27,
+      "angle_deg_image": -13.18,
+      "kind": "inclined",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          939,
+          380
+        ],
+        [
+          1095,
+          344
+        ]
+      ],
+      "length_px": 160.1,
+      "angle_deg_image": -12.99,
+      "kind": "inclined",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          650,
+          326
+        ],
+        [
+          755,
+          322
+        ]
+      ],
+      "length_px": 105.08,
+      "angle_deg_image": -2.18,
+      "kind": "approximately_horizontal",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          651,
+          328
+        ],
+        [
+          755,
+          325
+        ]
+      ],
+      "length_px": 104.04,
+      "angle_deg_image": -1.65,
+      "kind": "approximately_horizontal",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          651,
+          329
+        ],
+        [
+          755,
+          329
+        ]
+      ],
+      "length_px": 104.0,
+      "angle_deg_image": 0.0,
+      "kind": "approximately_horizontal",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          651,
+          330
+        ],
+        [
+          755,
+          330
+        ]
+      ],
+      "length_px": 104.0,
+      "angle_deg_image": 0.0,
+      "kind": "approximately_horizontal",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          651,
+          331
+        ],
+        [
+          755,
+          331
+        ]
+      ],
+      "length_px": 104.0,
+      "angle_deg_image": 0.0,
+      "kind": "approximately_horizontal",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          652,
+          332
+        ],
+        [
+          755,
+          332
+        ]
+      ],
+      "length_px": 103.0,
+      "angle_deg_image": 0.0,
+      "kind": "approximately_horizontal",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          653,
+          334
+        ],
+        [
+          755,
+          334
+        ]
+      ],
+      "length_px": 102.0,
+      "angle_deg_image": 0.0,
+      "kind": "approximately_horizontal",
+      "physical_surface_verified": false
+    },
+    {
+      "endpoints_px": [
+        [
+          654,
+          335
+        ],
+        [
+          755,
+          335
+        ]
+      ],
+      "length_px": 101.0,
+      "angle_deg_image": 0.0,
+      "kind": "approximately_horizontal",
+      "physical_surface_verified": false
+    }
+  ],
+  "limitations": "Image edges only; some may be decoration, occlusion boundaries or duplicate edges. No contact, depth or slope-in-metres is established."
+}

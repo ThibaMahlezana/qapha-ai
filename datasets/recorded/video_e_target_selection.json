@@ -1,0 +1,19 @@
+{
+  "schema": "qapha.target_selection.v1",
+  "experiment_id": "video_e_uncertainty_response",
+  "registration_sha256": "88367a5bca1c50f8c7a99b08b2ee553a4567ce1a5d9d9d6de9daa73f82f6bf71",
+  "recorded_at_utc_self_reported": "2026-11-04T07:53:07+00:00",
+  "source_video_sha256": "393b3bca31c97455d34b8d1915f94548b6c3abacb187a0a135fcd06f140fb809",
+  "calibration_video_sha256": "1dd74b9a8efae7e01260e4af8dadec0e15e1cc91a65bcb7429914bdd6e4054ab",
+  "preview_image": "heldout_video_e_preview.jpg",
+  "preview_image_sha256": "2b978e9eb2015e6418122d1ab8294335c612b79a74bd7f09a047109b0c5a4ccb",
+  "target_description": "The single white soccer ball with dark patches, thrown and bouncing on the garage floor; visible in calibration frames 0, 10, 20, 30, 40 and 49.",
+  "sam_concept": "soccer ball",
+  "notes": [
+    "Static clideo.com watermark bottom-right, added by trimming tool; not overlapping the ball in previewed frames.",
+    "Ball moves away from the camera, so apparent size and pixel scale change across the clip."
+  ],
+  "tracking_performed": false,
+  "no_target_reselection_after_performance_review": true,
+  "record_sha256": "3515523cba36e10cb837b20cfdbb55f43ab8367ae08632927972517be7031ea5"
+}

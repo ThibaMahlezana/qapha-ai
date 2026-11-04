@@ -1,0 +1,58 @@
+{
+  "schema": "qapha.physical_scenarios.v1",
+  "object_id": "1",
+  "cutoff_frame": 49,
+  "last_observed_reversal_frame": 41,
+  "training_frames": [
+    42,
+    49
+  ],
+  "training_sample_count": 8,
+  "image_y_acceleration_px_per_frame2": 3.14881,
+  "vertical_fit_rms_px": 0.482005,
+  "forecasts": [
+    {
+      "frame_index": 54,
+      "linear_center_px": [
+        546.363095,
+        352.130952
+      ],
+      "free_flight_candidate_center_px": [
+        546.363095,
+        457.616071
+      ],
+      "candidate_near_visual_edges_center_only": []
+    },
+    {
+      "frame_index": 59,
+      "linear_center_px": [
+        590.142857,
+        271.803571
+      ],
+      "free_flight_candidate_center_px": [
+        590.142857,
+        550.473214
+      ],
+      "candidate_near_visual_edges_center_only": [
+        {
+          "edge_id": "edge_0",
+          "distance_px": 29.527
+        }
+      ]
+    },
+    {
+      "frame_index": 70,
+      "linear_center_px": [
+        686.458333,
+        95.083333
+      ],
+      "free_flight_candidate_center_px": [
+        686.458333,
+        1031.854167
+      ],
+      "candidate_near_visual_edges_center_only": []
+    }
+  ],
+  "physical_contact_verified": false,
+  "limitations": "Vertical acceleration is apparent image-space curvature, not calibrated gravity. Screening uses object centre rather than contact geometry. Visual edges are unverified surfaces; no rebound is simulated. No fitted quantity is a calibrated uncertainty interval."
+}

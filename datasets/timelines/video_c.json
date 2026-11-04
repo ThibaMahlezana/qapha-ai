@@ -1,0 +1,5838 @@
+{
+  "schema": "qapha.lab_timeline.v1",
+  "source": {
+    "concept": "black metallic ball",
+    "object_id": "0",
+    "tracker": "sam-3.1",
+    "label": "Video C (development)",
+    "tracks_file": "heldout_video_c_calibration_tracks.json",
+    "tracks_sha256": "9c42518aab629d2b5230e2c126fa778dc7a0c427b1d6694724c39b3f5fb1bf0c"
+  },
+  "video": {
+    "file": "recorded/heldout_video_c_calibration.mp4",
+    "fps": 25.0,
+    "resolution_px": [
+      1280,
+      720
+    ],
+    "frame_offset": 0
+  },
+  "frame_count": 50,
+  "first_predicted_frame": 2,
+  "models": [
+    "persistence",
+    "linear",
+    "adaptive",
+    "policy",
+    "constant_velocity_2pt",
+    "alpha_beta",
+    "kalman_cv",
+    "bounce_aware"
+  ],
+  "parameters": {
+    "window": 6,
+    "decay": 0.85,
+    "policy": "warning_triggered_persistence (defaults)",
+    "kalman_cv": {
+      "q": 50.0,
+      "r": 4.0
+    },
+    "bounce_aware": "kalman+reset+floor, locked settings"
+  },
+  "summary": {
+    "persistence": {
+      "mean_error_px": 13.387468,
+      "maximum_error_px": 173.018063,
+      "errors_over_25px": 6
+    },
+    "linear": {
+      "mean_error_px": 13.541041,
+      "maximum_error_px": 127.22657,
+      "errors_over_25px": 8
+    },
+    "adaptive": {
+      "mean_error_px": 11.482721,
+      "maximum_error_px": 127.22657,
+      "errors_over_25px": 6
+    },
+    "policy": {
+      "mean_error_px": 9.261511,
+      "maximum_error_px": 127.22657,
+      "errors_over_25px": 5
+    },
+    "constant_velocity_2pt": {
+      "mean_error_px": 9.015013,
+      "maximum_error_px": 110.5,
+      "errors_over_25px": 4
+    },
+    "alpha_beta": {
+      "mean_error_px": 11.513307,
+      "maximum_error_px": 118.976712,
+      "errors_over_25px": 6
+    },
+    "kalman_cv": {
+      "mean_error_px": 9.40191,
+      "maximum_error_px": 107.001045,
+      "errors_over_25px": 4
+    },
+    "bounce_aware": {
+      "mean_error_px": 8.83344,
+      "maximum_error_px": 110.5,
+      "errors_over_25px": 4
+    }
+  },
+  "zone_summary": {
+    "model": "kalman_cv",
+    "coverage": {
+      "50": 0.7917,
+      "90": 0.8958,
+      "95": 0.9167
+    },
+    "mean_nll": 11.976667
+  },
+  "warning_frames": [
+    36
+  ],
+  "final_learning_state_sha256": "77206fa7fde18dc30ef8be6c7bfb1bf8671a1f436472d6bc2a1d8113bff81040",
+  "frames": [
+    {
+      "frame": 0,
+      "observed": {
+        "bbox_xyxy_px": [
+          671,
+          121,
+          737,
+          187
+        ],
+        "centre_xy": [
+          704.0,
+          154.0
+        ]
+      },
+      "predictions": null
+    },
+    {
+      "frame": 1,
+      "observed": {
+        "bbox_xyxy_px": [
+          671,
+          120,
+          737,
+          187
+        ],
+        "centre_xy": [
+          704.0,
+          153.5
+        ]
+      },
+      "predictions": null
+    },
+    {
+      "frame": 2,
+      "observed": {
+        "bbox_xyxy_px": [
+          670,
+          120,
+          737,
+          187
+        ],
+        "centre_xy": [
+          703.5,
+          153.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            704.0,
+            153.5
+          ],
+          "error_px": 0.5
+        },
+        "linear": {
+          "xy": [
+            704.0,
+            153.0
+          ],
+          "error_px": 0.707107
+        },
+        "adaptive": {
+          "xy": [
+            704.0,
+            153.5
+          ],
+          "error_px": 0.5
+        },
+        "policy": {
+          "xy": [
+            704.0,
+            153.5
+          ],
+          "error_px": 0.5
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            704.0,
+            153.0
+          ],
+          "error_px": 0.707107
+        },
+        "alpha_beta": {
+          "xy": [
+            704.0,
+            153.0
+          ],
+          "error_px": 0.707107
+        },
+        "kalman_cv": {
+          "xy": [
+            704.0,
+            153.0
+          ],
+          "error_px": 0.707107
+        },
+        "bounce_aware": {
+          "xy": [
+            704.0,
+            153.0
+          ],
+          "error_px": 0.707107
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": null,
+          "linear": null
+        },
+        "prediction_sha256": "6fab09d6edb41c686b3c6f170e3c5d387dc74dba83e6fa2e15a3a9198467bc72"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          704.0,
+          153.0
+        ],
+        "rx_px": 19.0133,
+        "ry_px": 19.0133,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 6.20416
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              704.0,
+              153.0
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 3,
+      "observed": {
+        "bbox_xyxy_px": [
+          670,
+          120,
+          736,
+          187
+        ],
+        "centre_xy": [
+          703.0,
+          153.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            703.5,
+            153.5
+          ],
+          "error_px": 0.5
+        },
+        "linear": {
+          "xy": [
+            703.25,
+            153.25
+          ],
+          "error_px": 0.353553
+        },
+        "adaptive": {
+          "xy": [
+            703.5,
+            153.5
+          ],
+          "error_px": 0.5
+        },
+        "policy": {
+          "xy": [
+            703.5,
+            153.5
+          ],
+          "error_px": 0.5
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            703.0,
+            153.5
+          ],
+          "error_px": 0.0
+        },
+        "alpha_beta": {
+          "xy": [
+            703.325,
+            153.175
+          ],
+          "error_px": 0.459619
+        },
+        "kalman_cv": {
+          "xy": [
+            702.9968,
+            153.5032
+          ],
+          "error_px": 0.004504
+        },
+        "bounce_aware": {
+          "xy": [
+            702.9968,
+            153.5032
+          ],
+          "error_px": 0.004504
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 0.5,
+          "linear": 0.7071067811865476
+        },
+        "prediction_sha256": "d084e35c938d60f1a4b2c828db8231fe89858a9838dcd93486143c6afff2c5b2"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          702.9968,
+          153.5032
+        ],
+        "rx_px": 15.0213,
+        "ry_px": 15.0213,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.729633
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              702.9968,
+              153.5032
+            ],
+            "rx_px": 15.0213,
+            "ry_px": 15.0213,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 4,
+      "observed": {
+        "bbox_xyxy_px": [
+          669,
+          120,
+          736,
+          187
+        ],
+        "centre_xy": [
+          702.5,
+          153.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            703.0,
+            153.5
+          ],
+          "error_px": 0.5
+        },
+        "linear": {
+          "xy": [
+            702.6667,
+            153.3333
+          ],
+          "error_px": 0.235749
+        },
+        "adaptive": {
+          "xy": [
+            703.0,
+            153.5
+          ],
+          "error_px": 0.5
+        },
+        "policy": {
+          "xy": [
+            703.0,
+            153.5
+          ],
+          "error_px": 0.5
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            702.5,
+            153.5
+          ],
+          "error_px": 0.0
+        },
+        "alpha_beta": {
+          "xy": [
+            702.6363,
+            153.3638
+          ],
+          "error_px": 0.192687
+        },
+        "kalman_cv": {
+          "xy": [
+            702.4743,
+            153.5257
+          ],
+          "error_px": 0.036355
+        },
+        "bounce_aware": {
+          "xy": [
+            702.4743,
+            153.5257
+          ],
+          "error_px": 0.036355
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 0.5,
+          "linear": 0.6540737725975565
+        },
+        "prediction_sha256": "d0eb04a7955970d4c358f72a1950bae5d9cd8c583c755d30c0ca219a8a785b11"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          702.4743,
+          153.5257
+        ],
+        "rx_px": 14.9515,
+        "ry_px": 14.9515,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.720331
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              702.4743,
+              153.5257
+            ],
+            "rx_px": 14.9515,
+            "ry_px": 14.9515,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 5,
+      "observed": {
+        "bbox_xyxy_px": [
+          668,
+          120,
+          735,
+          187
+        ],
+        "centre_xy": [
+          701.5,
+          153.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            702.5,
+            153.5
+          ],
+          "error_px": 1.0
+        },
+        "linear": {
+          "xy": [
+            702.125,
+            153.375
+          ],
+          "error_px": 0.637377
+        },
+        "adaptive": {
+          "xy": [
+            702.5,
+            153.5
+          ],
+          "error_px": 1.0
+        },
+        "policy": {
+          "xy": [
+            702.5,
+            153.5
+          ],
+          "error_px": 1.0
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            702.0,
+            153.5
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            702.0398,
+            153.4602
+          ],
+          "error_px": 0.541279
+        },
+        "kalman_cv": {
+          "xy": [
+            701.9986,
+            153.5014
+          ],
+          "error_px": 0.498561
+        },
+        "bounce_aware": {
+          "xy": [
+            701.9986,
+            153.5014
+          ],
+          "error_px": 0.498561
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 0.5,
+          "linear": 0.5913180457672453
+        },
+        "prediction_sha256": "adb9bfff7faf2950213eb3e9be4408b25eb03527c1818b88d1b832dd4eff93a9"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          701.9986,
+          153.5014
+        ],
+        "rx_px": 14.9389,
+        "ry_px": 14.9389,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.721199
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              701.9986,
+              153.5014
+            ],
+            "rx_px": 14.9389,
+            "ry_px": 14.9389,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 6,
+      "observed": {
+        "bbox_xyxy_px": [
+          666,
+          120,
+          733,
+          187
+        ],
+        "centre_xy": [
+          699.5,
+          153.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            701.5,
+            153.5
+          ],
+          "error_px": 2.0
+        },
+        "linear": {
+          "xy": [
+            701.0,
+            153.4
+          ],
+          "error_px": 1.50333
+        },
+        "adaptive": {
+          "xy": [
+            701.5,
+            153.5
+          ],
+          "error_px": 2.0
+        },
+        "policy": {
+          "xy": [
+            701.5,
+            153.5
+          ],
+          "error_px": 2.0
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            700.5,
+            153.5
+          ],
+          "error_px": 1.0
+        },
+        "alpha_beta": {
+          "xy": [
+            700.8304,
+            153.4946
+          ],
+          "error_px": 1.330452
+        },
+        "kalman_cv": {
+          "xy": [
+            700.5354,
+            153.498
+          ],
+          "error_px": 1.035405
+        },
+        "bounce_aware": {
+          "xy": [
+            700.5354,
+            153.498
+          ],
+          "error_px": 1.035405
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 0.575,
+          "linear": 0.5982269547820233
+        },
+        "prediction_sha256": "aa7fd60ad9eaa2eeaca6172be21acabb8081888f6334ef9b744041a3a50e587b"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          700.5354,
+          153.498
+        ],
+        "rx_px": 14.9379,
+        "ry_px": 14.9379,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.729563
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              700.5354,
+              153.498
+            ],
+            "rx_px": 14.9379,
+            "ry_px": 14.9379,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 7,
+      "observed": {
+        "bbox_xyxy_px": [
+          665,
+          121,
+          732,
+          187
+        ],
+        "centre_xy": [
+          698.5,
+          154.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            699.5,
+            153.5
+          ],
+          "error_px": 1.118034
+        },
+        "linear": {
+          "xy": [
+            698.6,
+            153.5
+          ],
+          "error_px": 0.509902
+        },
+        "adaptive": {
+          "xy": [
+            698.6,
+            153.5
+          ],
+          "error_px": 0.509902
+        },
+        "policy": {
+          "xy": [
+            698.6,
+            153.5
+          ],
+          "error_px": 0.509902
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            697.5,
+            153.5
+          ],
+          "error_px": 1.118034
+        },
+        "alpha_beta": {
+          "xy": [
+            698.2838,
+            153.5024
+          ],
+          "error_px": 0.5425
+        },
+        "kalman_cv": {
+          "xy": [
+            697.5279,
+            153.4997
+          ],
+          "error_px": 1.093238
+        },
+        "bounce_aware": {
+          "xy": [
+            697.5279,
+            153.4997
+          ],
+          "error_px": 1.093238
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 0.7887500000000001,
+          "linear": 0.7339923572403133
+        },
+        "prediction_sha256": "a151649cd0519c14289a0e6335850221da0a7de36c56d2b5082f3d82c537545f"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          697.5279,
+          153.4997
+        ],
+        "rx_px": 14.9379,
+        "ry_px": 14.9379,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.730828
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              697.5279,
+              153.4997
+            ],
+            "rx_px": 14.9379,
+            "ry_px": 14.9379,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 8,
+      "observed": {
+        "bbox_xyxy_px": [
+          663,
+          121,
+          730,
+          187
+        ],
+        "centre_xy": [
+          696.5,
+          154.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            698.5,
+            154.0
+          ],
+          "error_px": 2.0
+        },
+        "linear": {
+          "xy": [
+            697.5,
+            154.1
+          ],
+          "error_px": 1.004988
+        },
+        "adaptive": {
+          "xy": [
+            697.5,
+            154.1
+          ],
+          "error_px": 1.004988
+        },
+        "policy": {
+          "xy": [
+            697.5,
+            154.1
+          ],
+          "error_px": 1.004988
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            697.5,
+            154.5
+          ],
+          "error_px": 1.118034
+        },
+        "alpha_beta": {
+          "xy": [
+            697.1599,
+            154.1774
+          ],
+          "error_px": 0.683342
+        },
+        "kalman_cv": {
+          "xy": [
+            697.3497,
+            154.4668
+          ],
+          "error_px": 0.969443
+        },
+        "bounce_aware": {
+          "xy": [
+            697.3497,
+            154.4668
+          ],
+          "error_px": 0.969443
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 0.8381425983124843,
+          "linear": 0.7003787963581588
+        },
+        "prediction_sha256": "534a5515f3c53a4af0215cc73fecd82100d3ac917f7e74836d601a98edfff8ff"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          697.3497,
+          154.4668
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.728191
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              697.3497,
+              154.4668
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 9,
+      "observed": {
+        "bbox_xyxy_px": [
+          661,
+          121,
+          728,
+          187
+        ],
+        "centre_xy": [
+          694.5,
+          154.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            696.5,
+            154.0
+          ],
+          "error_px": 2.0
+        },
+        "linear": {
+          "xy": [
+            695.2,
+            154.1
+          ],
+          "error_px": 0.707107
+        },
+        "adaptive": {
+          "xy": [
+            695.2,
+            154.1
+          ],
+          "error_px": 0.707107
+        },
+        "policy": {
+          "xy": [
+            695.2,
+            154.1
+          ],
+          "error_px": 0.707107
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            694.5,
+            154.0
+          ],
+          "error_px": 0.0
+        },
+        "alpha_beta": {
+          "xy": [
+            694.9614,
+            154.1899
+          ],
+          "error_px": 0.498941
+        },
+        "kalman_cv": {
+          "xy": [
+            694.6369,
+            154.0724
+          ],
+          "error_px": 0.154922
+        },
+        "bounce_aware": {
+          "xy": [
+            694.6369,
+            154.0724
+          ],
+          "error_px": 0.154922
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 1.0124212085656117,
+          "linear": 0.7460701112212483
+        },
+        "prediction_sha256": "eb5f7017c8dce5e9cd9a0684fa6467f3c3655c3f36e46c867fd6ebe61af64d2e"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          694.6369,
+          154.0724
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.718741
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              694.6369,
+              154.0724
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 10,
+      "observed": {
+        "bbox_xyxy_px": [
+          659,
+          121,
+          727,
+          187
+        ],
+        "centre_xy": [
+          693.0,
+          154.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            694.5,
+            154.0
+          ],
+          "error_px": 1.5
+        },
+        "linear": {
+          "xy": [
+            692.9,
+            154.1
+          ],
+          "error_px": 0.141421
+        },
+        "adaptive": {
+          "xy": [
+            692.9,
+            154.1
+          ],
+          "error_px": 0.141421
+        },
+        "policy": {
+          "xy": [
+            692.9,
+            154.1
+          ],
+          "error_px": 0.141421
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            692.5,
+            154.0
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            692.7009,
+            154.0969
+          ],
+          "error_px": 0.314386
+        },
+        "kalman_cv": {
+          "xy": [
+            692.439,
+            153.9663
+          ],
+          "error_px": 0.562016
+        },
+        "bounce_aware": {
+          "xy": [
+            692.439,
+            153.9663
+          ],
+          "error_px": 0.562016
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 1.16055802728077,
+          "linear": 0.7402256117160498
+        },
+        "prediction_sha256": "c014641039e014592453de6ac1fe46052d07935881ccd1dd44b70a3a43f51853"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          692.439,
+          153.9663
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.721753
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              692.439,
+              153.9663
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 11,
+      "observed": {
+        "bbox_xyxy_px": [
+          657,
+          121,
+          723,
+          187
+        ],
+        "centre_xy": [
+          690.0,
+          154.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            693.0,
+            154.0
+          ],
+          "error_px": 3.0
+        },
+        "linear": {
+          "xy": [
+            691.3,
+            154.1
+          ],
+          "error_px": 1.30384
+        },
+        "adaptive": {
+          "xy": [
+            691.3,
+            154.1
+          ],
+          "error_px": 1.30384
+        },
+        "policy": {
+          "xy": [
+            691.3,
+            154.1
+          ],
+          "error_px": 1.30384
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            691.5,
+            154.0
+          ],
+          "error_px": 1.5
+        },
+        "alpha_beta": {
+          "xy": [
+            691.2364,
+            154.0345
+          ],
+          "error_px": 1.236862
+        },
+        "kalman_cv": {
+          "xy": [
+            691.4513,
+            153.9918
+          ],
+          "error_px": 1.451286
+        },
+        "bounce_aware": {
+          "xy": [
+            691.4513,
+            153.9918
+          ],
+          "error_px": 1.451286
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 1.2114743231886547,
+          "linear": 0.6504049733942405
+        },
+        "prediction_sha256": "c05af7e32d70f9c46838e3aba240fe8f3a6162b18ae79c6413e291da90d9003b"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          691.4513,
+          153.9918
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.740228
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              691.4513,
+              153.9918
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 12,
+      "observed": {
+        "bbox_xyxy_px": [
+          655,
+          121,
+          721,
+          188
+        ],
+        "centre_xy": [
+          688.0,
+          154.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            690.0,
+            154.0
+          ],
+          "error_px": 2.061553
+        },
+        "linear": {
+          "xy": [
+            688.1,
+            154.1
+          ],
+          "error_px": 0.412311
+        },
+        "adaptive": {
+          "xy": [
+            688.1,
+            154.1
+          ],
+          "error_px": 0.412311
+        },
+        "policy": {
+          "xy": [
+            688.1,
+            154.1
+          ],
+          "error_px": 0.412311
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            687.0,
+            154.0
+          ],
+          "error_px": 1.118034
+        },
+        "alpha_beta": {
+          "xy": [
+            687.8485,
+            154.0079
+          ],
+          "error_px": 0.514915
+        },
+        "kalman_cv": {
+          "xy": [
+            687.1431,
+            154.0022
+          ],
+          "error_px": 0.990943
+        },
+        "bounce_aware": {
+          "xy": [
+            687.1431,
+            154.0022
+          ],
+          "error_px": 0.990943
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 1.4797531747103565,
+          "linear": 0.7484202995411771
+        },
+        "prediction_sha256": "68dd9f092d961aec25c1fbc21a8ae104c946650ffb9317296185d68f709a6329"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          687.1431,
+          154.0022
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.728626
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              687.1431,
+              154.0022
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 13,
+      "observed": {
+        "bbox_xyxy_px": [
+          651,
+          122,
+          718,
+          188
+        ],
+        "centre_xy": [
+          684.5,
+          155.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            688.0,
+            154.5
+          ],
+          "error_px": 3.535534
+        },
+        "linear": {
+          "xy": [
+            685.9,
+            154.6
+          ],
+          "error_px": 1.456022
+        },
+        "adaptive": {
+          "xy": [
+            685.9,
+            154.6
+          ],
+          "error_px": 1.456022
+        },
+        "policy": {
+          "xy": [
+            685.9,
+            154.6
+          ],
+          "error_px": 1.456022
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            686.0,
+            155.0
+          ],
+          "error_px": 1.5
+        },
+        "alpha_beta": {
+          "xy": [
+            685.7161,
+            154.6749
+          ],
+          "error_px": 1.258769
+        },
+        "kalman_cv": {
+          "xy": [
+            685.823,
+            154.9675
+          ],
+          "error_px": 1.323421
+        },
+        "bounce_aware": {
+          "xy": [
+            685.823,
+            154.9675
+          ],
+          "error_px": 1.323421
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 1.5670231204251275,
+          "linear": 0.6980038389942671
+        },
+        "prediction_sha256": "287e2097bba1bc6000cb424f94063b9fa5c66ebc4cce8ceb44f551fcb6d28c11"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          685.823,
+          154.9675
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.736566
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              685.823,
+              154.9675
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 14,
+      "observed": {
+        "bbox_xyxy_px": [
+          649,
+          121,
+          715,
+          188
+        ],
+        "centre_xy": [
+          682.0,
+          154.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            684.5,
+            155.0
+          ],
+          "error_px": 2.54951
+        },
+        "linear": {
+          "xy": [
+            682.1,
+            155.2
+          ],
+          "error_px": 0.707107
+        },
+        "adaptive": {
+          "xy": [
+            682.1,
+            155.2
+          ],
+          "error_px": 0.707107
+        },
+        "policy": {
+          "xy": [
+            682.1,
+            155.2
+          ],
+          "error_px": 0.707107
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            681.0,
+            155.5
+          ],
+          "error_px": 1.414214
+        },
+        "alpha_beta": {
+          "xy": [
+            681.8132,
+            155.3625
+          ],
+          "error_px": 0.882537
+        },
+        "kalman_cv": {
+          "xy": [
+            681.159,
+            155.5389
+          ],
+          "error_px": 1.336643
+        },
+        "bounce_aware": {
+          "xy": [
+            681.159,
+            155.5389
+          ],
+          "error_px": 1.336643
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 1.862299738251269,
+          "linear": 0.8117065598235396
+        },
+        "prediction_sha256": "924d8dcef59cab8c1e4f6c2045d8b0c8d4cd88cfda51b7d5b9a70d6fcb02b7d5"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          681.159,
+          155.5389
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.736929
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              681.159,
+              155.5389
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 15,
+      "observed": {
+        "bbox_xyxy_px": [
+          646,
+          122,
+          712,
+          188
+        ],
+        "centre_xy": [
+          679.0,
+          155.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            682.0,
+            154.5
+          ],
+          "error_px": 3.041381
+        },
+        "linear": {
+          "xy": [
+            679.5,
+            154.6
+          ],
+          "error_px": 0.640312
+        },
+        "adaptive": {
+          "xy": [
+            679.5,
+            154.6
+          ],
+          "error_px": 0.640312
+        },
+        "policy": {
+          "xy": [
+            679.5,
+            154.6
+          ],
+          "error_px": 0.640312
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            679.5,
+            154.0
+          ],
+          "error_px": 1.118034
+        },
+        "alpha_beta": {
+          "xy": [
+            679.1962,
+            154.6094
+          ],
+          "error_px": 0.43708
+        },
+        "kalman_cv": {
+          "xy": [
+            679.3347,
+            154.072
+          ],
+          "error_px": 0.986494
+        },
+        "bounce_aware": {
+          "xy": [
+            679.3347,
+            154.072
+          ],
+          "error_px": 0.986494
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 1.9653812410330376,
+          "linear": 0.7960165930279895
+        },
+        "prediction_sha256": "a994bde69765664418382a435afddf4ba9e40477e66b8b8e382d00d45af5d2a7"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          679.3347,
+          154.072
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.728535
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              679.3347,
+              154.072
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 16,
+      "observed": {
+        "bbox_xyxy_px": [
+          642,
+          122,
+          709,
+          189
+        ],
+        "centre_xy": [
+          675.5,
+          155.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            679.0,
+            155.0
+          ],
+          "error_px": 3.535534
+        },
+        "linear": {
+          "xy": [
+            676.2,
+            155.2
+          ],
+          "error_px": 0.761577
+        },
+        "adaptive": {
+          "xy": [
+            676.2,
+            155.2
+          ],
+          "error_px": 0.761577
+        },
+        "policy": {
+          "xy": [
+            676.2,
+            155.2
+          ],
+          "error_px": 0.761577
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            676.0,
+            155.5
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            676.1555,
+            155.1167
+          ],
+          "error_px": 0.759343
+        },
+        "kalman_cv": {
+          "xy": [
+            676.0918,
+            155.3523
+          ],
+          "error_px": 0.609907
+        },
+        "bounce_aware": {
+          "xy": [
+            676.0918,
+            155.3523
+          ],
+          "error_px": 0.609907
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 2.1267812446504486,
+          "linear": 0.7726609676352844
+        },
+        "prediction_sha256": "360b4b92532a17ef78e6b915fa0c557e0269c150d6f55a0ad808bd4247526443"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          676.0918,
+          155.3523
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.722332
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              676.0918,
+              155.3523
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 17,
+      "observed": {
+        "bbox_xyxy_px": [
+          639,
+          122,
+          705,
+          189
+        ],
+        "centre_xy": [
+          672.0,
+          155.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            675.5,
+            155.5
+          ],
+          "error_px": 3.5
+        },
+        "linear": {
+          "xy": [
+            672.6,
+            155.8
+          ],
+          "error_px": 0.67082
+        },
+        "adaptive": {
+          "xy": [
+            672.6,
+            155.8
+          ],
+          "error_px": 0.67082
+        },
+        "policy": {
+          "xy": [
+            672.6,
+            155.8
+          ],
+          "error_px": 0.67082
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            672.0,
+            156.0
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            672.3967,
+            155.8095
+          ],
+          "error_px": 0.503104
+        },
+        "kalman_cv": {
+          "xy": [
+            672.0119,
+            156.0668
+          ],
+          "error_px": 0.566878
+        },
+        "bounce_aware": {
+          "xy": [
+            672.0119,
+            156.0668
+          ],
+          "error_px": 0.566878
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 2.338094143842792,
+          "linear": 0.7709984190779573
+        },
+        "prediction_sha256": "cd33cbeaa363bf4e5646114da522f835c9baa53abd6691dc8a6644ec84bc2c16"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          672.0119,
+          156.0668
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.721809
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              672.0119,
+              156.0668
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 18,
+      "observed": {
+        "bbox_xyxy_px": [
+          636,
+          123,
+          702,
+          189
+        ],
+        "centre_xy": [
+          669.0,
+          156.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            672.0,
+            155.5
+          ],
+          "error_px": 3.041381
+        },
+        "linear": {
+          "xy": [
+            668.8,
+            155.7
+          ],
+          "error_px": 0.360555
+        },
+        "adaptive": {
+          "xy": [
+            668.8,
+            155.7
+          ],
+          "error_px": 0.360555
+        },
+        "policy": {
+          "xy": [
+            668.8,
+            155.7
+          ],
+          "error_px": 0.360555
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            668.5,
+            155.5
+          ],
+          "error_px": 0.707107
+        },
+        "alpha_beta": {
+          "xy": [
+            668.6595,
+            155.7586
+          ],
+          "error_px": 0.417361
+        },
+        "kalman_cv": {
+          "xy": [
+            668.4519,
+            155.55
+          ],
+          "error_px": 0.709127
+        },
+        "bounce_aware": {
+          "xy": [
+            668.4519,
+            155.55
+          ],
+          "error_px": 0.709127
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 2.512380022266373,
+          "linear": 0.755971715203758
+        },
+        "prediction_sha256": "104a53021adf11754c01ec9d79db84d67c73ff8b6a6b55ab6497f7e47d0a4715"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          668.4519,
+          155.55
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.723682
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              668.4519,
+              155.55
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 19,
+      "observed": {
+        "bbox_xyxy_px": [
+          632,
+          123,
+          698,
+          190
+        ],
+        "centre_xy": [
+          665.0,
+          156.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            669.0,
+            156.0
+          ],
+          "error_px": 4.031129
+        },
+        "linear": {
+          "xy": [
+            665.9,
+            156.2
+          ],
+          "error_px": 0.948683
+        },
+        "adaptive": {
+          "xy": [
+            665.9,
+            156.2
+          ],
+          "error_px": 0.948683
+        },
+        "policy": {
+          "xy": [
+            665.9,
+            156.2
+          ],
+          "error_px": 0.948683
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            666.0,
+            156.5
+          ],
+          "error_px": 1.0
+        },
+        "alpha_beta": {
+          "xy": [
+            665.7192,
+            156.2967
+          ],
+          "error_px": 0.747361
+        },
+        "kalman_cv": {
+          "xy": [
+            665.9625,
+            156.4232
+          ],
+          "error_px": 0.965512
+        },
+        "bounce_aware": {
+          "xy": [
+            665.9625,
+            156.4232
+          ],
+          "error_px": 0.965512
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 2.5917302086987837,
+          "linear": 0.6966592270551594
+        },
+        "prediction_sha256": "be3d5764e6742a96af5c8b8d9100597f7047e5f5141bcc06d88ce31f4d579b35"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          665.9625,
+          156.4232
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.728113
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              665.9625,
+              156.4232
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 20,
+      "observed": {
+        "bbox_xyxy_px": [
+          628,
+          123,
+          694,
+          190
+        ],
+        "centre_xy": [
+          661.0,
+          156.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            665.0,
+            156.5
+          ],
+          "error_px": 4.0
+        },
+        "linear": {
+          "xy": [
+            661.6,
+            156.9
+          ],
+          "error_px": 0.72111
+        },
+        "adaptive": {
+          "xy": [
+            661.6,
+            156.9
+          ],
+          "error_px": 0.72111
+        },
+        "policy": {
+          "xy": [
+            661.6,
+            156.9
+          ],
+          "error_px": 0.72111
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            661.0,
+            157.0
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            661.5185,
+            156.9041
+          ],
+          "error_px": 0.657378
+        },
+        "kalman_cv": {
+          "xy": [
+            661.1095,
+            157.032
+          ],
+          "error_px": 0.543167
+        },
+        "bounce_aware": {
+          "xy": [
+            661.1095,
+            157.032
+          ],
+          "error_px": 0.543167
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 2.807640008516357,
+          "linear": 0.7344628377044599
+        },
+        "prediction_sha256": "4bacaba208134ab77fe151c97bf90f853ad26d6861a3b2bbc272a2ee8dfc75d3"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          661.1095,
+          157.032
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.721538
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              661.1095,
+              157.032
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 21,
+      "observed": {
+        "bbox_xyxy_px": [
+          624,
+          123,
+          689,
+          190
+        ],
+        "centre_xy": [
+          656.5,
+          156.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            661.0,
+            156.5
+          ],
+          "error_px": 4.5
+        },
+        "linear": {
+          "xy": [
+            657.4,
+            156.8
+          ],
+          "error_px": 0.948683
+        },
+        "adaptive": {
+          "xy": [
+            657.4,
+            156.8
+          ],
+          "error_px": 0.948683
+        },
+        "policy": {
+          "xy": [
+            657.4,
+            156.8
+          ],
+          "error_px": 0.948683
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            657.0,
+            156.5
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            657.2292,
+            156.7931
+          ],
+          "error_px": 0.785889
+        },
+        "kalman_cv": {
+          "xy": [
+            656.9279,
+            156.5418
+          ],
+          "error_px": 0.429892
+        },
+        "bounce_aware": {
+          "xy": [
+            656.9279,
+            156.5418
+          ],
+          "error_px": 0.429892
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 2.9864940072389037,
+          "linear": 0.7324599503127138
+        },
+        "prediction_sha256": "2ae33c56ce0351e3dc99f069b931a744f52d2b45471269878a74979ae1338429"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          656.9279,
+          156.5418
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.7204
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              656.9279,
+              156.5418
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 22,
+      "observed": {
+        "bbox_xyxy_px": [
+          619,
+          124,
+          685,
+          190
+        ],
+        "centre_xy": [
+          652.0,
+          157.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            656.5,
+            156.5
+          ],
+          "error_px": 4.527693
+        },
+        "linear": {
+          "xy": [
+            652.7,
+            156.7
+          ],
+          "error_px": 0.761577
+        },
+        "adaptive": {
+          "xy": [
+            652.7,
+            156.7
+          ],
+          "error_px": 0.761577
+        },
+        "policy": {
+          "xy": [
+            652.7,
+            156.7
+          ],
+          "error_px": 0.761577
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            652.0,
+            156.5
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            652.3962,
+            156.6299
+          ],
+          "error_px": 0.542138
+        },
+        "kalman_cv": {
+          "xy": [
+            652.0195,
+            156.4589
+          ],
+          "error_px": 0.54148
+        },
+        "bounce_aware": {
+          "xy": [
+            652.0195,
+            156.4589
+          ],
+          "error_px": 0.54148
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 3.213519906153068,
+          "linear": 0.7648934524733811
+        },
+        "prediction_sha256": "2edb46a951de9c0f0fa4adb13e2a9997d35bbf1988b8e63566a91248f8abc2f3"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          652.0195,
+          156.4589
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.721519
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              652.0195,
+              156.4589
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 23,
+      "observed": {
+        "bbox_xyxy_px": [
+          614,
+          124,
+          680,
+          191
+        ],
+        "centre_xy": [
+          647.0,
+          157.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            652.0,
+            157.0
+          ],
+          "error_px": 5.024938
+        },
+        "linear": {
+          "xy": [
+            648.0,
+            157.3
+          ],
+          "error_px": 1.019804
+        },
+        "adaptive": {
+          "xy": [
+            648.0,
+            157.3
+          ],
+          "error_px": 1.019804
+        },
+        "policy": {
+          "xy": [
+            648.0,
+            157.3
+          ],
+          "error_px": 1.019804
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            647.5,
+            157.5
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            647.6481,
+            157.2155
+          ],
+          "error_px": 0.707841
+        },
+        "kalman_cv": {
+          "xy": [
+            647.466,
+            157.4604
+          ],
+          "error_px": 0.467658
+        },
+        "bounce_aware": {
+          "xy": [
+            647.466,
+            157.4604
+          ],
+          "error_px": 0.467658
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 3.410645805590414,
+          "linear": 0.7643960311903395
+        },
+        "prediction_sha256": "1c6bb0bdce8bf594f74a1e66c2d0fa3dcf208c3a405ae244f744995d123a218f"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          647.466,
+          157.4604
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.72075
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              647.466,
+              157.4604
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 24,
+      "observed": {
+        "bbox_xyxy_px": [
+          608,
+          124,
+          675,
+          191
+        ],
+        "centre_xy": [
+          641.5,
+          157.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            647.0,
+            157.5
+          ],
+          "error_px": 5.5
+        },
+        "linear": {
+          "xy": [
+            642.6,
+            157.8
+          ],
+          "error_px": 1.140175
+        },
+        "adaptive": {
+          "xy": [
+            642.6,
+            157.8
+          ],
+          "error_px": 1.140175
+        },
+        "policy": {
+          "xy": [
+            642.6,
+            157.8
+          ],
+          "error_px": 1.140175
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            642.0,
+            158.0
+          ],
+          "error_px": 0.707107
+        },
+        "alpha_beta": {
+          "xy": [
+            642.3619,
+            157.8706
+          ],
+          "error_px": 0.938156
+        },
+        "kalman_cv": {
+          "xy": [
+            642.0295,
+            158.042
+          ],
+          "error_px": 0.757727
+        },
+        "bounce_aware": {
+          "xy": [
+            642.0295,
+            158.042
+          ],
+          "error_px": 0.757727
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 3.6527896063359186,
+          "linear": 0.8027072119195717
+        },
+        "prediction_sha256": "275bcbda5dcc63e00491c9cfc9c8eecdec01493dee455dde948ad305a53546b0"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          642.0295,
+          158.042
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.724418
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              642.0295,
+              158.042
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 25,
+      "observed": {
+        "bbox_xyxy_px": [
+          602,
+          125,
+          668,
+          192
+        ],
+        "centre_xy": [
+          635.0,
+          158.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            641.5,
+            157.5
+          ],
+          "error_px": 6.576473
+        },
+        "linear": {
+          "xy": [
+            636.8,
+            157.7
+          ],
+          "error_px": 1.969772
+        },
+        "adaptive": {
+          "xy": [
+            636.8,
+            157.7
+          ],
+          "error_px": 1.969772
+        },
+        "policy": {
+          "xy": [
+            636.8,
+            157.7
+          ],
+          "error_px": 1.969772
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            636.0,
+            157.5
+          ],
+          "error_px": 1.414214
+        },
+        "alpha_beta": {
+          "xy": [
+            636.463,
+            157.7836
+          ],
+          "error_px": 1.629
+        },
+        "kalman_cv": {
+          "xy": [
+            635.9969,
+            157.5394
+          ],
+          "error_px": 1.384349
+        },
+        "bounce_aware": {
+          "xy": [
+            635.9969,
+            157.5394
+          ],
+          "error_px": 1.384349
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 3.929871165385531,
+          "linear": 0.8533274438965104
+        },
+        "prediction_sha256": "e2adb8744ff72b3c9140aa8c1f6521545c3bea2bd1930c1c6cbe02a60b8a45ec"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          635.9969,
+          157.5394
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.738269
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              635.9969,
+              157.5394
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 26,
+      "observed": {
+        "bbox_xyxy_px": [
+          594,
+          124,
+          661,
+          192
+        ],
+        "centre_xy": [
+          627.5,
+          158.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            635.0,
+            158.5
+          ],
+          "error_px": 7.516648
+        },
+        "linear": {
+          "xy": [
+            629.8,
+            158.9
+          ],
+          "error_px": 2.469818
+        },
+        "adaptive": {
+          "xy": [
+            629.8,
+            158.9
+          ],
+          "error_px": 2.469818
+        },
+        "policy": {
+          "xy": [
+            629.8,
+            158.9
+          ],
+          "error_px": 2.469818
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            628.5,
+            159.5
+          ],
+          "error_px": 1.802776
+        },
+        "alpha_beta": {
+          "xy": [
+            629.3217,
+            158.9787
+          ],
+          "error_px": 2.067936
+        },
+        "kalman_cv": {
+          "xy": [
+            628.5228,
+            159.3912
+          ],
+          "error_px": 1.72669
+        },
+        "bounce_aware": {
+          "xy": [
+            628.5228,
+            159.3912
+          ],
+          "error_px": 1.72669
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 4.3268614734251445,
+          "linear": 1.0207940613659114
+        },
+        "prediction_sha256": "d0b6d25b8b2bab0ce5db7a6350a2443e5fac05fbac554d05488e37607a929612"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          628.5228,
+          159.3912
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.749259
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              628.5228,
+              159.3912
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 27,
+      "observed": {
+        "bbox_xyxy_px": [
+          584,
+          127,
+          649,
+          194
+        ],
+        "centre_xy": [
+          616.5,
+          160.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            627.5,
+            158.0
+          ],
+          "error_px": 11.280514
+        },
+        "linear": {
+          "xy": [
+            621.7,
+            158.3
+          ],
+          "error_px": 5.646238
+        },
+        "adaptive": {
+          "xy": [
+            621.7,
+            158.3
+          ],
+          "error_px": 5.646238
+        },
+        "policy": {
+          "xy": [
+            621.7,
+            158.3
+          ],
+          "error_px": 5.646238
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            620.0,
+            157.5
+          ],
+          "error_px": 4.609772
+        },
+        "alpha_beta": {
+          "xy": [
+            620.9646,
+            158.2436
+          ],
+          "error_px": 5.002412
+        },
+        "kalman_cv": {
+          "xy": [
+            619.986,
+            157.6721
+          ],
+          "error_px": 4.488737
+        },
+        "bounce_aware": {
+          "xy": [
+            619.986,
+            157.6721
+          ],
+          "error_px": 4.488737
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 4.805329480789341,
+          "linear": 1.2381476232178728
+        },
+        "prediction_sha256": "00100dca2dbde722d359d0df98460ccb97e8e892f9f4bd1a1560b658116a73a3"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          619.986,
+          157.6721
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.926409
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              619.986,
+              157.6721
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 28,
+      "observed": {
+        "bbox_xyxy_px": [
+          573,
+          135,
+          639,
+          201
+        ],
+        "centre_xy": [
+          606.0,
+          168.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            616.5,
+            160.5
+          ],
+          "error_px": 12.903488
+        },
+        "linear": {
+          "xy": [
+            609.4,
+            161.2
+          ],
+          "error_px": 7.602631
+        },
+        "adaptive": {
+          "xy": [
+            609.4,
+            161.2
+          ],
+          "error_px": 7.602631
+        },
+        "policy": {
+          "xy": [
+            609.4,
+            161.2
+          ],
+          "error_px": 7.602631
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            605.5,
+            163.0
+          ],
+          "error_px": 5.024938
+        },
+        "alpha_beta": {
+          "xy": [
+            608.1288,
+            161.3866
+          ],
+          "error_px": 6.947609
+        },
+        "kalman_cv": {
+          "xy": [
+            605.6482,
+            162.6965
+          ],
+          "error_px": 5.315191
+        },
+        "bounce_aware": {
+          "xy": [
+            605.6482,
+            162.6965
+          ],
+          "error_px": 5.315191
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 5.776607184572712,
+          "linear": 1.8993611325447837
+        },
+        "prediction_sha256": "27e4df379f5257b128fe20301212123799383d12cc6fe979b20dc2937a2275d0"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          605.6482,
+          162.6965
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 6.010019
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              605.6482,
+              162.6965
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 29,
+      "observed": {
+        "bbox_xyxy_px": [
+          563,
+          148,
+          629,
+          214
+        ],
+        "centre_xy": [
+          596.0,
+          181.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            606.0,
+            168.0
+          ],
+          "error_px": 16.401219
+        },
+        "linear": {
+          "xy": [
+            597.8,
+            170.1
+          ],
+          "error_px": 11.047624
+        },
+        "adaptive": {
+          "xy": [
+            597.8,
+            170.1
+          ],
+          "error_px": 11.047624
+        },
+        "policy": {
+          "xy": [
+            597.8,
+            170.1
+          ],
+          "error_px": 11.047624
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            595.5,
+            175.5
+          ],
+          "error_px": 5.522681
+        },
+        "alpha_beta": {
+          "xy": [
+            596.214,
+            171.5397
+          ],
+          "error_px": 9.462705
+        },
+        "kalman_cv": {
+          "xy": [
+            595.1887,
+            175.3796
+          ],
+          "error_px": 5.678676
+        },
+        "bounce_aware": {
+          "xy": [
+            595.1887,
+            175.3796
+          ],
+          "error_px": 5.678676
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 6.845639291971397,
+          "linear": 2.754851631187959
+        },
+        "prediction_sha256": "973bc06dac8afa715e85995ccd2aa1df270bcee45ddf2249c02e0febfb6c8049"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          595.1887,
+          175.3796
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 6.051255
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              595.1887,
+              175.3796
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 30,
+      "observed": {
+        "bbox_xyxy_px": [
+          554,
+          167,
+          620,
+          234
+        ],
+        "centre_xy": [
+          587.0,
+          200.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            596.0,
+            181.0
+          ],
+          "error_px": 21.476732
+        },
+        "linear": {
+          "xy": [
+            586.9,
+            185.7
+          ],
+          "error_px": 14.800338
+        },
+        "adaptive": {
+          "xy": [
+            586.9,
+            185.7
+          ],
+          "error_px": 14.800338
+        },
+        "policy": {
+          "xy": [
+            586.9,
+            185.7
+          ],
+          "error_px": 14.800338
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            586.0,
+            194.0
+          ],
+          "error_px": 6.576473
+        },
+        "alpha_beta": {
+          "xy": [
+            585.8198,
+            188.8428
+          ],
+          "error_px": 11.71676
+        },
+        "kalman_cv": {
+          "xy": [
+            585.9749,
+            194.0628
+          ],
+          "error_px": 6.518312
+        },
+        "bounce_aware": {
+          "xy": [
+            585.9749,
+            194.0628
+          ],
+          "error_px": 6.518312
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 8.278976318204197,
+          "linear": 3.998767513356877
+        },
+        "prediction_sha256": "fb6b8b98f53dc7787a19aa80b0f324c82860645b2fa6aa9534be47c59a5cc239"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          585.9749,
+          194.0628
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 6.156933
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              585.9749,
+              194.0628
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 31,
+      "observed": {
+        "bbox_xyxy_px": [
+          547,
+          196,
+          613,
+          263
+        ],
+        "centre_xy": [
+          580.0,
+          229.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            587.0,
+            200.5
+          ],
+          "error_px": 29.832868
+        },
+        "linear": {
+          "xy": [
+            577.4,
+            208.9
+          ],
+          "error_px": 20.763429
+        },
+        "adaptive": {
+          "xy": [
+            577.4,
+            208.9
+          ],
+          "error_px": 20.763429
+        },
+        "policy": {
+          "xy": [
+            577.4,
+            208.9
+          ],
+          "error_px": 20.763429
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            578.0,
+            220.0
+          ],
+          "error_px": 9.708244
+        },
+        "alpha_beta": {
+          "xy": [
+            577.2008,
+            213.8419
+          ],
+          "error_px": 15.906362
+        },
+        "kalman_cv": {
+          "xy": [
+            577.9986,
+            220.0345
+          ],
+          "error_px": 9.674824
+        },
+        "bounce_aware": {
+          "xy": [
+            577.9986,
+            220.0345
+          ],
+          "error_px": 9.674824
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 10.258639609710746,
+          "linear": 5.619003061450652
+        },
+        "prediction_sha256": "afa8748f5e41de4d41c4eb8bb93205a2cb7869adc30b9db2b2dd02076be08e45"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          577.9986,
+          220.0345
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 6.684379
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              577.9986,
+              220.0345
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 32,
+      "observed": {
+        "bbox_xyxy_px": [
+          545,
+          235,
+          610,
+          303
+        ],
+        "centre_xy": [
+          577.5,
+          269.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            580.0,
+            229.5
+          ],
+          "error_px": 39.579035
+        },
+        "linear": {
+          "xy": [
+            570.5,
+            243.8
+          ],
+          "error_px": 26.154158
+        },
+        "adaptive": {
+          "xy": [
+            570.5,
+            243.8
+          ],
+          "error_px": 26.154158
+        },
+        "policy": {
+          "xy": [
+            570.5,
+            243.8
+          ],
+          "error_px": 26.154158
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            573.0,
+            258.5
+          ],
+          "error_px": 11.42366
+        },
+        "alpha_beta": {
+          "xy": [
+            571.3575,
+            250.0708
+          ],
+          "error_px": 19.90087
+        },
+        "kalman_cv": {
+          "xy": [
+            572.9511,
+            258.3998
+          ],
+          "error_px": 11.535014
+        },
+        "bounce_aware": {
+          "xy": [
+            572.9511,
+            258.3998
+          ],
+          "error_px": 11.535014
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 13.194773835307025,
+          "linear": 7.890667010611992
+        },
+        "prediction_sha256": "f6e13f46c42ca5287f69601a3c3364ca0118b5183085b6d04a43ba91b470872b"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          572.9511,
+          258.3998
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 7.091511
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              572.9511,
+              258.3998
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 33,
+      "observed": {
+        "bbox_xyxy_px": [
+          542,
+          292,
+          607,
+          358
+        ],
+        "centre_xy": [
+          574.5,
+          325.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            577.5,
+            269.0
+          ],
+          "error_px": 56.0803
+        },
+        "linear": {
+          "xy": [
+            569.7,
+            290.7
+          ],
+          "error_px": 34.634232
+        },
+        "adaptive": {
+          "xy": [
+            569.7,
+            290.7
+          ],
+          "error_px": 34.634232
+        },
+        "policy": {
+          "xy": [
+            569.7,
+            290.7
+          ],
+          "error_px": 34.634232
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            575.0,
+            308.5
+          ],
+          "error_px": 16.507574
+        },
+        "alpha_beta": {
+          "xy": [
+            571.4273,
+            298.5447
+          ],
+          "error_px": 26.63311
+        },
+        "kalman_cv": {
+          "xy": [
+            574.8617,
+            308.5741
+          ],
+          "error_px": 16.429876
+        },
+        "bounce_aware": {
+          "xy": [
+            574.8617,
+            308.5741
+          ],
+          "error_px": 16.429876
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 17.15241298815996,
+          "linear": 10.630190714396766
+        },
+        "prediction_sha256": "c02b929fd3b737acdb8ddf8b7fd6e5ab05ba040965b7f5f4674d35e1f0ed4c37"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          574.8617,
+          308.5741
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": false,
+        "nll": 8.504027
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              574.8617,
+              308.5741
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 34,
+      "observed": {
+        "bbox_xyxy_px": [
+          537,
+          377,
+          604,
+          443
+        ],
+        "centre_xy": [
+          570.5,
+          410.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            574.5,
+            325.0
+          ],
+          "error_px": 85.094066
+        },
+        "linear": {
+          "xy": [
+            568.2,
+            356.4
+          ],
+          "error_px": 53.649324
+        },
+        "adaptive": {
+          "xy": [
+            568.2,
+            356.4
+          ],
+          "error_px": 53.649324
+        },
+        "policy": {
+          "xy": [
+            568.2,
+            356.4
+          ],
+          "error_px": 53.649324
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            571.5,
+            381.0
+          ],
+          "error_px": 29.017236
+        },
+        "alpha_beta": {
+          "xy": [
+            570.4241,
+            366.6435
+          ],
+          "error_px": 43.356607
+        },
+        "kalman_cv": {
+          "xy": [
+            571.8997,
+            380.7791
+          ],
+          "error_px": 29.25445
+        },
+        "bounce_aware": {
+          "xy": [
+            571.8997,
+            380.7791
+          ],
+          "error_px": 29.25445
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 22.991595975621937,
+          "linear": 14.230796850436892
+        },
+        "prediction_sha256": "1d2e6da808544f60d1747b88a6ba42a496c889490b561140cd09f65c6e51c959"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          571.8997,
+          380.7791
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": false,
+        "nll": 14.549774
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              571.8997,
+              380.7791
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 35,
+      "observed": {
+        "bbox_xyxy_px": [
+          535,
+          550,
+          601,
+          616
+        ],
+        "centre_xy": [
+          568.0,
+          583.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            570.5,
+            410.0
+          ],
+          "error_px": 173.018063
+        },
+        "linear": {
+          "xy": [
+            565.4,
+            455.8
+          ],
+          "error_px": 127.22657
+        },
+        "adaptive": {
+          "xy": [
+            565.4,
+            455.8
+          ],
+          "error_px": 127.22657
+        },
+        "policy": {
+          "xy": [
+            565.4,
+            455.8
+          ],
+          "error_px": 127.22657
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            566.5,
+            495.0
+          ],
+          "error_px": 88.012783
+        },
+        "alpha_beta": {
+          "xy": [
+            566.9116,
+            470.7865
+          ],
+          "error_px": 112.218741
+        },
+        "kalman_cv": {
+          "xy": [
+            566.5635,
+            494.4062
+          ],
+          "error_px": 88.605417
+        },
+        "bounce_aware": {
+          "xy": [
+            566.5635,
+            494.4062
+          ],
+          "error_px": 88.605417
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 32.30696641898153,
+          "linear": 20.143575970881788
+        },
+        "prediction_sha256": "87992c4cf6cf92e944f6f69f42980a61f1c6e36aa3efc8662f0532812295ba6a"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          566.5635,
+          494.4062
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": false,
+        "nll": 86.732547
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              566.5635,
+              494.4062
+            ],
+            "rx_px": 14.9378,
+            "ry_px": 14.9378,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "linear"
+      }
+    },
+    {
+      "frame": 36,
+      "observed": {
+        "bbox_xyxy_px": [
+          533,
+          612,
+          598,
+          679
+        ],
+        "centre_xy": [
+          565.5,
+          645.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            568.0,
+            583.0
+          ],
+          "error_px": 62.54998
+        },
+        "linear": {
+          "xy": [
+            564.2,
+            659.5
+          ],
+          "error_px": 14.060228
+        },
+        "adaptive": {
+          "xy": [
+            564.2,
+            659.5
+          ],
+          "error_px": 14.060228
+        },
+        "policy": {
+          "xy": [
+            568.0,
+            583.0
+          ],
+          "error_px": 62.54998
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            565.5,
+            756.0
+          ],
+          "error_px": 110.5
+        },
+        "alpha_beta": {
+          "xy": [
+            564.8039,
+            689.5647
+          ],
+          "error_px": 44.070229
+        },
+        "kalman_cv": {
+          "xy": [
+            565.2886,
+            752.5008
+          ],
+          "error_px": 107.001045
+        },
+        "bounce_aware": {
+          "xy": [
+            565.5,
+            756.0
+          ],
+          "error_px": 110.5
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 53.413630852264795,
+          "linear": 36.20602500806727
+        },
+        "prediction_sha256": "2f3bf94eef7e186ea2d991f2f586c6fc012ed42eeb337c47b83e93bb5d37d1fa"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          565.2886,
+          752.5008
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": false,
+        "nll": 123.863631
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              565.5,
+              756.0
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": true,
+        "override_active": true,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 37,
+      "observed": {
+        "bbox_xyxy_px": [
+          531,
+          601,
+          596,
+          668
+        ],
+        "centre_xy": [
+          563.5,
+          634.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            565.5,
+            645.5
+          ],
+          "error_px": 11.18034
+        },
+        "linear": {
+          "xy": [
+            562.6,
+            728.7
+          ],
+          "error_px": 94.204299
+        },
+        "adaptive": {
+          "xy": [
+            562.6,
+            728.7
+          ],
+          "error_px": 94.204299
+        },
+        "policy": {
+          "xy": [
+            565.5,
+            645.5
+          ],
+          "error_px": 11.18034
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            563.0,
+            708.0
+          ],
+          "error_px": 73.501701
+        },
+        "alpha_beta": {
+          "xy": [
+            562.7108,
+            753.4741
+          ],
+          "error_px": 118.976712
+        },
+        "kalman_cv": {
+          "xy": [
+            563.1045,
+            722.4533
+          ],
+          "error_px": 87.954156
+        },
+        "bounce_aware": {
+          "xy": [
+            563.0,
+            708.0
+          ],
+          "error_px": 73.501701
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 54.78408322682268,
+          "linear": 32.88415539598343
+        },
+        "prediction_sha256": "c36baf6473dbd08643144e9583abb69b6eae0657a4dc3f0a9ed306c775998f7f"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          563.1045,
+          722.4533
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": false,
+        "nll": 85.545997
+      },
+      "bounce": {
+        "floor_bottom_px": null,
+        "p_bounce": null,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 1.0,
+            "centre_xy": [
+              563.0,
+              708.0
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": true,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 38,
+      "observed": {
+        "bbox_xyxy_px": [
+          528,
+          596,
+          592,
+          662
+        ],
+        "centre_xy": [
+          560.0,
+          629.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            563.5,
+            634.5
+          ],
+          "error_px": 6.519202
+        },
+        "linear": {
+          "xy": [
+            560.7,
+            707.6
+          ],
+          "error_px": 78.603117
+        },
+        "adaptive": {
+          "xy": [
+            560.7,
+            707.6
+          ],
+          "error_px": 78.603117
+        },
+        "policy": {
+          "xy": [
+            563.5,
+            634.5
+          ],
+          "error_px": 6.519202
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            561.5,
+            623.5
+          ],
+          "error_px": 5.700877
+        },
+        "alpha_beta": {
+          "xy": [
+            561.0914,
+            694.2235
+          ],
+          "error_px": 65.232583
+        },
+        "kalman_cv": {
+          "xy": [
+            561.4911,
+            620.5355
+          ],
+          "error_px": 8.594817
+        },
+        "bounce_aware": {
+          "xy": [
+            561.5,
+            623.5
+          ],
+          "error_px": 5.700877
+        }
+      },
+      "adaptive": {
+        "selection": "linear",
+        "scores_before_observation": {
+          "persistence": 48.24352172592412,
+          "linear": 42.08217697632821
+        },
+        "prediction_sha256": "a2f9043f6cc3073087291117c66843ea3a4db47ee7522829ab51bdad3a4b1559"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          561.4911,
+          620.5355
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 6.480771
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.0065,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.9935,
+            "centre_xy": [
+              561.5,
+              623.5
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.0065,
+            "centre_xy": [
+              561.5,
+              645.5
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": true,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 39,
+      "observed": {
+        "bbox_xyxy_px": [
+          525,
+          594,
+          591,
+          660
+        ],
+        "centre_xy": [
+          558.0,
+          627.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            560.0,
+            629.0
+          ],
+          "error_px": 2.828427
+        },
+        "linear": {
+          "xy": [
+            557.1,
+            689.8
+          ],
+          "error_px": 62.806449
+        },
+        "adaptive": {
+          "xy": [
+            560.0,
+            629.0
+          ],
+          "error_px": 2.828427
+        },
+        "policy": {
+          "xy": [
+            560.0,
+            629.0
+          ],
+          "error_px": 2.828427
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            556.5,
+            623.5
+          ],
+          "error_px": 3.807887
+        },
+        "alpha_beta": {
+          "xy": [
+            557.3278,
+            648.0491
+          ],
+          "error_px": 21.05986
+        },
+        "kalman_cv": {
+          "xy": [
+            556.6321,
+            615.6745
+          ],
+          "error_px": 11.407852
+        },
+        "bounce_aware": {
+          "xy": [
+            556.4904,
+            623.535
+          ],
+          "error_px": 3.779518
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 41.984873827815896,
+          "linear": 47.56031797786028
+        },
+        "prediction_sha256": "ace1fd950d28cc12923f740734d05e1cc06a7221ad0d82f6526a9a77cf981afd"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          556.6321,
+          615.6745
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 7.061405
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.001,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.999,
+            "centre_xy": [
+              556.4904,
+              623.535
+            ],
+            "rx_px": 15.0213,
+            "ry_px": 15.0213,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.001,
+            "centre_xy": [
+              556.4904,
+              646.0
+            ],
+            "rx_px": 15.0213,
+            "ry_px": 15.0213,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 40,
+      "observed": {
+        "bbox_xyxy_px": [
+          523,
+          596,
+          589,
+          662
+        ],
+        "centre_xy": [
+          556.0,
+          629.0
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            558.0,
+            627.0
+          ],
+          "error_px": 2.828427
+        },
+        "linear": {
+          "xy": [
+            555.5,
+            670.4
+          ],
+          "error_px": 41.403019
+        },
+        "adaptive": {
+          "xy": [
+            558.0,
+            627.0
+          ],
+          "error_px": 2.828427
+        },
+        "policy": {
+          "xy": [
+            558.0,
+            627.0
+          ],
+          "error_px": 2.828427
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            556.0,
+            625.0
+          ],
+          "error_px": 4.0
+        },
+        "alpha_beta": {
+          "xy": [
+            555.3994,
+            628.8984
+          ],
+          "error_px": 0.609167
+        },
+        "kalman_cv": {
+          "xy": [
+            555.7856,
+            624.9431
+          ],
+          "error_px": 4.062593
+        },
+        "bounce_aware": {
+          "xy": [
+            555.8149,
+            625.0309
+          ],
+          "error_px": 3.973372
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 36.11140682235544,
+          "linear": 49.847237588204436
+        },
+        "prediction_sha256": "1a25840ee52cf63367d3a6ab309c9337b37e2b6aeea8eb1a9baea0758ebea6e4"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          555.7856,
+          624.9431
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.888806
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.0013,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.9987,
+            "centre_xy": [
+              555.8149,
+              625.0309
+            ],
+            "rx_px": 14.9515,
+            "ry_px": 14.9515,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.0013,
+            "centre_xy": [
+              555.8149,
+              646.0
+            ],
+            "rx_px": 14.9515,
+            "ry_px": 14.9515,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 41,
+      "observed": {
+        "bbox_xyxy_px": [
+          521,
+          601,
+          586,
+          668
+        ],
+        "centre_xy": [
+          553.5,
+          634.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            556.0,
+            629.0
+          ],
+          "error_px": 6.041523
+        },
+        "linear": {
+          "xy": [
+            553.6,
+            638.2
+          ],
+          "error_px": 3.701351
+        },
+        "adaptive": {
+          "xy": [
+            556.0,
+            629.0
+          ],
+          "error_px": 6.041523
+        },
+        "policy": {
+          "xy": [
+            556.0,
+            629.0
+          ],
+          "error_px": 6.041523
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            554.0,
+            631.0
+          ],
+          "error_px": 3.535534
+        },
+        "alpha_beta": {
+          "xy": [
+            553.7104,
+            627.7766
+          ],
+          "error_px": 6.72669
+        },
+        "kalman_cv": {
+          "xy": [
+            554.0986,
+            631.6643
+          ],
+          "error_px": 2.898242
+        },
+        "bounce_aware": {
+          "xy": [
+            554.111,
+            631.0202
+          ],
+          "error_px": 3.533003
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 31.11895986771405,
+          "linear": 48.58060483201063
+        },
+        "prediction_sha256": "236cd3c3d218a69dc6c3dd982a8d1bdd60416ad6ea30a2610d219aecfec1129e"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          554.0986,
+          631.6643
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.805171
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.0157,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.9843,
+            "centre_xy": [
+              554.111,
+              631.0202
+            ],
+            "rx_px": 14.9389,
+            "ry_px": 14.9389,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.0157,
+            "centre_xy": [
+              554.111,
+              646.0
+            ],
+            "rx_px": 14.9389,
+            "ry_px": 14.9389,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 42,
+      "observed": {
+        "bbox_xyxy_px": [
+          519,
+          612,
+          584,
+          679
+        ],
+        "centre_xy": [
+          551.5,
+          645.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            553.5,
+            634.5
+          ],
+          "error_px": 11.18034
+        },
+        "linear": {
+          "xy": [
+            551.1,
+            632.3
+          ],
+          "error_px": 13.206059
+        },
+        "adaptive": {
+          "xy": [
+            553.5,
+            634.5
+          ],
+          "error_px": 11.18034
+        },
+        "policy": {
+          "xy": [
+            553.5,
+            634.5
+          ],
+          "error_px": 11.18034
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            551.0,
+            640.0
+          ],
+          "error_px": 5.522681
+        },
+        "alpha_beta": {
+          "xy": [
+            551.2269,
+            635.645
+          ],
+          "error_px": 9.858756
+        },
+        "kalman_cv": {
+          "xy": [
+            551.0576,
+            640.1457
+          ],
+          "error_px": 5.372548
+        },
+        "bounce_aware": {
+          "xy": [
+            551.056,
+            640.0947
+          ],
+          "error_px": 5.423457
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 27.357344335576535,
+          "linear": 41.848716772908695
+        },
+        "prediction_sha256": "049b211461763e9b82fb9c63c9d34bd0464ebb4b505a1d8907f0a992248671a0"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          551.0576,
+          640.1457
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 6.016345
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.2187,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.7813,
+            "centre_xy": [
+              551.056,
+              640.0947
+            ],
+            "rx_px": 14.9379,
+            "ry_px": 14.9379,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.2187,
+            "centre_xy": [
+              551.056,
+              645.5
+            ],
+            "rx_px": 14.9379,
+            "ry_px": 14.9379,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 43,
+      "observed": {
+        "bbox_xyxy_px": [
+          517,
+          608,
+          583,
+          675
+        ],
+        "centre_xy": [
+          550.0,
+          641.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            551.5,
+            645.5
+          ],
+          "error_px": 4.272002
+        },
+        "linear": {
+          "xy": [
+            549.1,
+            647.7
+          ],
+          "error_px": 6.264982
+        },
+        "adaptive": {
+          "xy": [
+            551.5,
+            645.5
+          ],
+          "error_px": 4.272002
+        },
+        "policy": {
+          "xy": [
+            551.5,
+            645.5
+          ],
+          "error_px": 4.272002
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            549.5,
+            656.5
+          ],
+          "error_px": 15.008331
+        },
+        "alpha_beta": {
+          "xy": [
+            549.2909,
+            651.1028
+          ],
+          "error_px": 9.628924
+        },
+        "kalman_cv": {
+          "xy": [
+            549.4211,
+            656.3768
+          ],
+          "error_px": 14.888092
+        },
+        "bounce_aware": {
+          "xy": [
+            549.4199,
+            638.9441
+          ],
+          "error_px": 2.620939
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 24.9307936683649,
+          "linear": 37.5523181392787
+        },
+        "prediction_sha256": "f6d31aa5bdf0843232cd7d3fc6e966bd9a24c883e43a23766f7259819adbac17"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          549.4211,
+          656.3768
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 8.005766
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.9418,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.0582,
+            "centre_xy": [
+              549.4199,
+              656.4266
+            ],
+            "rx_px": 14.9379,
+            "ry_px": 14.9379,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.9418,
+            "centre_xy": [
+              549.4199,
+              638.9441
+            ],
+            "rx_px": 14.9379,
+            "ry_px": 14.9379,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 44,
+      "observed": {
+        "bbox_xyxy_px": [
+          515,
+          612,
+          581,
+          679
+        ],
+        "centre_xy": [
+          548.0,
+          645.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            550.0,
+            641.5
+          ],
+          "error_px": 4.472136
+        },
+        "linear": {
+          "xy": [
+            548.0,
+            644.0
+          ],
+          "error_px": 1.5
+        },
+        "adaptive": {
+          "xy": [
+            550.0,
+            641.5
+          ],
+          "error_px": 4.472136
+        },
+        "policy": {
+          "xy": [
+            550.0,
+            641.5
+          ],
+          "error_px": 4.472136
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            548.5,
+            637.5
+          ],
+          "error_px": 8.01561
+        },
+        "alpha_beta": {
+          "xy": [
+            548.0801,
+            645.2201
+          ],
+          "error_px": 0.29117
+        },
+        "kalman_cv": {
+          "xy": [
+            548.4979,
+            638.9347
+          ],
+          "error_px": 6.584184
+        },
+        "bounce_aware": {
+          "xy": [
+            547.9566,
+            634.6763
+          ],
+          "error_px": 10.823761
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 21.83197489900898,
+          "linear": 32.85921772484752
+        },
+        "prediction_sha256": "feac8be9f9568615a4b1a65d4bddbbf490b93f35e50fb9cfd09c1e7fa33589f0"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          548.4979,
+          638.9347
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 6.165839
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.1109,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.8891,
+            "centre_xy": [
+              547.9566,
+              634.6763
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.1109,
+            "centre_xy": [
+              547.9566,
+              645.5
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 45,
+      "observed": {
+        "bbox_xyxy_px": [
+          513,
+          612,
+          579,
+          679
+        ],
+        "centre_xy": [
+          546.0,
+          645.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            548.0,
+            645.5
+          ],
+          "error_px": 2.0
+        },
+        "linear": {
+          "xy": [
+            546.0,
+            649.2
+          ],
+          "error_px": 3.7
+        },
+        "adaptive": {
+          "xy": [
+            548.0,
+            645.5
+          ],
+          "error_px": 2.0
+        },
+        "policy": {
+          "xy": [
+            548.0,
+            645.5
+          ],
+          "error_px": 2.0
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            546.0,
+            649.5
+          ],
+          "error_px": 4.0
+        },
+        "alpha_beta": {
+          "xy": [
+            546.1584,
+            647.8776
+          ],
+          "error_px": 2.382887
+        },
+        "kalman_cv": {
+          "xy": [
+            546.081,
+            647.8338
+          ],
+          "error_px": 2.335215
+        },
+        "bounce_aware": {
+          "xy": [
+            546.0003,
+            643.0586
+          ],
+          "error_px": 2.441364
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 19.22799905740757,
+          "linear": 28.15533506612039
+        },
+        "prediction_sha256": "280e04fd0937fc0f7ac652d0ccdd112030a5703a0adac4b962de69c0c6194702"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          546.081,
+          647.8338
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.774765
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.7195,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.2805,
+            "centre_xy": [
+              546.0003,
+              649.5689
+            ],
+            "rx_px": 15.0213,
+            "ry_px": 15.0213,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.7195,
+            "centre_xy": [
+              546.0003,
+              643.0586
+            ],
+            "rx_px": 15.0213,
+            "ry_px": 15.0213,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 46,
+      "observed": {
+        "bbox_xyxy_px": [
+          512,
+          612,
+          577,
+          679
+        ],
+        "centre_xy": [
+          544.5,
+          645.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            546.0,
+            645.5
+          ],
+          "error_px": 1.5
+        },
+        "linear": {
+          "xy": [
+            544.0,
+            648.8
+          ],
+          "error_px": 3.337664
+        },
+        "adaptive": {
+          "xy": [
+            546.0,
+            645.5
+          ],
+          "error_px": 1.5
+        },
+        "policy": {
+          "xy": [
+            546.0,
+            645.5
+          ],
+          "error_px": 1.5
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            544.0,
+            645.5
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            544.091,
+            647.0874
+          ],
+          "error_px": 1.639297
+        },
+        "kalman_cv": {
+          "xy": [
+            543.9643,
+            646.1977
+          ],
+          "error_px": 0.87964
+        },
+        "bounce_aware": {
+          "xy": [
+            544.0025,
+            642.7277
+          ],
+          "error_px": 2.816567
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 16.643799198796433,
+          "linear": 24.487034806202338
+        },
+        "prediction_sha256": "5173049509605304219920df4199a218803b0520e08e75493d642150e838ce46"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          543.9643,
+          646.1977
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.726478
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.3772,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.6228,
+            "centre_xy": [
+              544.0025,
+              642.7277
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.3772,
+            "centre_xy": [
+              544.0025,
+              645.5
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 47,
+      "observed": {
+        "bbox_xyxy_px": [
+          512,
+          612,
+          575,
+          679
+        ],
+        "centre_xy": [
+          543.5,
+          645.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            544.5,
+            645.5
+          ],
+          "error_px": 1.0
+        },
+        "linear": {
+          "xy": [
+            542.7,
+            647.7
+          ],
+          "error_px": 2.34094
+        },
+        "adaptive": {
+          "xy": [
+            544.5,
+            645.5
+          ],
+          "error_px": 1.0
+        },
+        "policy": {
+          "xy": [
+            544.5,
+            645.5
+          ],
+          "error_px": 1.0
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            543.0,
+            645.5
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            542.7104,
+            646.1752
+          ],
+          "error_px": 1.038952
+        },
+        "kalman_cv": {
+          "xy": [
+            542.9576,
+            645.3539
+          ],
+          "error_px": 0.561765
+        },
+        "bounce_aware": {
+          "xy": [
+            543.0032,
+            645.4894
+          ],
+          "error_px": 0.496944
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 14.372229318976967,
+          "linear": 21.31462916332034
+        },
+        "prediction_sha256": "6f6ca144725147f996b29303ac154fa264e20390b7711d1a3e3d078a601ac15a"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          542.9576,
+          645.3539
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.72175
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.501,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.499,
+            "centre_xy": [
+              543.0032,
+              645.5177
+            ],
+            "rx_px": 15.0213,
+            "ry_px": 15.0213,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.501,
+            "centre_xy": [
+              543.0032,
+              645.4894
+            ],
+            "rx_px": 15.0213,
+            "ry_px": 15.0213,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 48,
+      "observed": {
+        "bbox_xyxy_px": [
+          509,
+          612,
+          574,
+          679
+        ],
+        "centre_xy": [
+          541.5,
+          645.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            543.5,
+            645.5
+          ],
+          "error_px": 2.0
+        },
+        "linear": {
+          "xy": [
+            541.9,
+            645.5
+          ],
+          "error_px": 0.4
+        },
+        "adaptive": {
+          "xy": [
+            543.5,
+            645.5
+          ],
+          "error_px": 2.0
+        },
+        "policy": {
+          "xy": [
+            543.5,
+            645.5
+          ],
+          "error_px": 2.0
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            542.5,
+            645.5
+          ],
+          "error_px": 1.0
+        },
+        "alpha_beta": {
+          "xy": [
+            542.0481,
+            645.7008
+          ],
+          "error_px": 0.583702
+        },
+        "kalman_cv": {
+          "xy": [
+            542.508,
+            645.4327
+          ],
+          "error_px": 1.010276
+        },
+        "bounce_aware": {
+          "xy": [
+            542.0285,
+            645.4046
+          ],
+          "error_px": 0.537052
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 12.366394921130421,
+          "linear": 18.468575786143884
+        },
+        "prediction_sha256": "37e7b63a208d8c4f70a2e667f396d9e439854a46eef4cdadc4570f61bb60beda"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          542.508,
+          645.4327
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.729025
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.4957,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.5043,
+            "centre_xy": [
+              542.0285,
+              645.4046
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.4957,
+            "centre_xy": [
+              542.0285,
+              645.5
+            ],
+            "rx_px": 19.0133,
+            "ry_px": 19.0133,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    },
+    {
+      "frame": 49,
+      "observed": {
+        "bbox_xyxy_px": [
+          508,
+          612,
+          572,
+          679
+        ],
+        "centre_xy": [
+          540.0,
+          645.5
+        ]
+      },
+      "predictions": {
+        "persistence": {
+          "xy": [
+            541.5,
+            645.5
+          ],
+          "error_px": 1.5
+        },
+        "linear": {
+          "xy": [
+            539.8,
+            646.3
+          ],
+          "error_px": 0.824621
+        },
+        "adaptive": {
+          "xy": [
+            541.5,
+            645.5
+          ],
+          "error_px": 1.5
+        },
+        "policy": {
+          "xy": [
+            541.5,
+            645.5
+          ],
+          "error_px": 1.5
+        },
+        "constant_velocity_2pt": {
+          "xy": [
+            539.5,
+            645.5
+          ],
+          "error_px": 0.5
+        },
+        "alpha_beta": {
+          "xy": [
+            539.9747,
+            645.5292
+          ],
+          "error_px": 0.038644
+        },
+        "kalman_cv": {
+          "xy": [
+            539.612,
+            645.5076
+          ],
+          "error_px": 0.388034
+        },
+        "bounce_aware": {
+          "xy": [
+            539.4966,
+            645.4996
+          ],
+          "error_px": 0.503366
+        }
+      },
+      "adaptive": {
+        "selection": "persistence",
+        "scores_before_observation": {
+          "persistence": 10.811435682960859,
+          "linear": 15.758289418222297
+        },
+        "prediction_sha256": "9d343d914d82929604a29ae965c6cf239f59f81717e21947645cc96cf15ae79a"
+      },
+      "zone": {
+        "model": "kalman_cv",
+        "level": "90",
+        "centre_xy": [
+          539.612,
+          645.5076
+        ],
+        "rx_px": 14.9378,
+        "ry_px": 14.9378,
+        "angle_deg": 0.0,
+        "observed_inside": true,
+        "nll": 5.720047
+      },
+      "bounce": {
+        "floor_bottom_px": 679,
+        "p_bounce": 0.5,
+        "hypotheses": [
+          {
+            "name": "keeps falling",
+            "weight": 0.5,
+            "centre_xy": [
+              539.4966,
+              645.5006
+            ],
+            "rx_px": 15.0213,
+            "ry_px": 15.0213,
+            "angle_deg": 0.0
+          },
+          {
+            "name": "bounces",
+            "weight": 0.5,
+            "centre_xy": [
+              539.4966,
+              645.4996
+            ],
+            "rx_px": 15.0213,
+            "ry_px": 15.0213,
+            "angle_deg": 0.0
+          }
+        ]
+      },
+      "policy": {
+        "warning": false,
+        "override_active": false,
+        "selection": "persistence"
+      }
+    }
+  ],
+  "limitations": [
+    "Image-pixel coordinates of SAM box centres, not physical positions.",
+    "One-frame-ahead forecasts only.",
+    "Kalman zone settings (q=50, r=4) were chosen on development videos C and E; they are not independently validated.",
+    "Read-only replay of recorded tracks; not a live stream.",
+    "Bounce-aware model: the floor is learned from observed bounces; its bounce detector can be fooled by small wobbles (see tests v1 and v2)."
+  ]
+}

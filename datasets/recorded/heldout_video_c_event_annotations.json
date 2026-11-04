@@ -1,0 +1,54 @@
+{
+  "schema": "qapha.event_annotations.v1",
+  "stage": "review_pending",
+  "source_packet_sha256": "26da80b3a7d43ac00db5567fa868d9876e2342f1c538f352822778eeeed28759",
+  "object_id": "0",
+  "calibration_cutoff_frame": 49,
+  "annotation_frames": [
+    {
+      "frame_index": 36,
+      "reviewed": false,
+      "motion_label": "not_reviewed",
+      "contact_visibility": "not_reviewed",
+      "tracking_quality_issue_visible": null,
+      "reviewer_notes": ""
+    },
+    {
+      "frame_index": 42,
+      "reviewed": false,
+      "motion_label": "not_reviewed",
+      "contact_visibility": "not_reviewed",
+      "tracking_quality_issue_visible": null,
+      "reviewer_notes": ""
+    },
+    {
+      "frame_index": 49,
+      "reviewed": false,
+      "motion_label": "not_reviewed",
+      "contact_visibility": "not_reviewed",
+      "tracking_quality_issue_visible": null,
+      "reviewer_notes": ""
+    }
+  ],
+  "allowed_motion_labels": [
+    "approximately_horizontal_visible",
+    "direction_reversal_visible",
+    "no_clear_motion_change",
+    "not_reviewed",
+    "uncertain"
+  ],
+  "allowed_contact_labels": [
+    "no_visible_contact",
+    "not_reviewed",
+    "occluded_or_ambiguous",
+    "visible_contact_candidate"
+  ],
+  "review_protocol": {
+    "inspect_frames_before_and_after": true,
+    "use_calibration_video_only": true,
+    "hide_model_reasoning_from_reviewer": true,
+    "do_not_infer_contact_from_direction_change_alone": true,
+    "unknown_is_an_acceptable_answer": true
+  },
+  "limitations": "This template is not ground truth until independently reviewed. Visual contact is not proof of physical causality. Video C is a diagnostic, non-blinded experiment."
+}

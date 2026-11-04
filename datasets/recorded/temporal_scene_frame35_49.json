@@ -1,0 +1,267 @@
+{
+  "schema": "qapha.temporal_scene.v1",
+  "frame_window": [
+    35,
+    49
+  ],
+  "fps": 25.0,
+  "time_window_s": [
+    1.4,
+    1.96
+  ],
+  "coordinate_system": "image_pixels_y_down",
+  "reviewed_edges": [
+    {
+      "edge_id": "edge_0",
+      "endpoints_px": [
+        [
+          339,
+          580
+        ],
+        [
+          934,
+          580
+        ]
+      ],
+      "physical_surface_verified": false
+    },
+    {
+      "edge_id": "edge_1",
+      "endpoints_px": [
+        [
+          1016,
+          415
+        ],
+        [
+          1279,
+          354
+        ]
+      ],
+      "physical_surface_verified": false
+    },
+    {
+      "edge_id": "edge_2",
+      "endpoints_px": [
+        [
+          129,
+          331
+        ],
+        [
+          335,
+          382
+        ]
+      ],
+      "physical_surface_verified": false
+    },
+    {
+      "edge_id": "edge_3",
+      "endpoints_px": [
+        [
+          56,
+          368
+        ],
+        [
+          252,
+          414
+        ]
+      ],
+      "physical_surface_verified": false
+    },
+    {
+      "edge_id": "edge_4",
+      "endpoints_px": [
+        [
+          938,
+          381
+        ],
+        [
+          1096,
+          344
+        ]
+      ],
+      "physical_surface_verified": false
+    }
+  ],
+  "objects": [
+    {
+      "object_id": "0",
+      "status": "measured_image_motion",
+      "observed_frames": 15,
+      "expected_frames": 15,
+      "displacement_px": [
+        -82.5,
+        94.0
+      ],
+      "motion_class": "moving",
+      "relationships": [
+        {
+          "edge_id": "edge_0",
+          "distance_first_px": 189.598,
+          "distance_last_px": 92.0,
+          "distance_change_px": -97.598,
+          "distance_trend": "approaching",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_1",
+          "distance_first_px": 45.169,
+          "distance_last_px": 143.031,
+          "distance_change_px": 97.862,
+          "distance_trend": "receding",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_2",
+          "distance_first_px": 640.632,
+          "distance_last_px": 567.979,
+          "distance_change_px": -72.653,
+          "distance_trend": "approaching",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_3",
+          "distance_first_px": 723.749,
+          "distance_last_px": 645.257,
+          "distance_change_px": -78.492,
+          "distance_trend": "approaching",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_4",
+          "distance_first_px": 22.182,
+          "distance_last_px": 116.078,
+          "distance_change_px": 93.896,
+          "distance_trend": "receding",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        }
+      ]
+    },
+    {
+      "object_id": "1",
+      "status": "measured_image_motion",
+      "observed_frames": 15,
+      "expected_frames": 15,
+      "displacement_px": [
+        129.0,
+        9.0
+      ],
+      "motion_class": "moving",
+      "relationships": [
+        {
+          "edge_id": "edge_0",
+          "distance_first_px": 116.0,
+          "distance_last_px": 107.0,
+          "distance_change_px": -9.0,
+          "distance_trend": "approaching",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_1",
+          "distance_first_px": 644.366,
+          "distance_last_px": 516.765,
+          "distance_change_px": -127.601,
+          "distance_trend": "approaching",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_2",
+          "distance_first_px": 90.588,
+          "distance_last_px": 190.623,
+          "distance_change_px": 100.035,
+          "distance_trend": "receding",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_3",
+          "distance_first_px": 131.386,
+          "distance_last_px": 257.354,
+          "distance_change_px": 125.968,
+          "distance_trend": "receding",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_4",
+          "distance_first_px": 570.569,
+          "distance_last_px": 445.112,
+          "distance_change_px": -125.458,
+          "distance_trend": "approaching",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        }
+      ]
+    },
+    {
+      "object_id": "2",
+      "status": "measured_image_motion",
+      "observed_frames": 15,
+      "expected_frames": 15,
+      "displacement_px": [
+        0.0,
+        0.0
+      ],
+      "motion_class": "approximately_stationary",
+      "relationships": [
+        {
+          "edge_id": "edge_0",
+          "distance_first_px": 377.325,
+          "distance_last_px": 377.325,
+          "distance_change_px": 0.0,
+          "distance_trend": "approximately_constant_distance",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_1",
+          "distance_first_px": 28.126,
+          "distance_last_px": 28.126,
+          "distance_change_px": 0.0,
+          "distance_trend": "approximately_constant_distance",
+          "near_at_end": true,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_2",
+          "distance_first_px": 889.589,
+          "distance_last_px": 889.589,
+          "distance_change_px": 0.0,
+          "distance_trend": "approximately_constant_distance",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_3",
+          "distance_first_px": 974.468,
+          "distance_last_px": 974.468,
+          "distance_change_px": 0.0,
+          "distance_trend": "approximately_constant_distance",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        },
+        {
+          "edge_id": "edge_4",
+          "distance_first_px": 127.641,
+          "distance_last_px": 127.641,
+          "distance_change_px": 0.0,
+          "distance_trend": "approximately_constant_distance",
+          "near_at_end": false,
+          "physical_contact_verified": false
+        }
+      ]
+    }
+  ],
+  "thresholds_px": {
+    "near": 30.0,
+    "trend": 5.0,
+    "movement": 5.0
+  },
+  "limitations": "2D image-plane distances only. No depth, contact, support, or metric geometry verified. Endpoint trends can miss intervening direction changes."
+}

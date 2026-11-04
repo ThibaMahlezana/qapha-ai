@@ -1,0 +1,23 @@
+{
+  "schema": "qapha.model_comparison.v1",
+  "object_id": "1",
+  "fps": 25.0,
+  "last_frame": 49,
+  "target_frame": 70,
+  "window": 7,
+  "observed_prefix_sha256": "abe16cb39db44139f599cb52b4ff01bf4ad3354d9d369913a278510677882f4b",
+  "predictions": {
+    "constant_velocity": {
+      "x": 685.5,
+      "y": 133.1429
+    },
+    "constant_vertical_acceleration": {
+      "x": 685.5,
+      "y": 987.7381
+    }
+  },
+  "fitted_vertical_acceleration_px_s2": 1867.5595,
+  "status": "frozen_unverified",
+  "limitations": "Uncalibrated image-plane fit; assumes no future collision or regime change",
+  "sha256": "cd43e88d1539fcd77cf1f39cb5c3c73a68d93f96f0ba591fdd4cdb1ca6632749"
+}

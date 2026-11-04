@@ -1,0 +1,42 @@
+{
+  "schema": "qapha.experiment_seal.v1",
+  "stage": "calibration_only_sealed",
+  "source_video_sha256": "660c8d3b3375ed7f11ea6c75ff73b5d124fc83330aefa283daa042f917e2e1a5",
+  "calibration_video_sha256": "9cea498c3c5b1779823b20955786b57f4bb902a103dbf32c855fcb2217e33e35",
+  "calibration_cutoff_frame": 49,
+  "object_id": "0",
+  "selected_model": "quadratic_y",
+  "selected_predictions": [
+    {
+      "frame_index": 54,
+      "center_px": [
+        100.167832,
+        439.453671
+      ]
+    },
+    {
+      "frame_index": 59,
+      "center_px": [
+        105.604895,
+        516.901224
+      ]
+    },
+    {
+      "frame_index": 70,
+      "center_px": [
+        117.566434,
+        700.362762
+      ]
+    }
+  ],
+  "selection_artifact_sha256": "97e096022333ab792bac2b44f26fb184b44380113d4cdd53be4e1c5c0a5f433e",
+  "forecast_artifact_sha256": "77f81bf02e63f9a09ef951570c915d257ba298b1506b86af8d5f0f9d1c37851f",
+  "protocol_artifact_sha256": "05056a8c5ed95e0127310bfc1b087d5c7e328ef5685700e2a471f3d34257e0cd",
+  "calibration_manifest_artifact_sha256": "7196c92ffa53c734d419f6cc420766eb3490731401967be1c00e35fcc1395033",
+  "tracking_artifact_sha256": "3694271df9de89ada4df9c287f778219986211d9017f86b1d131f03a47d3e135",
+  "selection_reproduced_exactly": true,
+  "forecast_reproduced_exactly": true,
+  "verification_frames_used": false,
+  "limitations": "This is a reproducible local record, not a digital signature or independently trusted timestamp. Video B is a retrospective selector diagnostic; use a new untouched video for prospective evaluation.",
+  "seal_sha256": "c87a51e66a440b2f8e69e055d5a0d9a45de7bfb9bd1183f33427ef398447b168"
+}

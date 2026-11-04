@@ -1,0 +1,51 @@
+{
+  "schema": "qapha.heldout_forecast.v1",
+  "stage": "frozen_before_future_verification",
+  "object_id": "0",
+  "cutoff_frame": 49,
+  "training_frames": [
+    38,
+    49
+  ],
+  "training_sample_count": 12,
+  "training_sha256": "5f0a2123b5261c8cfe470387338c3b74b498068636d4dc1bccc9aa768566810d",
+  "calibration_video_sha256": "9cea498c3c5b1779823b20955786b57f4bb902a103dbf32c855fcb2217e33e35",
+  "fps": 60.0,
+  "image_y_acceleration_px_per_frame2": 0.148601,
+  "predictions": [
+    {
+      "frame_index": 54,
+      "linear_center_px": [
+        100.167832,
+        432.147436
+      ],
+      "quadratic_y_center_px": [
+        100.167832,
+        439.453671
+      ]
+    },
+    {
+      "frame_index": 59,
+      "linear_center_px": [
+        105.604895,
+        499.935897
+      ],
+      "quadratic_y_center_px": [
+        105.604895,
+        516.901224
+      ]
+    },
+    {
+      "frame_index": 70,
+      "linear_center_px": [
+        117.566434,
+        649.070513
+      ],
+      "quadratic_y_center_px": [
+        117.566434,
+        700.362762
+      ]
+    }
+  ],
+  "limitations": "Pixel-space extrapolation only. Neither model simulates ring collisions. Repeated tracking boxes can bias parameter fitting. No future observations used."
+}

@@ -1,0 +1,26 @@
+{
+  "status": "verified",
+  "target_frame": 70,
+  "object_id": "1",
+  "actual_center_px": {
+    "x": 663.5,
+    "y": 482.5
+  },
+  "predicted_centers_px": {
+    "constant_velocity": {
+      "x": 685.5,
+      "y": 133.1429
+    },
+    "constant_vertical_acceleration": {
+      "x": 685.5,
+      "y": 987.7381
+    }
+  },
+  "errors_px": {
+    "constant_velocity": 350.0491,
+    "constant_vertical_acceleration": 505.7169
+  },
+  "better_model_on_this_example": "constant_velocity",
+  "prediction_sha256": "cd43e88d1539fcd77cf1f39cb5c3c73a68d93f96f0ba591fdd4cdb1ca6632749",
+  "note": "One held-out image-plane comparison; not evidence of general superiority"
+}

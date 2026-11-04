@@ -1,0 +1,37 @@
+{
+  "schema": "qapha.heldout_protocol.v1",
+  "stage": "registered_before_future_tracking",
+  "video": {
+    "path": "C:\\Users\\Keywest\\Desktop\\Web Apps\\qapha-ai\\datasets\\recorded\\heldout_video_e.mp4",
+    "sha256": "393b3bca31c97455d34b8d1915f94548b6c3abacb187a0a135fcd06f140fb809",
+    "fps": 25.0,
+    "frame_count_reported": 477,
+    "resolution_px": [
+      1280,
+      720
+    ]
+  },
+  "calibration_frames_inclusive": [
+    0,
+    49
+  ],
+  "target_frames": [
+    54,
+    59,
+    70
+  ],
+  "evaluation_policy": {
+    "perception_calibration_only": true,
+    "geometry_from_calibration_only": true,
+    "freeze_forecasts_before_verification": true,
+    "verification_tracking_separate": true,
+    "report_all_scenarios_and_horizons": true
+  },
+  "transferred_experimental_assumptions": {
+    "restitution": 0.6,
+    "contact_offset_px": 0.0,
+    "candidate_edge_selection": "review geometry using calibration frames only",
+    "contact_is_hypothetical": true
+  },
+  "limitations": "Metadata and full-file checksum do not read future object coordinates. This registry cannot prevent a person from viewing future frames. A new video's perspective and scale may make prior pixel thresholds inappropriate; do not tune them on verification frames. Reported frame count must be checked during decoding."
+}

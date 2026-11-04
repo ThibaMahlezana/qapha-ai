@@ -1,0 +1,290 @@
+<div class="doc">
+  <aside class="toc">
+    <p class="toc-title">On this page</p>
+    @for (s of sections; track s[0]) {
+      <a (click)="go(s[0])">{{ s[1] }}</a>
+    }
+    <a routerLink="/lab" class="big-button small">Load the demo</a>
+  </aside>
+
+  <article class="doc-body">
+    <p class="kicker">Documentation</p>
+    <h1>How Qapha works</h1>
+    <p class="lead">What Qapha is for, how it is built, what we tested and what we found,
+      including what did not work.</p>
+
+    <section id="goal">
+      <h2>The ultimate goal</h2>
+      <p>Qapha aims to become a <b>general adaptive reasoning system for physical
+        environments</b>: a system that can watch an unfamiliar scene, work out how things
+        in it behave, predict what will happen, say how certain it is, notice when it is
+        wrong, and improve. In the long run it should also answer "what if?" questions and
+        decide for itself which observation or experiment would teach it most.</p>
+      <p>That matters wherever a machine must act <i>before</i> things happen: robot arms,
+        drones, warehouses, farms, factories.</p>
+    </section>
+
+    <section id="strategy">
+      <h2>How the experiments lead there</h2>
+      <p>A general reasoner cannot be built in one step, so we climb a ladder of
+        capabilities. Each rung is a capability the final system needs, tested with an
+        experiment that can fail. The bouncing ball is the test bench for the lower rungs.</p>
+      <div class="ladder">
+        <div class="rung done"><b>See.</b> Find and follow an object in real video (SAM 3.1).</div>
+        <div class="rung done"><b>Predict honestly.</b> Seal every guess before the answer is revealed, so results cannot be faked.</div>
+        <div class="rung done"><b>Test fairly.</b> Pre-register experiments; judge only on data nobody has analysed.</div>
+        <div class="rung done"><b>Show the reasoning.</b> A lab where every guess, hit and miss is visible.</div>
+        <div class="rung partial"><b>Know how unsure it is.</b> Predict zones, not just points, and check they are truthful.</div>
+        <div class="rung partial"><b>Learn about the scene.</b> Infer a hidden fact (where the floor is) from what it saw, and use it to anticipate events.</div>
+        <div class="rung todo"><b>Answer "what if?"</b> Predict a drop from 150 cm after watching 50 cm and 100 cm, then compare with the real clip.</div>
+        <div class="rung todo"><b>Choose what to observe.</b> Spend expensive perception only where it reduces uncertainty most.</div>
+        <div class="rung todo"><b>Generalise.</b> Other objects, other scenes, live cameras, robots.</div>
+      </div>
+      <p>The rungs are general even though the test bench is a ball. "Learn that a floor
+        exists and expect a bounce" is the same skill as "learn that a table edge exists and
+        expect a cup to fall". The experiments are built to transfer.</p>
+    </section>
+
+    <section id="why-ball">
+      <h2>Why a bouncing ball</h2>
+      <div class="grid-2">
+        <div class="note"><h4>Smooth is easy, sudden is hard</h4>
+          <p>A falling ball is predictable. At the floor everything reverses in one frame.
+            Every model we tested failed hardest at that moment.</p></div>
+        <div class="note"><h4>The robot problem in miniature</h4>
+          <p>Grasping, collisions, slipping and stopping are all sudden changes. If a
+            system cannot anticipate a bounce, it cannot anticipate contact.</p></div>
+        <div class="note"><h4>The environment matters</h4>
+          <p>A bounce happens because of the floor. To anticipate it, Qapha must learn
+            something about the scene, not just the ball.</p></div>
+        <div class="note"><h4>Cheap and checkable</h4>
+          <p>Anyone can film it with a phone, repeat it, and see whether a prediction was right.</p></div>
+      </div>
+    </section>
+
+    <section id="loop">
+      <h2>The predict-and-check loop</h2>
+      <div class="flow">
+        <div><b>Observe</b><small>SAM finds the ball</small></div>
+        <div><b>Predict</b><small>every model guesses the next frame</small></div>
+        <div><b>Seal</b><small>the guess is fingerprinted</small></div>
+        <div><b>Reveal</b><small>the real frame arrives</small></div>
+        <div><b>Score</b><small>error and surprise measured</small></div>
+        <div><b>Learn</b><small>models and floor memory update</small></div>
+      </div>
+      <p>The rule that makes this trustworthy: <b>a prediction for a frame may only use
+        earlier frames.</b> Each guess is sealed with a SHA-256 fingerprint first, and
+        automated tests check that changing a future frame never changes a past guess.</p>
+    </section>
+
+    <section id="meta">
+      <h2>How Meta AI is used</h2>
+      <table class="doc-table">
+        <thead><tr><th>Meta model</th><th>Role in Qapha</th><th>Why there</th></tr></thead>
+        <tbody>
+          <tr><td><b>SAM 3.1</b><br><small>via the Meta Model API</small></td>
+            <td>Given a phrase such as "blue ball", it finds and tracks the object through
+              every frame, returning a box and mask per frame.</td>
+            <td>Perception is the hardest part to build by hand; SAM works on any
+              describable object without training on our footage.</td></tr>
+          <tr><td><b>Muse Spark</b><br><small>reasoning model</small></td>
+            <td>Reasons over structured evidence, for example whether a reversal near the
+              floor might be a collision, and proposes what to observe next. It may only cite
+              evidence we measured, and may not claim verified contact.</td>
+            <td>Weighing competing explanations is where a reasoning model helps; a
+              validator keeps it honest.</td></tr>
+        </tbody>
+      </table>
+      <p><b>Design choice:</b> predictions, uncertainty and scores are transparent
+        mathematics, not language-model output, so every number is reproducible and
+        testable. Meta's models do what they are best at: seeing and reasoning about evidence.</p>
+    </section>
+
+    <section id="models">
+      <h2>The models compared</h2>
+      <table class="doc-table">
+        <thead><tr><th>Model</th><th>Idea in one line</th></tr></thead>
+        <tbody>
+          <tr><td>Persistence</td><td>The ball stays where it was.</td></tr>
+          <tr><td>Linear (6-frame)</td><td>Average speed over the last five steps.</td></tr>
+          <tr><td>Adaptive selector</td><td>The original learner: switch between persistence and linear, whichever had lower recent error.</td></tr>
+          <tr><td>Warning policy</td><td>Adaptive, but falls back to persistence after its errors spike.</td></tr>
+          <tr><td>Constant velocity</td><td>Repeat the last single step. Simple, and repeatedly the one to beat.</td></tr>
+          <tr><td>Alpha-beta filter</td><td>A classic fixed-gain tracking filter.</td></tr>
+          <tr><td>Kalman + zone</td><td>A guess <i>plus</i> a zone where it is 90% sure the ball will be.</td></tr>
+          <tr><td>Bounce-aware</td><td>Kalman plus a surprise reset plus <b>floor memory</b>.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="uncertainty">
+      <h2>Knowing how unsure it is</h2>
+      <ul>
+        <li><b>Coverage:</b> a 90% zone should contain the ball about 90% of the time.</li>
+        <li><b>Surprise score (NLL):</b> heavily punishes confident misses and rewards an
+          honest "I'm not sure". Lower is better.</li>
+      </ul>
+      <p><b>Finding:</b> a standard Kalman filter's zone settles to about 15 px and never
+        changes. At bounces it misses by around 100 px while still claiming 15. In the lab,
+        the dashed zone-size line stays flat while the error spikes.</p>
+    </section>
+
+    <section id="floor">
+      <h2>Learning the floor</h2>
+      <p>The bounce-aware model watches the ball's bottom edge. When it goes down then up,
+        the model records <b>"there is a floor here"</b>. Near that height it keeps two
+        competing hypotheses, <b>"keeps falling"</b> and <b>"bounces"</b>, weighted by the
+        chance of contact. The lab shows both as coloured zones with percentages, and the
+        learned floor as a dashed line.</p>
+      <ul>
+        <li><b>Frames miss the moment of contact</b>, so the lowest point seen is above the
+          true floor; the model keeps the deepest bounce seen.</li>
+        <li><b>Bounciness is assumed (0.6)</b>; estimating it from the two frames around
+          contact gave nonsense.</li>
+      </ul>
+    </section>
+
+    <section id="discipline">
+      <h2>Keeping the science honest</h2>
+      <div class="grid-2">
+        <div class="note"><h4>Development vs test</h4><p>Methods are built on videos we have studied, and judged only on clips nobody had analysed.</p></div>
+        <div class="note"><h4>Pre-registration</h4><p>Code fingerprints, settings, hypotheses and pass/fail rules are sealed before a test. The evaluation refuses to run if locked code changes.</p></div>
+        <div class="note"><h4>Nothing dropped silently</h4><p>Untrackable clips are reported as ineligible, with the reason.</p></div>
+        <div class="note"><h4>Failures are kept</h4><p>Every failed hypothesis stays on the record, including our own protocol mistakes.</p></div>
+      </div>
+    </section>
+
+    <section id="results">
+      <h2>Results</h2>
+      <h3>Video E: registered test of the original learner</h3>
+      <table class="doc-table num">
+        <thead><tr><th>Model</th><th>Mean error</th><th>Misses over 25 px</th></tr></thead>
+        <tbody>
+          <tr class="good"><td>Constant velocity</td><td>8.94 px</td><td>2</td></tr>
+          <tr><td>Alpha-beta</td><td>15.01 px</td><td>5</td></tr>
+          <tr><td>Linear (6-frame)</td><td>20.81 px</td><td>7</td></tr>
+          <tr><td>Warning policy</td><td>21.02 px</td><td>11</td></tr>
+          <tr><td>Adaptive selector</td><td>21.44 px</td><td>8</td></tr>
+          <tr><td>Persistence</td><td>29.79 px</td><td>26</td></tr>
+        </tbody>
+      </table>
+      <h3>Floor memory on development video E</h3>
+      <p>Error at the later bounce fell from <b>33 px to 6.6 px</b>; the model gave the bounce
+        99.5% before it happened, and it was the best model on that clip (7.27 px).</p>
+      <h3>Fresh clips: test v1</h3>
+      <p><b>Inconclusive.</b> Only the first 3 seconds were analysed and the ball was still in
+        the hand (our protocol mistake). It did catch a real weakness: a 1-pixel wobble fooled
+        floor memory on a rolling clip.</p>
+      <h3>Fresh clips: test v2 (whole clips, same locked code)</h3>
+      <table class="doc-table">
+        <thead><tr><th>Hypothesis</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>H1: floor memory reduces error at later bounces</td>
+            <td class="bad">Not supported: better on 2 of 3 clips, but a false floor on the
+              150 cm drop made pooled error worse (17.6 → 20.0 px).</td></tr>
+          <tr><td>H2: lower overall surprise score</td><td class="good-text">Supported, narrowly (6.56 → 6.47).</td></tr>
+          <tr><td>H3: does not harm rolling clips</td><td class="good-text">Supported (1.19 → 1.17 px).</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="failures">
+      <h2>What failed and why</h2>
+      <ul>
+        <li><b>The original adaptive learner</b> lost to a one-line baseline: choosing the right
+          model mattered more than switching between models.</li>
+        <li><b>The bounce detector is too jumpy.</b> Any 1-pixel down-then-up counts, so wobble
+          can create a false floor that misleads later predictions. Seen on two independent
+          clips; it is the clearest next fix.</li>
+        <li><b>Footage quality.</b> Clips were compressed by WhatsApp; in one far shot the ball
+          was too small for SAM to find.</li>
+        <li><b>Our own protocol.</b> Test v1 analysed the wrong part of each clip. It is recorded,
+          and v2 changed only the protocol, never the method.</li>
+      </ul>
+    </section>
+
+    <section id="code">
+      <h2>Code structure</h2>
+      <p>A Python backend does the science and serves results; an Angular frontend shows them.
+        Data flows in one direction:</p>
+      <div class="pipeline">
+        <span>Video</span><i>→</i><span>SAM 3.1 tracks</span><i>→</i><span>Sealed registration</span>
+        <i>→</i><span>Frozen predictions + scores</span><i>→</i><span>Timeline file</span>
+        <i>→</i><span>API</span><i>→</i><span>Lab</span>
+      </div>
+      <pre class="tree">qapha-ai/
+├── backend/app/
+│   ├── perception/    video intake, SAM 3.1 tracking, overlays
+│   ├── learning/      the predictors and the sealed prediction protocol
+│   ├── experiments/   registrations, intake, evaluations (one script per step)
+│   ├── reasoning/     Muse Spark evidence packets, reasoning and audits
+│   ├── physics/       motion analysis, regimes, contact evidence, simulator
+│   ├── world/         scene graphs and motion events
+│   ├── context/       scene geometry (edges, surfaces)
+│   ├── pipeline/      timeline.py: builds the replay files for the lab
+│   ├── api/           lab.py: read-only FastAPI server for the lab
+│   └── providers/     Meta Model API clients
+├── backend/tests/unit/   ~300 automated tests
+├── frontend/src/app/
+│   ├── features/welcome/      home page
+│   ├── features/about/        this page
+│   └── features/laboratory/   the replay lab
+└── datasets/
+    ├── recorded/              development videos, tracks, sealed records
+    ├── fresh_clips_unopened/  the registered test clips
+    ├── fresh_clip_analysis_v2/  test v2 tracks and report
+    └── timelines/             replay files the lab reads</pre>
+      <table class="doc-table">
+        <thead><tr><th>Key file</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr><td><code>learning/prediction_protocol.py</code></td><td>Freezes a prediction before its frame is observed; refuses out-of-order or tampered state.</td></tr>
+          <tr><td><code>learning/probabilistic.py</code></td><td>Kalman filter with uncertainty zones; coverage and surprise scoring.</td></tr>
+          <tr><td><code>learning/bounce_aware.py</code></td><td>Floor memory and the two competing bounce hypotheses.</td></tr>
+          <tr><td><code>learning/reference_baselines.py</code></td><td>Constant velocity and alpha-beta baselines.</td></tr>
+          <tr><td><code>perception/sam_video_smoke.py</code></td><td>Uploads a clip to SAM 3.1 and saves per-frame tracks.</td></tr>
+          <tr><td><code>experiments/register_*.py</code></td><td>Seal clips and test plans before any analysis.</td></tr>
+          <tr><td><code>experiments/bounce_test_evaluation.py</code></td><td>Applies exactly the registered rules and writes the sealed report.</td></tr>
+          <tr><td><code>pipeline/timeline.py</code></td><td>Turns tracks into a frame-by-frame replay of every model.</td></tr>
+          <tr><td><code>api/lab.py</code></td><td>Serves replay files and video frames (as images) to the lab.</td></tr>
+          <tr><td><code>features/laboratory/</code></td><td>Draws frames, guesses, zones, hypotheses and charts.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="limits">
+      <h2>Limitations</h2>
+      <ul>
+        <li>Positions are in image pixels, not metres; scale differs between clips.</li>
+        <li>Predictions are one frame ahead (1/25 or 1/30 s).</li>
+        <li>One tracked object, recorded video (not live), and a small number of clips.</li>
+        <li>Contact is inferred from motion, never physically verified.</li>
+        <li>Fingerprints show a file was not changed; they do not prove when it was created.</li>
+      </ul>
+    </section>
+
+    <section id="next">
+      <h2>What comes next</h2>
+      <ol>
+        <li><b>A sturdier bounce detector:</b> require a real fall before believing in a floor.</li>
+        <li><b>Gravity-aware motion</b>, so the model knows <i>when</i> the ball reaches the floor.</li>
+        <li><b>"What if?"</b>: use the 50 and 100 cm drops to predict the 150 cm drop (the ruler converts pixels to centimetres).</li>
+        <li><b>Choosing what to observe:</b> call SAM only when uncertainty is high, since perception costs money.</li>
+        <li><b>Live camera input</b> and more than one object.</li>
+      </ol>
+    </section>
+
+    <section id="lab">
+      <h2>How to read the lab</h2>
+      <ul>
+        <li><b>White box and dot:</b> where SAM saw the ball.</li>
+        <li><b>Coloured rings:</b> each model's guess, made before the frame was shown; dashed lines show the miss.</li>
+        <li><b>Amber ellipse:</b> the Kalman 90% zone; red when the ball lands outside it.</li>
+        <li><b>Teal and pink ellipses:</b> the bounce-aware model's two hypotheses, with probabilities.</li>
+        <li><b>Dashed teal line:</b> the floor learned from an earlier bounce.</li>
+        <li><b>Diamond at the edge:</b> a guess that fell outside the picture.</li>
+        <li><b>Chart:</b> error per frame. Click to jump; arrow keys step; space plays.</li>
+      </ul>
+      <a routerLink="/lab" class="big-button">Load the demo</a>
+    </section>
+  </article>
+</div>

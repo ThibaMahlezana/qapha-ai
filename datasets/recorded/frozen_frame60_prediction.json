@@ -1,0 +1,17 @@
+{
+  "schema": "qapha.video_forecast.v1",
+  "model": "least_squares_constant_velocity",
+  "object_id": "1",
+  "fps": 25.0,
+  "last_frame": 49,
+  "target_frame": 60,
+  "window": 7,
+  "observed_prefix_sha256": "abe16cb39db44139f599cb52b4ff01bf4ad3354d9d369913a278510677882f4b",
+  "predicted_center_px": {
+    "x": 598.3571,
+    "y": 277.25
+  },
+  "units": "image_pixels",
+  "status": "frozen_unverified",
+  "sha256": "c9e595640979575cb6e2b30b86f217a5a78ab107a4d8d8a2f73a881f45739145"
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "qapha.contact_association.v1",
+  "stage": "post_prediction_evaluation_only",
+  "object_id": "1",
+  "edge_id": "edge_0",
+  "forecast_cutoff_frame": 49,
+  "criteria": {
+    "max_closest_approach_distance_px": 10.0,
+    "max_approach_to_reversal_delay_frames": 2,
+    "require_reversal_after_or_at_approach": true
+  },
+  "associations": [
+    {
+      "audit_index": 0,
+      "predicted_impact_frame": 60.050853,
+      "closest_approach_frame": 60,
+      "closest_bottom_edge_distance_px": 3.0,
+      "matched_reversal_frames": [
+        61
+      ],
+      "association": "candidate_temporal_contact",
+      "physical_collision_verified": false
+    }
+  ],
+  "physical_collision_verified": false,
+  "limitations": "Retrospective image-plane association, not proof of contact. Uses the upstream audit's single closest approach per impact and observed reversal triplets. Does not establish 3D geometry, forces, or a calibrated probability. Do not use verification observations to change an already frozen forecast."
+}

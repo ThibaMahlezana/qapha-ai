@@ -1,0 +1,52 @@
+{
+  "schema": "qapha.warning_policy_diagnostic.v1",
+  "stage": "historical_counterfactual_replay",
+  "evaluated_predictions": 48,
+  "cooldown_frames": 3,
+  "warning_frames": [
+    36
+  ],
+  "decisions_changed": 3,
+  "original_mean_error_px": 11.482721,
+  "candidate_mean_error_px": 9.261511,
+  "mean_error_difference_px": -2.221211,
+  "changed_decisions": [
+    {
+      "frame_index": 36,
+      "warning": true,
+      "caution_active": true,
+      "original_model": "linear",
+      "candidate_model": "persistence",
+      "original_error_px": 14.060228,
+      "candidate_error_px": 62.54998,
+      "error_difference_px": 48.489752
+    },
+    {
+      "frame_index": 37,
+      "warning": false,
+      "caution_active": true,
+      "original_model": "linear",
+      "candidate_model": "persistence",
+      "original_error_px": 94.204299,
+      "candidate_error_px": 11.18034,
+      "error_difference_px": -83.023959
+    },
+    {
+      "frame_index": 38,
+      "warning": false,
+      "caution_active": true,
+      "original_model": "linear",
+      "candidate_model": "persistence",
+      "original_error_px": 78.603117,
+      "candidate_error_px": 6.519202,
+      "error_difference_px": -72.083915
+    }
+  ],
+  "limitations": [
+    "Policy evaluated retrospectively on Video C.",
+    "Three-frame cooldown is a diagnostic choice, not validated.",
+    "Only previously recorded forecasts are compared.",
+    "No new physical-world prediction was generated.",
+    "This result cannot establish generalization."
+  ]
+}

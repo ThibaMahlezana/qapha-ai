@@ -1,0 +1,19 @@
+{
+  "schema": "qapha.scene_reasoning.v1",
+  "model": "muse-spark-1.3",
+  "frame_index": 49,
+  "hypotheses": [
+    {
+      "confidence": 0.75,
+      "edge_id": "edge_1",
+      "evidence_frame_index": 49,
+      "hypothesis": "proximity_only",
+      "next_observation": "Depth-resolved separation measurement between object 2 and edge_1 over multiple frames to assess physical contact",
+      "object_id": "2",
+      "reason": "Frame 49 shows distance_px 28.126 below threshold_px 30.0, but contact_verified is false with single-frame 2D proximity only and no depth or contact information"
+    }
+  ],
+  "physical_contact_verified": false,
+  "status": "unverified_hypotheses",
+  "note": "Muse hypotheses are not measurements. Confidence values are model estimates, not calibrated probabilities."
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "qapha.motion_events.v1",
+  "frame_window": [
+    30,
+    49
+  ],
+  "coordinate_system": "image_pixels_y_down",
+  "fps": 25.0,
+  "reviewed_edge_ids": [
+    "edge_0",
+    "edge_1",
+    "edge_2",
+    "edge_3",
+    "edge_4"
+  ],
+  "events": [
+    {
+      "object_id": "1",
+      "frame_index": 41,
+      "time_s": 1.64,
+      "event": "vertical_direction_reversal",
+      "delta_before_px": 37.0,
+      "delta_after_px": -31.0,
+      "nearest_edge_id": "edge_0",
+      "nearest_edge_distance_px": 38.0,
+      "near_reviewed_edge": false,
+      "physical_collision_verified": false
+    }
+  ],
+  "limitations": "Three-frame pixel-centre reversals only. Box jitter, occlusion and perspective can produce false positives. Nearest visual edge is not a verified contact surface. No impact or bounce is established. Frames outside the window are not used."
+}

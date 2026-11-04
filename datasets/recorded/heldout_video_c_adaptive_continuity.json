@@ -1,0 +1,34 @@
+{
+  "schema": "qapha.adaptive_continuity.v1",
+  "source": "heldout_video_c_calibration_tracks.json",
+  "object_id": "0",
+  "calibration_only": true,
+  "frames_processed": 50,
+  "checkpoint_after_frame": 24,
+  "resumed_from_frame": 25,
+  "states_identical": true,
+  "prediction_histories_identical": true,
+  "final_state_sha256": "77206fa7fde18dc30ef8be6c7bfb1bf8671a1f436472d6bc2a1d8113bff81040",
+  "summary": {
+    "schema": "qapha.adaptive_session_summary.v1",
+    "object_id": "0",
+    "observations_seen": 50,
+    "last_observed_frame": 49,
+    "next_expected_frame": 50,
+    "state_sha256": "77206fa7fde18dc30ef8be6c7bfb1bf8671a1f436472d6bc2a1d8113bff81040",
+    "evaluated_predictions": 48,
+    "mean_error_px": {
+      "persistence": 13.387468,
+      "linear": 13.54104,
+      "adaptive": 11.482721
+    },
+    "selection_counts": {
+      "persistence": 16,
+      "linear": 32
+    },
+    "current_model_scores": {
+      "persistence": 9.41472033051673,
+      "linear": 13.518239174257477
+    }
+  }
+}
