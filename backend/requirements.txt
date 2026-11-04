@@ -1,6 +1,6 @@
 # Qapha backend: lab API and the analysis pipeline.
 fastapi>=0.110
-uvicorn[standard]>=0.29
+uvicorn>=0.29
 numpy>=1.26
 # Headless build: no GUI libraries needed on a server.
 opencv-python-headless>=4.9
