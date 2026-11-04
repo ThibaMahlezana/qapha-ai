@@ -1,6 +1,6 @@
 # Qapha: an AI that predicts the physical world, and checks itself honestly
 
-**Live demo:** http://YOUR-SERVER-IP  ·  **Video:** YOUR-VIDEO-LINK
+**Live demo:** http://13.49.141.174  ·  **Video:** YOUR-VIDEO-LINK
 **Meta Global AI Developer Hackathon 2026** · Indie Developer Track · Theme: *Push the Frontier*
 
 Robots, drones and machines on factory floors must predict what happens next *before* it happens.
